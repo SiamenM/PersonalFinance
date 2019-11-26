@@ -1,7 +1,7 @@
-package java.Exception;
+package financeException;
 
 
-public class ModelException {
+public class ModelException extends Exception {
 
     public static final int TITLE_EMPTY = 1;
     public static final int IS_EXITS = 2;
