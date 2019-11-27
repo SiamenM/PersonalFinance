@@ -49,7 +49,6 @@ public class Filter {
             step = STEP_DAY;
         }
         setFromTo(new GregorianCalendar());
-
     }
 
     public boolean check(Date date) {
