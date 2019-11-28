@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e672c6a-f0bb-402d-ae50-4a882801f059" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/model/Stastistics.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/saveLoad/SaveData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/ini4j_0_5_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/settings/Settings.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Currency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/model/Filter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Filter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/PersonalFinance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/PersonalFinance.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -20,58 +18,40 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Account.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Stastistics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1080">
-              <caret line="82" selection-start-line="82" selection-end-line="82" />
+            <state relative-caret-position="357">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#761#762#0" expanded="true" />
-                <element signature="e#790#791#0" expanded="true" />
-                <element signature="e#1681#1682#0" expanded="true" />
-                <element signature="e#1741#1742#0" expanded="true" />
-                <element signature="e#1798#1799#0" expanded="true" />
-                <element signature="e#1826#1827#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Filter.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-365">
-              <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#193#194#0" expanded="true" />
-                <element signature="e#212#213#0" expanded="true" />
-                <element signature="e#466#467#0" expanded="true" />
-                <element signature="e#407#408#0" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
-                <element signature="e#528#529#0" expanded="true" />
-                <element signature="e#555#556#0" expanded="true" />
-                <element signature="e#582#583#0" expanded="true" />
-                <element signature="e#607#608#0" expanded="true" />
-                <element signature="e#680#681#0" expanded="true" />
-                <element signature="e#732#733#0" expanded="true" />
-                <element signature="e#944#945#0" expanded="true" />
-                <element signature="e#998#999#0" expanded="true" />
+                <element signature="e#884#885#0" expanded="true" />
+                <element signature="e#938#939#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Stastistics.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/settings/Settings.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="485">
-              <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+            <state relative-caret-position="689">
+              <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1728#1729#0" expanded="true" />
-                <element signature="e#1771#1772#0" expanded="true" />
+                <element signature="e#1444#1445#0" expanded="true" />
+                <element signature="e#1495#1496#0" expanded="true" />
+                <element signature="e#1536#1537#0" expanded="true" />
+                <element signature="e#1567#1568#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/PersonalFinance.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -79,7 +59,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/saveLoad/SaveData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="757">
+            <state relative-caret-position="697">
               <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -133,7 +113,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Transfer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
+            <state relative-caret-position="731">
               <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -147,18 +127,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Currency.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="876">
-              <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
+            <state relative-caret-position="1258">
+              <caret line="96" selection-start-line="96" selection-end-line="96" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1239#1240#0" expanded="true" />
-                <element signature="e#1271#1272#0" expanded="true" />
-                <element signature="e#2163#2164#0" expanded="true" />
-                <element signature="e#2222#2223#0" expanded="true" />
-                <element signature="e#2279#2280#0" expanded="true" />
-                <element signature="e#2307#2308#0" expanded="true" />
-                <element signature="e#2365#2366#0" expanded="true" />
-                <element signature="e#2408#2409#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -210,7 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/PersonalFinance.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Common.java" />
         <option value="$PROJECT_DIR$/src/main/java/settings/Text.java" />
         <option value="$PROJECT_DIR$/src/main/java/Exception/ModelException.java" />
@@ -224,6 +195,8 @@
         <option value="$PROJECT_DIR$/src/main/java/model/Currency.java" />
         <option value="$PROJECT_DIR$/src/main/java/saveLoad/SaveData.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Stastistics.java" />
+        <option value="$PROJECT_DIR$/src/main/java/PersonalFinance.java" />
+        <option value="$PROJECT_DIR$/src/main/java/settings/Settings.java" />
       </list>
     </option>
   </component>
@@ -240,7 +213,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -252,6 +224,12 @@
               <item name="PersonalFinance" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="PersonalFinance" type="2674bda8:ScopeViewTreeModel$GroupNode" />
               <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="PersonalFinance" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="PersonalFinance" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="fonts" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
             <path>
               <item name="PersonalFinance" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
@@ -290,21 +268,34 @@
               <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
               <item name="saveLoad" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
+            <path>
+              <item name="PersonalFinance" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="PersonalFinance" type="2674bda8:ScopeViewTreeModel$GroupNode" />
+              <item name="src" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="main" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="java" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="settings" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574858288455" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1574944359337" />
+    <property name="last_opened_file_path" value="C:/ini4j-0.5.4.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Global Libraries" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
@@ -373,18 +364,19 @@
       <workItem from="1574680297735" duration="3725000" />
       <workItem from="1574765994587" duration="1143000" />
       <workItem from="1574767156918" duration="4170000" />
-      <workItem from="1574851155763" duration="4489000" />
+      <workItem from="1574851155763" duration="4625000" />
+      <workItem from="1574941855754" duration="2321000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18890000" />
+    <option name="totallyTimeSpent" value="21347000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18763326" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18976545" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -419,16 +411,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/PersonalFinance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Exception/ModelException.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Common.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -464,6 +446,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Account.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1003">
+          <caret line="82" selection-start-line="82" selection-end-line="82" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#761#762#0" expanded="true" />
+            <element signature="e#790#791#0" expanded="true" />
+            <element signature="e#1681#1682#0" expanded="true" />
+            <element signature="e#1741#1742#0" expanded="true" />
+            <element signature="e#1798#1799#0" expanded="true" />
+            <element signature="e#1826#1827#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Filter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#655#656#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#706#707#0" expanded="true" />
+            <element signature="e#732#733#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/saveLoad/SaveData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#674#675#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
+            <element signature="e#750#751#0" expanded="true" />
+            <element signature="e#783#784#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#985#986#0" expanded="true" />
+            <element signature="e#1017#1018#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Transaction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1207">
@@ -494,6 +528,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Transfer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2347#2348#0" expanded="true" />
+            <element signature="e#2383#2384#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Currency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1258">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/financeException/ModelException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -519,103 +575,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Transfer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="45" column="24" selection-start-line="45" selection-start-column="24" selection-end-line="45" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2347#2348#0" expanded="true" />
-            <element signature="e#2383#2384#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Account.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1080">
-          <caret line="82" selection-start-line="82" selection-end-line="82" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#761#762#0" expanded="true" />
-            <element signature="e#790#791#0" expanded="true" />
-            <element signature="e#1681#1682#0" expanded="true" />
-            <element signature="e#1741#1742#0" expanded="true" />
-            <element signature="e#1798#1799#0" expanded="true" />
-            <element signature="e#1826#1827#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Filter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-365">
-          <caret line="49" column="9" selection-start-line="49" selection-start-column="9" selection-end-line="49" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#193#194#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#407#408#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-            <element signature="e#528#529#0" expanded="true" />
-            <element signature="e#555#556#0" expanded="true" />
-            <element signature="e#582#583#0" expanded="true" />
-            <element signature="e#607#608#0" expanded="true" />
-            <element signature="e#680#681#0" expanded="true" />
-            <element signature="e#732#733#0" expanded="true" />
-            <element signature="e#944#945#0" expanded="true" />
-            <element signature="e#998#999#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Currency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="876">
-          <caret line="96" lean-forward="true" selection-start-line="96" selection-end-line="96" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1239#1240#0" expanded="true" />
-            <element signature="e#1271#1272#0" expanded="true" />
-            <element signature="e#2163#2164#0" expanded="true" />
-            <element signature="e#2222#2223#0" expanded="true" />
-            <element signature="e#2279#2280#0" expanded="true" />
-            <element signature="e#2307#2308#0" expanded="true" />
-            <element signature="e#2365#2366#0" expanded="true" />
-            <element signature="e#2408#2409#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/saveLoad/SaveData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="757">
-          <caret line="54" column="30" selection-start-line="54" selection-start-column="30" selection-end-line="54" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#674#675#0" expanded="true" />
-            <element signature="e#705#706#0" expanded="true" />
-            <element signature="e#750#751#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#825#826#0" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
-            <element signature="e#906#907#0" expanded="true" />
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#985#986#0" expanded="true" />
-            <element signature="e#1017#1018#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Stastistics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="485">
-          <caret line="29" column="57" selection-start-line="29" selection-start-column="57" selection-end-line="29" selection-end-column="57" />
+        <state relative-caret-position="357">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1728#1729#0" expanded="true" />
-            <element signature="e#1771#1772#0" expanded="true" />
+            <element signature="e#884#885#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/PersonalFinance.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/settings/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="689">
+          <caret line="60" column="13" lean-forward="true" selection-start-line="60" selection-start-column="13" selection-end-line="60" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1444#1445#0" expanded="true" />
+            <element signature="e#1495#1496#0" expanded="true" />
+            <element signature="e#1536#1537#0" expanded="true" />
+            <element signature="e#1567#1568#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -685,6 +673,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>ini4j-0.5.4</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
