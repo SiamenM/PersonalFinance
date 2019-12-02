@@ -7,7 +7,11 @@ final public class Text {
     private static final HashMap<String, String> data = new HashMap<String, String>();
 
     public static String get(String key) {
-        return data.get(key);
+        if (data.containsKey(key)) {
+            return data.get(key);
+        }
+        System.out.println("This key don't exits"); // for debugging
+        return "";
     }
 
     public static String[] getMonth() {
@@ -57,6 +61,9 @@ final public class Text {
         data.put("RATE_INCORRECT", "Некорректное значение курса!");
         data.put("AMOUNT_FORMAT", "Некорректный формат суммы!");
         data.put("NO_BASE_CURRENCY", "Установите базовую валюту!");
+
+        data.put("YES","ДА");
+        data.put("NO","НЕТ");
 
     }
 

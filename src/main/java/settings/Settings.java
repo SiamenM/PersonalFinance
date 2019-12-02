@@ -15,11 +15,11 @@ public class Settings {
     public static final File SAVE_DIR = new File("saves/");
     public static final String SAVE_FILE_EXT = "myfin";
 
-    private static final String FORMAT_AMOUNT = "%.2f";
-    private static final String FORMAT_RATE = "%.4f";
-    private static final String FORMAT_DATE = "dd.MM.yyyy";
-    private static final String FORMAT_DATE_MONTH = "MMMM yyyy";
-    private static final String FORMAT_DATE_YEAR = "yyyy";
+    public static final String FORMAT_AMOUNT = "%.2f";
+    public static final String FORMAT_RATE = "%.4f";
+    public static final String FORMAT_DATE = "dd.MM.yyyy";
+    public static final String FORMAT_DATE_MONTH = "MMMM yyyy";
+    public static final String FORMAT_DATE_YEAR = "yyyy";
 
     public static final int COUNT_OVERVIEW_ROWS = 10;
 
