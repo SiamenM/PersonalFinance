@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.Locale;
 import java.util.prefs.Preferences;
 
-public class Settings {
+public final class Settings {
 
     public static final File FONT_KORNILOW = new File("src/fonts/Kornilow.ttf");
     public static final File SAVE_DIR = new File("saves/");
