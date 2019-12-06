@@ -13,6 +13,7 @@ public class ModelException extends Exception {
     public static final int RATE_INCORRECT = 8;
     public static final int AMOUNT_FORMAT = 9;
     public static final int NO_BASE_CURRENCY = 10;
+    public static final int COMMON_NOT_FOUND = 11;
 
     private final int code;
 
@@ -42,6 +43,8 @@ public class ModelException extends Exception {
                 return settings.Text.get("ERROR_AMOUNT_FORMAT");
             case NO_BASE_CURRENCY:
                 return settings.Text.get("ERROR_NO_BASE_CURRENCY");
+            case COMMON_NOT_FOUND:
+                return settings.Text.get("COMMON_NOT_FOUND");
         }
         return "";
     }

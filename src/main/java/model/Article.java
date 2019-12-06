@@ -2,6 +2,7 @@ package model;
 
 
 import financeException.ModelException;
+import saveLoad.SaveData;
 
 import java.util.Objects;
 
@@ -54,4 +55,13 @@ public class Article extends java.model.Common {
         return title;
     }
 
+    @Override
+    public void postEdit(SaveData saveData) {
+
+        for (Transaction t: saveData.getTransactions()){
+            if (t.getArticle().equals(saveData.getOldCommon())){
+                t.setArticle(this);
+            }
+        }
+    }
 }

@@ -1,6 +1,7 @@
 package model;
 
 import financeException.ModelException;
+import saveLoad.SaveData;
 
 import java.util.Date;
 
@@ -79,6 +80,27 @@ public class Transaction extends java.model.Common {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    @Override
+    public void postAdd(SaveData saveData) {
+        setAmounts(saveData);
+    }
+
+    @Override
+    public void postEdit(SaveData saveData) {
+        setAmounts(saveData);
+    }
+
+    @Override
+    public void postRemove(SaveData saveData) {
+        setAmounts(saveData);
+    }
+
+    private void setAmounts(SaveData saveData) {
+        for (Account a : saveData.getAccounts()) {
+            a.setAmountTransactionAndTransfers(saveData.getTransactions(), saveData.getTransfers());
+        }
     }
 
     @Override
