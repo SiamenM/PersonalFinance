@@ -1,7 +1,7 @@
 package settings;
 
-import model.Currency;
-import model.Filter;
+import mainClasses.Currency;
+import mainClasses.Filter;
 
 import java.text.DateFormatSymbols;
 import java.text.SimpleDateFormat;

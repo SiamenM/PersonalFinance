@@ -1,4 +1,4 @@
-package model;
+package mainClasses;
 
 
 import financeException.ModelException;
@@ -6,7 +6,7 @@ import saveLoad.SaveData;
 
 import java.util.Objects;
 
-public class Article extends java.model.Common {
+public class Article extends Common {
 
     private String title;
 

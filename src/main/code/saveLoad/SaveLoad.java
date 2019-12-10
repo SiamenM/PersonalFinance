@@ -30,14 +30,13 @@ public class SaveLoad {
         // check null if accounts no
         try {
             JAXBContext context = JAXBContext.newInstance(Wrapper.class);
-
             Unmarshaller unmarshaller = context.createUnmarshaller();
             Wrapper wrapper = (Wrapper) unmarshaller.unmarshal(Settings.getFileSave());
-            saveData.setAccounts(saveData.getAccounts());
-            saveData.setArticles(saveData.getArticles());
-            saveData.setTransactions(saveData.getTransactions());
-            saveData.setTransfers(saveData.getTransfers());
-            saveData.setCurrencies(saveData.getCurrencies());
+            saveData.setAccounts(wrapper.getAccounts());
+            saveData.setArticles(wrapper.getArticles());
+            saveData.setTransactions(wrapper.getTransactions());
+            saveData.setTransfers(wrapper.getTransfers());
+            saveData.setCurrencies(wrapper.getCurrencies());
         } catch (JAXBException e) {
             e.printStackTrace();
         }

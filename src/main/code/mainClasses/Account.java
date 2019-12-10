@@ -1,4 +1,4 @@
-package model;
+package mainClasses;
 
 import financeException.ModelException;
 import saveLoad.SaveData;
@@ -6,7 +6,7 @@ import saveLoad.SaveData;
 import java.util.List;
 import java.util.Objects;
 
-public class Account extends java.model.Common {
+public class Account extends Common {
 
     private String title;
     private Currency currency;
@@ -120,5 +120,15 @@ public class Account extends java.model.Common {
             }
         }
         setAmountTransactionAndTransfers(SaveData.getInstance().getTransactions(), SaveData.getInstance().getTransfers());
+    }
+
+    @Override
+    public String toString() {
+        return "Account{" +
+                "title='" + title + '\'' +
+                ", currency=" + currency +
+                ", startAmount=" + startAmount +
+                ", amount=" + amount +
+                '}';
     }
 }

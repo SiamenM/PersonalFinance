@@ -1,4 +1,4 @@
-package model;
+package mainClasses;
 
 import java.time.YearMonth;
 import java.util.Calendar;

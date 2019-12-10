@@ -1,11 +1,11 @@
-package model;
+package mainClasses;
 
 import financeException.ModelException;
 import saveLoad.SaveData;
 
 import java.util.Objects;
 
-public class Currency extends java.model.Common {
+public class Currency extends Common {
 
     private String title;
     private String code;

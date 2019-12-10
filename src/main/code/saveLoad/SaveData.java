@@ -1,9 +1,8 @@
 package saveLoad;
 
 import financeException.ModelException;
-import model.*;
+import mainClasses.*;
 
-import java.model.Common;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +15,7 @@ public final class SaveData {
     private List<Account> accounts = new ArrayList<>();
     private List<Transaction> transactions = new ArrayList<>();
     private List<Transfer> transfers = new ArrayList<>();
-    private java.model.Common oldCommon;
+    private Common oldCommon;
     private boolean saved = true;
     private final Filter filter;
 

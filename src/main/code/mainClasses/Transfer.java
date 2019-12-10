@@ -1,11 +1,11 @@
-package model;
+package mainClasses;
 
 import financeException.ModelException;
 import saveLoad.SaveData;
 
 import java.util.Date;
 
-public class Transfer extends java.model.Common {
+public class Transfer extends Common {
 
     private Account fromAccount;
     private Account toAccount;

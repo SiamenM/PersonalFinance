@@ -1,4 +1,4 @@
-package model;
+package mainClasses;
 
 import saveLoad.SaveData;
 
