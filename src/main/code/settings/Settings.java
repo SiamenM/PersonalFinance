@@ -23,7 +23,7 @@ public final class Settings {
 
     public static final int COUNT_OVERVIEW_ROWS = 10;
 
-    public static final String[] CURRENCIES_CODES = {"RUB", "USD", "EUR", "BYN", "UAH"};
+    public static final String[] CURRENCIES_CODES = {"BLR", "USD", "EUR", "RUB", "UAH"};
 
     private static final File FILE_SETTINGS = new File("src/saves/settings.ini");
     private static File fileSave = new File("src/saves/default.myrus");

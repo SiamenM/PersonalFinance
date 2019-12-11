@@ -2,8 +2,12 @@ package saveLoad;
 
 import financeException.ModelException;
 import mainClasses.*;
+import org.xml.sax.SAXException;
 
+import javax.xml.parsers.ParserConfigurationException;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public final class SaveData {
@@ -211,6 +215,17 @@ public final class SaveData {
             throw new ModelException(ModelException.COMMON_NOT_FOUND);
         }
 
+    }
+
+    public void updateCurrencies() throws IOException, SAXException, ParserConfigurationException {
+        HashMap<String, Double> rates = RateCurrency.getRates(getBaseCurrency());
+        for (Currency currency : currencies) {
+            currency.setRate(rates.get(currency.getCode()));
+        }
+        for (Account account : accounts) {
+            account.getCurrency().setRate(rates.get(account.getCurrency().getCode()));
+            saved = false;
+        }
     }
 
     @Override

@@ -11,15 +11,18 @@ import java.util.Date;
 
 public class PersonalFinance {
 
-    public static void main(String[] args) throws ModelException {
+    public static void main(String[] args) throws Exception {
         init();
         SaveData saveData = SaveData.getInstance();
-        System.out.println(saveData);
-        //testModel();
+
+        saveData.updateCurrencies();
+        System.out.println(saveData.getCurrencies());
+
     }
+    //testModel();
 
     private static void testModel() throws ModelException {
-        Currency c1 = new Currency("Рубль", "RUB", 1, true, true);
+        Currency c1 = new Currency("Белорусский рубль", "BLR", 1, true, true);
         Currency c2 = new Currency("Доллар", "USD", 65, true, false);
         Currency c3 = new Currency("Евро", "EUR", 75, false, false);
         Currency c4 = new Currency("Гривна", "UAH", 2.5, false, false);
@@ -93,7 +96,6 @@ public class PersonalFinance {
         sd.save();
         //sd.load();
         System.out.println(sd);
-
     }
 
     private static void init() {
