@@ -23,7 +23,7 @@ public class RateCurrency {
         String url = "http://www.nbrb.by/services/xmlexrates.aspx?ondate=" + dateFormat.format(new Date());
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         Document document = factory.newDocumentBuilder().parse(new URL(url).openStream());
-        NodeList nodeList1 = document.getElementsByTagName("Valute");
+        NodeList nodeList1 = document.getElementsByTagName("Currency");
         for (int i = 0; i < nodeList1.getLength(); i++) {
             Node node = nodeList1.item(i);
             NodeList n1Childs = node.getChildNodes();
@@ -33,23 +33,22 @@ public class RateCurrency {
                 }
             }
         }
-        System.out.println(nodeMap);
         HashMap<String, Double> rates = new HashMap<>();
         for (Map.Entry<String, NodeList> entry : nodeMap.entrySet()) {
             NodeList temp = entry.getValue();
             double value = 0;
             int faceValue = 0;  //номинал валюты
             for (int i = 0; i < temp.getLength(); i++) {
-                if (temp.item(i).getNodeName().equals("Value")) {
+                if (temp.item(i).getNodeName().equals("Rate")) {
                     value = Double.parseDouble(temp.item(i).getTextContent().replace(",", "."));
-                } else if (temp.item(i).getNodeName().equals("Nominal")) {
+                } else if (temp.item(i).getNodeName().equals("Scale")) {
                     faceValue = Integer.parseInt(temp.item(i).getTextContent());
                 }
+                double amount = value / faceValue;
+                rates.put(entry.getKey(), (((double) Math.round(amount * 10000)) / 10000));
             }
-            double amount = value / faceValue;
-            rates.put(entry.getKey(), (((double) Math.round(amount * 10000)) / 10000));
         }
-        rates.put("RUB", 1.0);
+        rates.put("BLR", 1.0);
         double div = rates.get(base.getCode());
         for (Map.Entry<String, Double> entry : rates.entrySet()) {
             entry.setValue(entry.getValue() / div);
