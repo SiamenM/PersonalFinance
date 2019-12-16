@@ -1,26 +1,35 @@
+import UI.Refresh;
 import financeException.ModelException;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 import mainClasses.*;
 import saveLoad.SaveData;
 import settings.Settings;
 import settings.Text;
 
 import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class PersonalFinance {
+public class PersonalFinance extends Application implements Refresh {
+
+    private Stage window;
+    private Scene scene1;
 
     public static void main(String[] args) throws Exception {
-        init();
+        initialization();
+        launch();
         //testModel();
-        SaveData saveData = SaveData.getInstance();
-
-        saveData.updateCurrencies();
-        System.out.println(saveData.getCurrencies());
-
+        //  SaveData saveData = SaveData.getInstance();
+        //saveData.updateCurrencies();
+        //System.out.println(saveData);
     }
-
 
     private static void testModel() throws ModelException {
         Currency c1 = new Currency("Белорусский рубль", "BLR", 1, true, true);
@@ -99,7 +108,7 @@ public class PersonalFinance {
         System.out.println(sd);
     }
 
-    private static void init() {
+    private static void initialization() {
         Settings.init();
         Text.init();
         GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
@@ -108,5 +117,29 @@ public class PersonalFinance {
         } catch (FontFormatException | IOException e) {
             e.printStackTrace();
         }
+    }
+
+    @Override
+    public void start(Stage primaryStage) {
+        window = primaryStage;
+        window.setTitle(Text.get("PROGRAM_NAME"));
+        window.setResizable(false);
+        Image iconMain = new Image(new File("images/main.png").toURI().toString());
+        window.getIcons().add(iconMain);
+        HBox hBox = new HBox();
+        BorderPane borderPane = new BorderPane();//Контейнер javafx.scene.layout.BorderPane позволяет
+        // прижать вложенные элементы управления
+        // к одной из сторон контейнера: по верхнему, нижнему,
+        // левому или правому краю или расположить по центру.
+
+        scene1 = new Scene(hBox, 600, 500);
+
+        window.setScene(scene1);
+        window.show();
+    }
+
+    @Override
+    public void refresh() {
+
     }
 }
