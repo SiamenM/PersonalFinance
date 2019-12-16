@@ -2,76 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e672c6a-f0bb-402d-ae50-4a882801f059" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/Thumbs.db" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/account.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/accounts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/accounts_panel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/amount.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/article.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/articles.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/articles_panel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/balance.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/balance_currencies.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/base.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/cancel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/code.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/currencies.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/currencies_panel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/currency.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/date.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/left.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/main.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/main_old.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_edit_add.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_edit_delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_edit_edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_file.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_file_exit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_file_new.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_file_open.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_file_save.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_file_update_currencies.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_help.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_help_about.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_popup_delete.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_popup_edit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_settings.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_settings_language.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_settings_language_english.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_settings_language_russian.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_view.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_view_accounts.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_view_articles.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_view_currencies.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_view_overview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_view_statistics.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_view_transactions.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/menu_view_transfers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/notice.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/ok.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/on.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/overview.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/overview_panel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/rate.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/right.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/statistics.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/statistics_panel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/title.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/transactions.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/transactions_panel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/transfers.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/transfers_panel.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/code/UI/EnableEditDelete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/code/UI/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/code/UI/Refresh.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/code/PersonalFinance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/PersonalFinance.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/settings/Style.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/settings/Style.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/PersonalFinance.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/PersonalFinance.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/code/UI/jj.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/PersonalFinance.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -83,11 +16,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/code/PersonalFinance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1139">
-              <caret line="142" selection-start-line="142" selection-end-line="142" />
+            <state relative-caret-position="349">
+              <caret line="120" column="28" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#testModel#0;class#PersonalFinance#0" />
@@ -96,23 +29,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/code/UI/EnableEditDelete.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="45" selection-start-line="4" selection-start-column="45" selection-end-line="4" selection-end-column="45" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/code/PersonalFinance.fxml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/code/UI/jj.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -127,7 +51,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/code/settings/Text.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
+            <state relative-caret-position="578">
               <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="30" />
             </state>
           </provider>
@@ -136,7 +60,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/code/settings/Style.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="272">
               <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -228,11 +152,13 @@
         <option value="$PROJECT_DIR$/src/main/code/UI/MainFrame.java" />
         <option value="$PROJECT_DIR$/src/main/code/settings/Style.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/Refresh.java" />
-        <option value="$PROJECT_DIR$/src/main/code/PersonalFinance.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/EnableEditDelete.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/menu/jj.fxml" />
         <option value="$PROJECT_DIR$/src/main/code/UI/menu/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/jj.fxml" />
+        <option value="$PROJECT_DIR$/src/main/PersonalFinance.fxml" />
+        <option value="$PROJECT_DIR$/src/main/code/PersonalFinance.java" />
+        <option value="$PROJECT_DIR$/src/main/code/PersonalFinance.fxml" />
       </list>
     </option>
   </component>
@@ -248,6 +174,46 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="saves" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="target" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
       <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
@@ -316,62 +282,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="saves" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -381,7 +291,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576480509239" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1576499770602" />
     <property name="last_opened_file_path" value="C:/ini4j-0.5.4.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -392,17 +302,17 @@
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PersonalFinance\src\main\code" />
+      <recent name="C:\Users\PersonalFinance\src\main" />
+      <recent name="C:\Users\PersonalFinance\src\main\code\UI" />
+      <recent name="C:\Users\PersonalFinance" />
+      <recent name="C:\Users\PersonalFinance\src" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\PersonalFinance\src\main\code\UI" />
       <recent name="C:\Users\PersonalFinance\src\main\code\settings" />
       <recent name="C:\Users\Senya\IdeaProjects\PersonalFinance\src\fonts" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\PersonalFinance\src\main\code\UI" />
-      <recent name="C:\Users\PersonalFinance" />
-      <recent name="C:\Users\PersonalFinance\src" />
-      <recent name="C:\Users\PersonalFinance\src\main\code\settings" />
-      <recent name="C:\Users\PersonalFinance\src\main\java" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -484,18 +394,18 @@
       <workItem from="1576125042081" duration="3777000" />
       <workItem from="1576138390657" duration="535000" />
       <workItem from="1576225818637" duration="6462000" />
-      <workItem from="1576473204162" duration="6841000" />
+      <workItem from="1576473204162" duration="7114000" />
+      <workItem from="1576497970834" duration="1762000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64413000" />
+    <option name="totallyTimeSpent" value="66448000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19616205" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19829424" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -516,7 +426,6 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" weight="0.32900432" />
       <window_info anchor="bottom" id="Messages" order="12" weight="0.32600734" />
       <window_info anchor="bottom" id="Duplicate detector" order="13" weight="0.32900432" />
-      <window_info anchor="right" id="Preview" weight="0.32995737" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -526,6 +435,7 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Database" order="8" />
+      <window_info anchor="right" id="Preview" order="9" weight="0.32995737" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -745,6 +655,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/com/sun/glass/ui/win/WinApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="129">
+          <caret line="172" column="9" lean-forward="true" selection-start-line="172" selection-start-column="9" selection-end-line="172" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/UI/menu/MainMenu.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/code/UI/Refresh.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Style.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/code/mainClasses/Common.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -772,47 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/javafx-src.zip!/com/sun/glass/ui/win/WinApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="172" column="9" lean-forward="true" selection-start-line="172" selection-start-column="9" selection-end-line="172" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Style.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/UI/Refresh.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Text.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="34" column="18" selection-start-line="34" selection-start-column="18" selection-end-line="34" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/UI/menu/MainMenu.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="41" selection-start-line="5" selection-start-column="41" selection-end-line="5" selection-end-column="41" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/code/UI/EnableEditDelete.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -820,24 +721,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/UI/jj.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="21" lean-forward="true" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/code/PersonalFinance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="142" selection-start-line="142" selection-end-line="142" />
+        <state relative-caret-position="349">
+          <caret line="120" column="28" selection-start-line="120" selection-start-column="28" selection-end-line="120" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#testModel#0;class#PersonalFinance#0" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/PersonalFinance.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="31" lean-forward="true" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">

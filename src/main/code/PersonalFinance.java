@@ -1,10 +1,8 @@
-import UI.Refresh;
 import financeException.ModelException;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
-import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import mainClasses.*;
 import saveLoad.SaveData;
@@ -12,12 +10,11 @@ import settings.Settings;
 import settings.Text;
 
 import java.awt.*;
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class PersonalFinance extends Application implements Refresh {
+public class PersonalFinance extends Application {
 
     private Stage window;
     private Scene scene1;
@@ -120,26 +117,29 @@ public class PersonalFinance extends Application implements Refresh {
     }
 
     @Override
-    public void start(Stage primaryStage) {
-        window = primaryStage;
+    public void start(Stage primaryStage) throws IOException {
+        window=primaryStage;
+        Parent root = FXMLLoader.load(getClass().getResource("PersonalFinance.fxml"));
+        Scene scene = new Scene(root);
+        window.setScene(scene);
         window.setTitle(Text.get("PROGRAM_NAME"));
         window.setResizable(false);
-        Image iconMain = new Image(new File("images/main.png").toURI().toString());
-        window.getIcons().add(iconMain);
-        HBox hBox = new HBox();
-        BorderPane borderPane = new BorderPane();//Контейнер javafx.scene.layout.BorderPane позволяет
-        // прижать вложенные элементы управления
-        // к одной из сторон контейнера: по верхнему, нижнему,
-        // левому или правому краю или расположить по центру.
-
-        scene1 = new Scene(hBox, 600, 500);
-
-        window.setScene(scene1);
         window.show();
+//        window = primaryStage;
+//        window.setTitle(Text.get("PROGRAM_NAME"));
+//        window.setResizable(false);
+//        Image iconMain = new Image(new File("images/main.png").toURI().toString());
+//        window.getIcons().add(iconMain);
+//        HBox hBox = new HBox();
+//        BorderPane borderPane = new BorderPane();//Контейнер javafx.scene.layout.BorderPane позволяет
+//        // прижать вложенные элементы управления
+//        // к одной из сторон контейнера: по верхнему, нижнему,
+//        // левому или правому краю или расположить по центру.
+//
+//        scene1 = new Scene(hBox, 600, 500);
+//
+//        window.setScene(scene1);
+//        window.show();
     }
 
-    @Override
-    public void refresh() {
-
-    }
-}
+   }
