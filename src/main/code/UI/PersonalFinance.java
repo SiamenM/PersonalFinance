@@ -1,25 +1,25 @@
+package UI;
+
 import financeException.ModelException;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import mainClasses.*;
 import saveLoad.SaveData;
 import settings.Settings;
 import settings.Text;
 
-import java.awt.*;
+import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class PersonalFinance extends Application {
 
-    private Stage window;
-    private Scene scene1;
-
-    public static void main(String[] args) throws Exception {
+      public static void main(String[] args) throws Exception {
         initialization();
         launch();
         //testModel();
@@ -108,28 +108,28 @@ public class PersonalFinance extends Application {
     private static void initialization() {
         Settings.init();
         Text.init();
-        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-        try {
-            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, Settings.FONT_KORNILOW));
-        } catch (FontFormatException | IOException e) {
-            e.printStackTrace();
-        }
+//        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+//        try {
+//            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, Settings.FONT_KORNILOW));
+//        } catch (FontFormatException | IOException e) {
+//            e.printStackTrace();
+//        }
     }
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        window=primaryStage;
-        Parent root = FXMLLoader.load(getClass().getResource("PersonalFinance.fxml"));
-        Scene scene = new Scene(root);
-        window.setScene(scene);
-        window.setTitle(Text.get("PROGRAM_NAME"));
-        window.setResizable(false);
-        window.show();
+        Parent root = FXMLLoader.load(getClass().getResource("/UI/PersonalFinance.fxml"));
+        primaryStage.setScene(new Scene(root));
+        primaryStage.setTitle(Text.get("PROGRAM_NAME"));
+        primaryStage.setResizable(false);
+        Image iconMain = new Image(new File("images/main.png").toURI().toString());
+        primaryStage.getIcons().add(iconMain);
+        primaryStage.show();
 //        window = primaryStage;
 //        window.setTitle(Text.get("PROGRAM_NAME"));
 //        window.setResizable(false);
-//        Image iconMain = new Image(new File("images/main.png").toURI().toString());
-//        window.getIcons().add(iconMain);
+//
+//
 //        HBox hBox = new HBox();
 //        BorderPane borderPane = new BorderPane();//Контейнер javafx.scene.layout.BorderPane позволяет
 //        // прижать вложенные элементы управления
@@ -141,5 +141,4 @@ public class PersonalFinance extends Application {
 //        window.setScene(scene1);
 //        window.show();
     }
-
-   }
+}
