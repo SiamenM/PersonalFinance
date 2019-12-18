@@ -14,7 +14,7 @@ import java.io.IOException;
 
 public class Controller {
 
-    public void pressExit(ActionEvent exit){
+    public void pressExit(ActionEvent exit) {
         Platform.exit();
     }
 
@@ -28,6 +28,18 @@ public class Controller {
         aboutStage.getIcons().add(iconMain);
         aboutStage.show();
     }
+
+    public void pressAddAccount(ActionEvent addAccount) throws IOException {
+        Parent addWindow = FXMLLoader.load(getClass().getResource("/UI/AddAccountWindow.fxml"));
+        Stage addStage = new Stage();
+        addStage.setScene(new Scene(addWindow));
+        addStage.setTitle(Text.get("MENU_EDIT_ADD"));
+        addStage.setResizable(false);
+        Image iconMain = new Image(new File("images/add.png").toURI().toString());
+        addStage.getIcons().add(iconMain);
+        addStage.show();
+    }
+
     public void press(ActionEvent event) {
 
     }
