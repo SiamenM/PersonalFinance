@@ -2,9 +2,14 @@ package UI;
 
 import financeException.ModelException;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import mainClasses.*;
@@ -18,7 +23,8 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class PersonalFinance extends Application {
-
+    public Button btn_msg;
+    public MenuItem menu_close;
       public static void main(String[] args) throws Exception {
         initialization();
         launch();
@@ -122,9 +128,14 @@ public class PersonalFinance extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.setTitle(Text.get("PROGRAM_NAME"));
         primaryStage.setResizable(false);
+
+//        menu_close=FXMLLoader.load(getClass().getResource("menu_close"));
+//        menu_close.setText("PFrhsnj");
         Image iconMain = new Image(new File("images/main.png").toURI().toString());
         primaryStage.getIcons().add(iconMain);
         primaryStage.show();
+
+
 //        window = primaryStage;
 //        window.setTitle(Text.get("PROGRAM_NAME"));
 //        window.setResizable(false);
@@ -140,5 +151,19 @@ public class PersonalFinance extends Application {
 //
 //        window.setScene(scene1);
 //        window.show();
+    }
+
+    public void pressExit(Event exit) {
+        Platform.exit();
+    }
+    public void pressAbout(Event about) throws IOException {
+        Parent aboutRoot = FXMLLoader.load(getClass().getResource("/UI/About.fxml"));
+        Stage aboutStage = new Stage();
+        aboutStage.setScene(new Scene(aboutRoot));
+        aboutStage.setTitle(Text.get("MENU_HELP_ABOUT"));
+        aboutStage.setResizable(false);
+        Image iconMain = new Image(new File("images/about.png").toURI().toString());
+        aboutStage.getIcons().add(iconMain);
+        aboutStage.show();
     }
 }
