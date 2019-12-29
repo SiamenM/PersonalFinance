@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e672c6a-f0bb-402d-ae50-4a882801f059" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/ini4j_0_5_4.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/ini4j_0_5_4.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/code/UI/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/UI/Controller.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/code/UI/PersonalFinance.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/UI/PersonalFinance.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/code/UI/PersonalFinance.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/UI/PersonalFinance.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/code/settings/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/settings/Text.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/settings/Text.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/settings/Text.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,26 +20,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/code/UI/PersonalFinance.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="274">
-              <caret line="131" column="10" selection-start-line="131" selection-start-column="10" selection-end-line="132" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#5754#5755#0" expanded="true" />
-                <element signature="e#5785#5786#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/code/UI/About.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="376">
+              <caret line="163" column="84" lean-forward="true" selection-start-line="163" selection-start-column="8" selection-end-line="163" selection-end-column="84" />
             </state>
           </provider>
         </entry>
@@ -44,49 +32,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/code/UI/Controller.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="177">
-              <caret line="23" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="122">
+              <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#2582#2583#0" expanded="true" />
+                <element signature="e#2612#2613#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/code/UI/AddAccountWindow.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="26" selection-start-line="26" selection-end-line="26" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/code/UI/PersonalFinance.fxml">
-          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="72" column="134" selection-start-line="72" selection-start-column="134" selection-end-line="72" selection-end-column="134" />
+            <state relative-caret-position="-615">
+              <caret line="84" column="44" lean-forward="true" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Thread.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="747" selection-start-line="747" selection-end-line="747" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/code/settings/Text.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1275">
-              <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="31" />
+            <state relative-caret-position="342">
+              <caret line="92" column="6" lean-forward="true" selection-start-line="92" selection-start-column="6" selection-end-line="100" selection-end-column="50" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/code/settings/Settings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="349">
+              <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -182,16 +165,17 @@
         <option value="$PROJECT_DIR$/src/main/code/UI/menu/MainMenu.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/jj.fxml" />
         <option value="$PROJECT_DIR$/src/main/PersonalFinance.fxml" />
-        <option value="$PROJECT_DIR$/src/main/code/settings/Text.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/Conroller.java" />
         <option value="$PROJECT_DIR$/src/main/code/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/code/PersonalFinance.fxml" />
         <option value="$PROJECT_DIR$/src/main/code/PersonalFinance.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/About.fxml" />
         <option value="$PROJECT_DIR$/src/main/code/UI/AddWindow.fxml" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/code/UI/PersonalFinance.java" />
+        <option value="$PROJECT_DIR$/src/main/code/settings/Text.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/PersonalFinance.fxml" />
-        <option value="$PROJECT_DIR$/src/main/code/UI/PersonalFinance.java" />
       </list>
     </option>
   </component>
@@ -238,13 +222,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
+              <item name="settings" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
               <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="saves" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="UI" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
@@ -332,29 +318,29 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577354566461" />
-    <property name="last_opened_file_path" value="C:/ini4j-0.5.4.jar!/" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1577576616938" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/ini4j-0.5.4.jar!/" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PersonalFinance\src\main\code\UI" />
+      <recent name="C:\Users\PersonalFinance\src\main\code\settings" />
+      <recent name="C:\Users\Senya\IdeaProjects\PersonalFinance\src\fonts" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PersonalFinance\src\main\code\UI" />
       <recent name="C:\Users\PersonalFinance\src\main\code" />
       <recent name="C:\Users\PersonalFinance\src\main" />
       <recent name="C:\Users\PersonalFinance" />
       <recent name="C:\Users\PersonalFinance\src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\PersonalFinance\src\main\code\UI" />
-      <recent name="C:\Users\PersonalFinance\src\main\code\settings" />
-      <recent name="C:\Users\Senya\IdeaProjects\PersonalFinance\src\fonts" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -444,16 +430,18 @@
       <workItem from="1576647437587" duration="3066000" />
       <workItem from="1577098104031" duration="506000" />
       <workItem from="1577343004066" duration="8238000" />
+      <workItem from="1577545530447" duration="10629000" />
+      <workItem from="1577576921093" duration="5884000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86205000" />
+    <option name="totallyTimeSpent" value="102718000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19349681" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.19969743" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -462,7 +450,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.33333334" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.33224222" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -472,7 +460,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" weight="0.32900432" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.50053304" side_tool="true" weight="0.33333334" />
-      <window_info anchor="bottom" id="Messages" order="12" weight="0.32575756" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.32569557" />
       <window_info anchor="bottom" id="Duplicate detector" order="13" weight="0.32900432" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -491,13 +479,6 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/java/Exception/ModelException.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="51" selection-start-line="13" selection-start-column="51" selection-end-line="13" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Collections.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84082">
@@ -673,16 +654,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/code/saveLoad/RateCurrency.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="663">
@@ -711,22 +682,35 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/code/UI/MainFrame.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Text.java">
+    <entry file="file://$PROJECT_DIR$/src/main/code/UI/About.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1275">
-          <caret line="75" column="18" selection-start-line="75" selection-start-column="18" selection-end-line="75" selection-end-column="31" />
+        <state relative-caret-position="289">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Thread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11764">
+          <caret line="747" selection-start-line="747" selection-end-line="747" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Style.java">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="170">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/UI/AddAccountWindow.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/code/mainClasses/Article.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -748,58 +732,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/UI/About.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
+    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Settings.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/UI/AddAccountWindow.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/UI/Controller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="177">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="349">
+          <caret line="30" column="23" selection-start-line="30" selection-start-column="23" selection-end-line="30" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/lang/Thread.java">
+    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Style.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="747" selection-start-line="747" selection-end-line="747" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/UI/PersonalFinance.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="72" column="134" selection-start-line="72" selection-start-column="134" selection-end-line="72" selection-end-column="134" />
+        <state relative-caret-position="272">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/code/UI/PersonalFinance.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="131" column="10" selection-start-line="131" selection-start-column="10" selection-end-line="132" selection-end-column="19" />
+        <state relative-caret-position="376">
+          <caret line="163" column="84" lean-forward="true" selection-start-line="163" selection-start-column="8" selection-end-line="163" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="92" column="6" lean-forward="true" selection-start-line="92" selection-start-column="6" selection-end-line="100" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/UI/Controller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="102" column="1" selection-start-line="102" selection-start-column="1" selection-end-line="102" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5754#5755#0" expanded="true" />
-            <element signature="e#5785#5786#0" expanded="true" />
+            <element signature="e#2582#2583#0" expanded="true" />
+            <element signature="e#2612#2613#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/UI/PersonalFinance.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-615">
+          <caret line="84" column="44" lean-forward="true" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
   </component>
   <component name="masterDetails">

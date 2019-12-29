@@ -63,8 +63,9 @@ final public class Text {
         data.put("NO", "НЕТ");
 
         data.put("MENU_FILE", "Файл");
-        data.put("MENU_EDIT", "Справка");
+        data.put("MENU_EDIT", "Правка");
         data.put("MENU_VIEW", "Вид");
+        data.put("MENU_PROPERTIES", "Настройки");
         data.put("MENU_HELP", "Помощь");
 
         data.put("MENU_FILE_NEW", "Новый");
@@ -77,15 +78,28 @@ final public class Text {
         data.put("MENU_EDIT_EDIT", "Изменить");
         data.put("MENU_EDIT_DELETE", "Удалить");
 
-        data.put("MENU_VIEW_OVERVIEW", "Обзор");
-        data.put("MENU_VIEW_ACCOUNTS", "Счета");
-        data.put("MENU_VIEW_ARTICLES", "Статьи");
-        data.put("MENU_VIEW_TRANSACTIONS", "Транзакции");
-        data.put("MENU_VIEW_TRANSFERS", "Переводы");
-        data.put("MENU_VIEW_CURRENCIES", "Валюты");
-        data.put("MENU_VIEW_STATISTICS", "Статистика");
+        data.put("MENU_PROPERTIES_LANGUAGE", "Статистика");
 
         data.put("MENU_HELP_ABOUT", "О программе");
+
+        data.put("MENU_VIEW_OVERVIEW", "Обзор");
+        data.put("LABEL_LAST_TRANSACTIONS","Последние транзакции");
+        data.put("MENU_VIEW_ACCOUNTS", "Счета");
+        data.put("LABEL_ACCOUNTS", "Счета");
+        data.put("BUTTON_ADD","Добавить");
+        data.put("BUTTON_EDIT","Изменить");
+        data.put("BUTTON_DELETE","Удалить");
+        data.put("MENU_VIEW_ARTICLES", "Статьи");
+        data.put("LABEL_ARTICLES","Статьи");
+        data.put("MENU_VIEW_TRANSACTIONS", "Транзакции");
+        data.put("LABEL_TRANSACTIONS","Транзакции");
+        data.put("MENU_VIEW_TRANSFERS", "Переводы");
+        data.put("LABEL_TRANSFERS","Переводы");
+        data.put("MENU_VIEW_CURRENCIES", "Валюты");
+        data.put("LABEL_CURRENCIES","Валюты");
+        data.put("MENU_VIEW_STATISTICS", "Статистика");
+        data.put("LABEL_STATISTICS","Статистика");
+
 
     }
 

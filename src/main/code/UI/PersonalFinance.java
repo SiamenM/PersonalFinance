@@ -23,15 +23,43 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class PersonalFinance extends Application {
-    public Button btn_msg;
-    public MenuItem menu_close;
-      public static void main(String[] args) throws Exception {
+
+
+    public static void main(String[] args) throws Exception {
         initialization();
         launch();
         //testModel();
         //  SaveData saveData = SaveData.getInstance();
         //saveData.updateCurrencies();
         //System.out.println(saveData);
+    }
+
+    @Override
+    public void start(Stage primaryStage) throws IOException {
+        Parent root = FXMLLoader.load(getClass().getResource("/UI/PersonalFinance.fxml"));
+        primaryStage.setScene(new Scene(root));
+        primaryStage.setTitle(Text.get("PROGRAM_NAME"));
+        primaryStage.setResizable(false);
+        Image iconMain = new Image(new File("images/main.png").toURI().toString());
+        primaryStage.getIcons().add(iconMain);
+        primaryStage.show();
+
+
+//        window = primaryStage;
+//        window.setTitle(Text.get("PROGRAM_NAME"));
+//        window.setResizable(false);
+//
+//
+//        HBox hBox = new HBox();
+//        BorderPane borderPane = new BorderPane();//Контейнер javafx.scene.layout.BorderPane позволяет
+//        // прижать вложенные элементы управления
+//        // к одной из сторон контейнера: по верхнему, нижнему,
+//        // левому или правому краю или расположить по центру.
+//
+//        scene1 = new Scene(hBox, 600, 500);
+//
+//        window.setScene(scene1);
+//        window.show();
     }
 
     private static void testModel() throws ModelException {
@@ -122,36 +150,7 @@ public class PersonalFinance extends Application {
 //        }
     }
 
-    @Override
-    public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/UI/PersonalFinance.fxml"));
-        primaryStage.setScene(new Scene(root));
-        primaryStage.setTitle(Text.get("PROGRAM_NAME"));
-        primaryStage.setResizable(false);
 
-//        menu_close=FXMLLoader.load(getClass().getResource("menu_close"));
-//        menu_close.setText("PFrhsnj");
-        Image iconMain = new Image(new File("images/main.png").toURI().toString());
-        primaryStage.getIcons().add(iconMain);
-        primaryStage.show();
-
-
-//        window = primaryStage;
-//        window.setTitle(Text.get("PROGRAM_NAME"));
-//        window.setResizable(false);
-//
-//
-//        HBox hBox = new HBox();
-//        BorderPane borderPane = new BorderPane();//Контейнер javafx.scene.layout.BorderPane позволяет
-//        // прижать вложенные элементы управления
-//        // к одной из сторон контейнера: по верхнему, нижнему,
-//        // левому или правому краю или расположить по центру.
-//
-//        scene1 = new Scene(hBox, 600, 500);
-//
-//        window.setScene(scene1);
-//        window.show();
-    }
 
     public void pressExit(Event exit) {
         Platform.exit();

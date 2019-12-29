@@ -10,46 +10,80 @@
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane fx:id="" maxHeight="500.0" maxWidth="900.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.PersonalFinance">
+<AnchorPane fx:id="" maxHeight="500.0" maxWidth="900.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller">
    <children>
       <TabPane cache="true" layoutX="199.0" layoutY="86.0" prefHeight="329.0" prefWidth="676.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="80.0" tabMaxWidth="80.0" tabMinHeight="80.0" tabMinWidth="80.0">
         <tabs>
-          <Tab text="Обзор">
+          <Tab fx:id="menu_view_overview" text="Overview">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label layoutX="156.0" layoutY="14.0" text="Label" />
+                        <Label fx:id="label_last_transactions" layoutX="338.0" layoutY="23.0" text="Last transactions" />
                      </children>
                   </AnchorPane>
             </content>
           </Tab>
-          <Tab text="Счета">
+          <Tab fx:id="menu_view_accounts" text="Accounts">
                <content>
-                  <Button fx:id="btn_msg" mnemonicParsing="false" prefHeight="24.0" prefWidth="52.0" text="Button" />
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="button_edit" layoutX="293.0" layoutY="48.0" minWidth="90.0" mnemonicParsing="false" text="Edit" />
+                        <Button fx:id="button_delete" layoutX="400.0" layoutY="48.0" minWidth="90.0" mnemonicParsing="false" text="Delete" />
+                        <Button fx:id="button_add" layoutX="185.0" layoutY="48.0" minWidth="90.0" mnemonicParsing="false" text="Add" />
+                        <Label fx:id="label_accounts" layoutX="338.0" layoutY="23.0" text="Accounts" />
+                     </children>
+                  </AnchorPane>
                </content></Tab>
-            <Tab text="Статьи">
+            <Tab fx:id="menu_view_articles" text="Articles">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="label_articles" layoutX="338.0" layoutY="23.0" text="Articles" />
+                        <Button layoutX="172.0" layoutY="47.0" minWidth="100.0" mnemonicParsing="false" text="Add" />
+                        <Button layoutX="288.0" layoutY="47.0" minWidth="100.0" mnemonicParsing="false" text="Edit" />
+                        <Button layoutX="404.0" layoutY="47.0" minWidth="100.0" mnemonicParsing="false" text="Delete" />
+                     </children></AnchorPane>
               </content>
             </Tab>
-            <Tab text="Транзакции">
+            <Tab fx:id="menu_view_transactions" text="Transactions">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="153.0" layoutY="68.0" minWidth="100.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="278.0" layoutY="68.0" minWidth="100.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="395.0" layoutY="68.0" minWidth="100.0" mnemonicParsing="false" text="Button" />
+                        <Label fx:id="label_transactions" layoutX="338.0" layoutY="23.0" text="Transactions" />
+                     </children></AnchorPane>
               </content>
             </Tab>
-            <Tab text="Переводы">
+            <Tab fx:id="menu_view_transfer" text="Transfers">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label fx:id="label_transfers" layoutX="338.0" layoutY="23.0" text="Transfers" />
+                        <Button layoutX="195.0" layoutY="55.0" minWidth="100.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="287.0" layoutY="67.0" minWidth="100.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="385.0" layoutY="55.0" minWidth="100.0" mnemonicParsing="false" text="Button" />
+                     </children></AnchorPane>
               </content>
             </Tab>
-            <Tab text="Валюты">
+            <Tab fx:id="menu_view_currencies" text="Currencies">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button layoutX="286.0" layoutY="46.0" minWidth="100.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="354.0" layoutY="46.0" minWidth="100.0" mnemonicParsing="false" text="Button" />
+                        <Button layoutX="440.0" layoutY="59.0" minWidth="100.0" mnemonicParsing="false" text="Button" />
+                        <Label fx:id="label_currencies" layoutX="338.0" layoutY="23.0" text="Currencies" />
+                     </children></AnchorPane>
               </content>
             </Tab>
-            <Tab text="Статистика">
+            <Tab fx:id="menu_view_statistics" text="Statistics">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="598.0" />
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="598.0">
+                     <children>
+                        <Label fx:id="label_statistics" layoutX="338.0" layoutY="23.0" text="Statistics" />
+                     </children></AnchorPane>
               </content>
             </Tab>
         </tabs>
@@ -64,33 +98,39 @@
       <Label layoutX="14.0" layoutY="258.0" text="Label" />
       <MenuBar layoutX="2.0" layoutY="2.0" prefHeight="25.0" prefWidth="900.0">
         <menus>
-          <Menu mnemonicParsing="false" text="File">
+          <Menu fx:id="menu_file" mnemonicParsing="false" text="File">
             <items>
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-                  <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                  <MenuItem fx:id="menu_new" mnemonicParsing="false" text="New" />
+                  <MenuItem fx:id="menu_open" mnemonicParsing="false" text="Open" />
+                  <MenuItem fx:id="menu_save" mnemonicParsing="false" text="Save" />
+                  <MenuItem fx:id="menu_refresh" mnemonicParsing="false" text="Refresh" />
               <MenuItem fx:id="menu_close" mnemonicParsing="false" onAction="#pressExit" onMenuValidation="#pressExit" text="Close" />
             </items>
           </Menu>
-          <Menu mnemonicParsing="false" text="Edit">
+          <Menu fx:id="menu_edit" mnemonicParsing="false" text="Edit">
             <items>
-                  <MenuItem mnemonicParsing="false" text="Add" />
-                  <MenuItem mnemonicParsing="false" text="Change" />
-              <MenuItem mnemonicParsing="false" text="Delete" />
+                  <MenuItem fx:id="menu_add" mnemonicParsing="false" text="Add" />
+                  <MenuItem fx:id="menu_change" mnemonicParsing="false" text="Change" />
+              <MenuItem fx:id="menu_delete" mnemonicParsing="false" text="Delete" />
             </items>
           </Menu>
-            <Menu mnemonicParsing="false" text="View">
+            <Menu fx:id="menu_view" mnemonicParsing="false" text="View">
               <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem fx:id="menu_overview" mnemonicParsing="false" text="Overview" />
+                  <MenuItem fx:id="menu_accounts" mnemonicParsing="false" text="Accounts" />
+                  <MenuItem fx:id="menu_articles" mnemonicParsing="false" text="Articles" />
+                  <MenuItem fx:id="menu_transaction" mnemonicParsing="false" text="Transactions" />
+                  <MenuItem fx:id="menu_transfer" mnemonicParsing="false" text="Transfers" />
+                  <MenuItem fx:id="menu_currencies" mnemonicParsing="false" text="Currencies" />
+                  <MenuItem fx:id="menu_statistics" mnemonicParsing="false" text="Statistics" />
               </items>
             </Menu>
-            <Menu mnemonicParsing="false" text="Properties">
+            <Menu fx:id="menu_properties" mnemonicParsing="false" text="Properties">
               <items>
-                <MenuItem mnemonicParsing="false" text="Action 1" />
+                <MenuItem fx:id="menu_language" mnemonicParsing="false" text="Action 1" />
               </items>
             </Menu>
-          <Menu mnemonicParsing="false" text="Help">
+          <Menu fx:id="menu_help" mnemonicParsing="false" text="Help">
             <items>
               <MenuItem fx:id="about_program" mnemonicParsing="false" onAction="#pressAbout" text="About Program" />
             </items>

@@ -1,40 +1,110 @@
 package UI;
 
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuBar;
-import javafx.scene.control.MenuItem;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.stage.Stage;
 import settings.Text;
 
 import java.io.File;
-import java.io.IOException;
 
 public class Controller {
 
 
+    @FXML
+    public MenuItem menu_new;
+    public MenuItem menu_open;
+    public MenuItem menu_save;
+    public MenuItem menu_refresh;
+    public MenuItem menu_close;
+    public MenuItem menu_add;
+    public MenuItem menu_change;
+    public MenuItem menu_overview;
+    public MenuItem menu_accounts;
+    public MenuItem menu_articles;
+    public MenuItem menu_transaction;
+    public MenuItem menu_transfer;
+    public MenuItem menu_currencies;
+    public MenuItem menu_statistics;
+    public MenuItem menu_language;
+    public MenuItem about_program;
+    public MenuItem menu_delete;
+    public Menu menu_file;
+    public Menu menu_edit;
+    public Menu menu_view;
+    public Menu menu_properties;
+    public Menu menu_help;
+    public Tab menu_view_overview;
+    public Tab menu_view_accounts;
+    public Tab menu_view_articles;
+    public Tab menu_view_transactions;
+    public Tab menu_view_transfer;
+    public Tab menu_view_currencies;
+    public Tab menu_view_statistics;
+    public Label label_last_transactions;
+    public Label label_accounts;
+    public Label label_articles;
+    public Label label_transactions;
+    public Label label_transfers;
+    public Label label_currencies;
+    public Label label_statistics;
+    public Button button_add;
+    public Button button_edit;
+    public Button button_delete;
 
 
 
+    public void initialize() {
+        menu_file.setText(Text.get("MENU_FILE"));
+        menu_edit.setText(Text.get("MENU_EDIT"));
+        menu_view.setText(Text.get("MENU_VIEW"));
+        menu_properties.setText(Text.get("MENU_PROPERTIES"));
+        menu_help.setText(Text.get("MENU_HELP"));
 
-//    public void pressAddAccount(ActionEvent addAccount) throws IOException {
-//        Parent addWindow = FXMLLoader.load(getClass().getResource("/UI/AddAccountWindow.fxml"));
-//        Stage addStage = new Stage();
-//        addStage.setScene(new Scene(addWindow));
-//        addStage.setTitle(Text.get("MENU_EDIT_ADD"));
-//        addStage.setResizable(false);
-//        Image iconMain = new Image(new File("images/add.png").toURI().toString());
-//        addStage.getIcons().add(iconMain);
-//        addStage.show();
-//    }
+        menu_new.setText(Text.get("MENU_FILE_NEW"));
+        menu_open.setText(Text.get("MENU_FILE_OPEN"));
+        menu_save.setText(Text.get("MENU_FILE_SAVE"));
+        menu_refresh.setText(Text.get("MENU_FILE_UPDATE_CURRENCIES"));
+        menu_close.setText(Text.get("MENU_FILE_EXIT"));
 
-//    public void press(ActionEvent event) {
-//
-//    }
+        menu_add.setText(Text.get("MENU_EDIT_ADD"));
+        menu_change.setText(Text.get("MENU_EDIT_EDIT"));
+        menu_delete.setText(Text.get("MENU_EDIT_DELETE"));
+        menu_overview.setText(Text.get("MENU_VIEW_OVERVIEW"));
+        label_last_transactions.setText(Text.get("LABEL_LAST_TRANSACTIONS"));
+        menu_accounts.setText(Text.get("MENU_VIEW_ACCOUNTS"));
+        menu_articles.setText(Text.get("MENU_VIEW_ARTICLES"));
+        menu_transaction.setText(Text.get("MENU_VIEW_TRANSACTIONS"));
+        menu_transfer.setText(Text.get("MENU_VIEW_TRANSFERS"));
+        menu_currencies.setText(Text.get("MENU_VIEW_CURRENCIES"));
+        menu_statistics.setText(Text.get("MENU_VIEW_STATISTICS"));
+
+        menu_language.setText(Text.get("MENU_PROPERTIES_LANGUAGE"));
+
+        menu_view_overview.setText((Text.get("MENU_VIEW_OVERVIEW")));
+        Image menuOverview = new Image(new File("images/menu_view_overview.png").toURI().toString());
+
+        menu_view_accounts.setText((Text.get("MENU_VIEW_ACCOUNTS")));
+        label_accounts.setText((Text.get("LABEL_ACCOUNTS")));
+        button_add.setText(Text.get("BUTTON_ADD"));
+        button_edit.setText(Text.get("BUTTON_EDIT"));
+        button_delete.setText(Text.get("BUTTON_DELETE"));
+        menu_view_articles.setText(Text.get("MENU_VIEW_ARTICLES"));
+        label_articles.setText(Text.get("LABEL_ARTICLES"));
+        menu_view_transactions.setText((Text.get("MENU_VIEW_TRANSACTIONS")));
+        label_transactions.setText(Text.get("LABEL_TRANSACTIONS"));
+        menu_view_transfer.setText((Text.get("MENU_VIEW_TRANSFERS")));
+        label_transfers.setText(Text.get("LABEL_TRANSFERS"));
+        menu_view_currencies.setText((Text.get("MENU_VIEW_CURRENCIES")));
+        label_currencies.setText(Text.get("LABEL_CURRENCIES"));
+        menu_view_statistics.setText((Text.get("MENU_VIEW_STATISTICS")));
+        label_statistics.setText(Text.get("LABEL_STATISTICS"));
+    }
+
+    public void pressExit() {
+        System.exit(1);
+    }
+
+    public void pressAbout() {
+
+    }
 }
