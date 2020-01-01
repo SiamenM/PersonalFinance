@@ -40,7 +40,7 @@ public class PersonalFinance extends Application {
         primaryStage.setScene(new Scene(root));
         primaryStage.setTitle(Text.get("PROGRAM_NAME"));
         primaryStage.setResizable(false);
-        Image iconMain = new Image(new File("images/main.png").toURI().toString());
+        Image iconMain = new Image("images/main.png");
         primaryStage.getIcons().add(iconMain);
         primaryStage.show();
 

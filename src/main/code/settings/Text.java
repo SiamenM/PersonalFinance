@@ -99,6 +99,7 @@ final public class Text {
         data.put("LABEL_CURRENCIES","Валюты");
         data.put("MENU_VIEW_STATISTICS", "Статистика");
         data.put("LABEL_STATISTICS","Статистика");
+        data.put("INCOME_ON_ARTICLES","Доходы по статьям");
 
 
     }

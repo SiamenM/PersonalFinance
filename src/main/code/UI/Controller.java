@@ -3,6 +3,7 @@ package UI;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import settings.Text;
 
 import java.io.File;
@@ -26,7 +27,7 @@ public class Controller {
     public MenuItem menu_currencies;
     public MenuItem menu_statistics;
     public MenuItem menu_language;
-    public MenuItem about_program;
+    public MenuItem menu_about_program;
     public MenuItem menu_delete;
     public Menu menu_file;
     public Menu menu_edit;
@@ -47,10 +48,23 @@ public class Controller {
     public Label label_transfers;
     public Label label_currencies;
     public Label label_statistics;
-    public Button button_add;
-    public Button button_edit;
-    public Button button_delete;
-
+    public Button button_accounts_edit;
+    public Button button_accounts_delete;
+    public Button button_accounts_add;
+    public Button button_articles_add;
+    public Button button_articles_edit;
+    public Button button_articles_delete;
+    public Button button_transactions_add;
+    public Button button_transactions_edit;
+    public Button button_transactions_delete;
+    public Button button_transfers_add;
+    public Button button_transfers_edit;
+    public Button button_transfers_delete;
+    public Button button_currencies_add;
+    public Button button_currencies_edit;
+    public Button button_currencies_delete;
+    public Button button_statistics_income_on_articles;
+    public ImageView image_add;
 
 
     public void initialize() {
@@ -75,29 +89,46 @@ public class Controller {
         menu_articles.setText(Text.get("MENU_VIEW_ARTICLES"));
         menu_transaction.setText(Text.get("MENU_VIEW_TRANSACTIONS"));
         menu_transfer.setText(Text.get("MENU_VIEW_TRANSFERS"));
+
         menu_currencies.setText(Text.get("MENU_VIEW_CURRENCIES"));
         menu_statistics.setText(Text.get("MENU_VIEW_STATISTICS"));
 
         menu_language.setText(Text.get("MENU_PROPERTIES_LANGUAGE"));
-
+        menu_about_program.setText(Text.get("MENU_HELP_ABOUT"));
         menu_view_overview.setText((Text.get("MENU_VIEW_OVERVIEW")));
-        Image menuOverview = new Image(new File("images/menu_view_overview.png").toURI().toString());
 
         menu_view_accounts.setText((Text.get("MENU_VIEW_ACCOUNTS")));
         label_accounts.setText((Text.get("LABEL_ACCOUNTS")));
-        button_add.setText(Text.get("BUTTON_ADD"));
-        button_edit.setText(Text.get("BUTTON_EDIT"));
-        button_delete.setText(Text.get("BUTTON_DELETE"));
+        button_accounts_add.setText(Text.get("BUTTON_ADD"));
+        button_accounts_edit.setText(Text.get("BUTTON_EDIT"));
+        button_accounts_delete.setText(Text.get("BUTTON_DELETE"));
         menu_view_articles.setText(Text.get("MENU_VIEW_ARTICLES"));
         label_articles.setText(Text.get("LABEL_ARTICLES"));
+        button_articles_add.setText(Text.get("MENU_EDIT_ADD"));
+        button_articles_edit.setText(Text.get("MENU_EDIT_EDIT"));
+        button_articles_delete.setText(Text.get("MENU_EDIT_DELETE"));
         menu_view_transactions.setText((Text.get("MENU_VIEW_TRANSACTIONS")));
         label_transactions.setText(Text.get("LABEL_TRANSACTIONS"));
+        button_transactions_add.setText(Text.get("MENU_EDIT_ADD"));
+        button_transactions_edit.setText(Text.get("MENU_EDIT_EDIT"));
+        button_transactions_delete.setText(Text.get("MENU_EDIT_DELETE"));
         menu_view_transfer.setText((Text.get("MENU_VIEW_TRANSFERS")));
         label_transfers.setText(Text.get("LABEL_TRANSFERS"));
+        button_transfers_add.setText(Text.get("MENU_EDIT_ADD"));
+        button_transfers_edit.setText(Text.get("MENU_EDIT_EDIT"));
+        button_transfers_delete.setText(Text.get("MENU_EDIT_DELETE"));
         menu_view_currencies.setText((Text.get("MENU_VIEW_CURRENCIES")));
         label_currencies.setText(Text.get("LABEL_CURRENCIES"));
+        button_currencies_add.setText(Text.get("MENU_EDIT_ADD"));
+        button_currencies_edit.setText(Text.get("MENU_EDIT_EDIT"));
+        button_currencies_delete.setText(Text.get("MENU_EDIT_DELETE"));
+        Image image = new Image("images/delete.png");
+        image_add.setImage(image);
+
+
         menu_view_statistics.setText((Text.get("MENU_VIEW_STATISTICS")));
         label_statistics.setText(Text.get("LABEL_STATISTICS"));
+        button_statistics_income_on_articles.setText(Text.get("INCOME_ON_ARTICLES"));
     }
 
     public void pressExit() {
