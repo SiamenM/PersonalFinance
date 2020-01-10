@@ -11,16 +11,25 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
 
 <AnchorPane fx:id="" maxHeight="500.0" maxWidth="900.0" minHeight="500.0" minWidth="800.0" prefHeight="500.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller">
    <children>
-      <TabPane cache="true" layoutX="199.0" layoutY="86.0" prefHeight="329.0" prefWidth="676.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="80.0" tabMaxWidth="80.0" tabMinHeight="80.0" tabMinWidth="80.0">
+      <TabPane cache="true" layoutX="199.0" layoutY="86.0" prefHeight="329.0" prefWidth="676.0" rotateGraphic="true" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="80.0" tabMaxWidth="80.0" tabMinHeight="80.0" tabMinWidth="80.0">
         <tabs>
           <Tab fx:id="menu_view_overview" text="Overview">
             <content>
               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="label_last_transactions" layoutX="338.0" layoutY="23.0" text="Last transactions" />
+                        <Label fx:id="label_last_transactions" layoutX="250.0" text="Last transactions" AnchorPane.topAnchor="0.0">
+                           <graphic>
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/overview.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Label>
                      </children>
                   </AnchorPane>
             </content>
@@ -36,34 +45,45 @@
                <content>
                   <AnchorPane prefHeight="200.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="button_accounts_edit" layoutX="288.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Edit">
+                        <Label fx:id="label_accounts" layoutX="270.0" text="Accounts">
                            <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/edit.png" />
+                                    <Image url="@../images/accounts.png" />
                                  </image>
                               </ImageView>
-                           </graphic></Button>
-                        <Button fx:id="button_accounts_delete" layoutX="418.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Delete">
-                           <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/delete.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic></Button>
-                        <Button fx:id="button_accounts_add" layoutX="158.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Add" AnchorPane.leftAnchor="158.0">
-                           <graphic>
-                              <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/menu_edit_add.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic></Button>
-                        <Label fx:id="label_accounts" layoutX="338.0" layoutY="23.0" text="Accounts">
-                           <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true" />
-                           </graphic></Label>
+                           </graphic>
+                        </Label>
+                        <HBox fillHeight="false" focusTraversable="true" layoutX="168.0" layoutY="47.0" prefHeight="37.0" prefWidth="340.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="button_accounts_add" minWidth="100.0" mnemonicParsing="false" text="Add">
+                                 <graphic>
+                                    <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/menu_edit_add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="button_accounts_edit" minWidth="100.0" mnemonicParsing="false" text="Edit">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="button_accounts_delete" cache="true" minWidth="100.0" mnemonicParsing="false" text="Delete">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/delete.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children></HBox>
                      </children>
                   </AnchorPane>
                </content>
@@ -78,31 +98,46 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="label_articles" layoutX="338.0" layoutY="23.0" text="Articles" />
-                        <Button fx:id="button_articles_add" layoutX="158.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Add" textAlignment="CENTER" wrapText="true">
+                        <Label fx:id="label_articles" layoutX="270.0" text="Articles">
                            <graphic>
-                              <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/menu_edit_add.png" />
+                                    <Image url="@../images/articles.png" />
                                  </image>
                               </ImageView>
-                           </graphic></Button>
-                        <Button fx:id="button_articles_edit" layoutX="288.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Edit">
-                           <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/edit.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic></Button>
-                        <Button fx:id="button_articles_delete" layoutX="418.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Delete">
-                           <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/delete.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic></Button>
+                           </graphic>
+                        </Label>
+                        <HBox fillHeight="false" layoutX="88.0" layoutY="135.0" prefHeight="37.0" prefWidth="340.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="button_accounts_add" minWidth="100.0" mnemonicParsing="false" text="Add">
+                                 <graphic>
+                                    <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/menu_edit_add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="button_accounts_edit" minWidth="100.0" mnemonicParsing="false" text="Edit">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="button_accounts_delete" cache="true" minWidth="100.0" mnemonicParsing="false" text="Delete">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/delete.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children></AnchorPane>
               </content>
                <graphic>
@@ -117,31 +152,46 @@
               <content>
                 <AnchorPane prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="button_transactions_add" layoutX="158.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Add">
+                        <Label fx:id="label_transactions" layoutX="270.0" text="Transactions">
                            <graphic>
-                              <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/menu_edit_add.png" />
+                                    <Image url="@../images/transactions.png" />
                                  </image>
                               </ImageView>
-                           </graphic></Button>
-                        <Button fx:id="button_transactions_edit" layoutX="288.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Edit">
-                           <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/edit.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic></Button>
-                        <Button fx:id="button_transactions_delete" layoutX="418.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Delete">
-                           <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/delete.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic></Button>
-                        <Label fx:id="label_transactions" layoutX="338.0" layoutY="23.0" text="Transactions" />
+                           </graphic>
+                        </Label>
+                        <HBox fillHeight="false" layoutX="128.0" layoutY="140.0" prefHeight="37.0" prefWidth="340.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="button_accounts_add" minWidth="100.0" mnemonicParsing="false" text="Add">
+                                 <graphic>
+                                    <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/menu_edit_add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="button_accounts_edit" minWidth="100.0" mnemonicParsing="false" text="Edit">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="button_accounts_delete" cache="true" minWidth="100.0" mnemonicParsing="false" text="Delete">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/delete.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children></AnchorPane>
               </content>
                <graphic>
@@ -156,31 +206,46 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Label fx:id="label_transfers" layoutX="338.0" layoutY="23.0" text="Transfers" />
-                        <Button fx:id="button_transfers_add" layoutX="158.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Add">
+                        <Label fx:id="label_transfers" layoutX="280.0" text="Transfers">
                            <graphic>
-                              <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/menu_edit_add.png" />
+                                    <Image url="@../images/transfers.png" />
                                  </image>
                               </ImageView>
-                           </graphic></Button>
-                        <Button fx:id="button_transfers_edit" layoutX="288.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Edit">
-                           <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/edit.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic></Button>
-                        <Button fx:id="button_transfers_delete" layoutX="418.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Delete">
-                           <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/delete.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic></Button>
+                           </graphic>
+                        </Label>
+                        <HBox fillHeight="false" layoutX="148.0" layoutY="84.0" prefHeight="37.0" prefWidth="340.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="button_accounts_add" minWidth="100.0" mnemonicParsing="false" text="Add">
+                                 <graphic>
+                                    <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/menu_edit_add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="button_accounts_edit" minWidth="100.0" mnemonicParsing="false" text="Edit">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="button_accounts_delete" cache="true" minWidth="100.0" mnemonicParsing="false" text="Delete">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/delete.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children></AnchorPane>
               </content>
                <graphic>
@@ -195,31 +260,46 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
-                        <Button fx:id="button_currencies_add" layoutX="158.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Add">
+                        <Label fx:id="label_currencies" layoutX="275.0" text="Currencies">
                            <graphic>
-                              <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@../images/menu_edit_add.png" />
+                                    <Image url="@../images/currencies.png" />
                                  </image>
                               </ImageView>
-                           </graphic></Button>
-                        <Button fx:id="button_currencies_edit" layoutX="288.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Edit">
-                           <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/edit.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic></Button>
-                        <Button fx:id="button_currencies_delete" layoutX="418.0" layoutY="48.0" minWidth="100.0" mnemonicParsing="false" text="Delete">
-                           <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@../images/delete.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic></Button>
-                        <Label fx:id="label_currencies" layoutX="338.0" layoutY="23.0" text="Currencies" />
+                           </graphic>
+                        </Label>
+                        <HBox fillHeight="false" layoutX="155.0" layoutY="162.0" prefHeight="37.0" prefWidth="340.0" spacing="20.0">
+                           <children>
+                              <Button fx:id="button_accounts_add" minWidth="100.0" mnemonicParsing="false" text="Add">
+                                 <graphic>
+                                    <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/menu_edit_add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="button_accounts_edit" minWidth="100.0" mnemonicParsing="false" text="Edit">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/edit.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="button_accounts_delete" cache="true" minWidth="100.0" mnemonicParsing="false" text="Delete">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../images/delete.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
                      </children></AnchorPane>
               </content>
                <graphic>
@@ -234,15 +314,16 @@
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="598.0">
                      <children>
-                        <Label fx:id="label_statistics" layoutX="310.0" layoutY="23.0" text="Statistics">
+                        <Button fx:id="button_statistics_income_on_articles" layoutX="278.0" layoutY="78.0" minWidth="100.0" mnemonicParsing="false" text="Income on articles" />
+                        <Label fx:id="label_statistics" layoutX="280.0" text="Statistics">
                            <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@../images/statistics_panel.png" />
                                  </image>
                               </ImageView>
-                           </graphic></Label>
-                        <Button fx:id="button_statistics_income_on_articles" layoutX="278.0" layoutY="78.0" minWidth="100.0" mnemonicParsing="false" text="Income on articles" />
+                           </graphic>
+                        </Label>
                      </children></AnchorPane>
               </content>
                <graphic>
@@ -260,7 +341,14 @@
       </TabPane>
       <Label layoutX="14.0" layoutY="127.0" text="Label" />
       <Label layoutX="14.0" layoutY="153.0" text="Label" />
-      <Label layoutX="14.0" layoutY="207.0" text="Итоговый баланс" />
+      <Label layoutX="14.0" layoutY="207.0" text="Итоговый баланс">
+         <graphic>
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/balance.png" />
+               </image>
+            </ImageView>
+         </graphic></Label>
       <Label layoutX="14.0" layoutY="231.0" text="Label" />
       <Label layoutX="14.0" layoutY="258.0" text="Label" />
       <MenuBar layoutX="2.0" layoutY="2.0" prefHeight="25.0" prefWidth="900.0">
@@ -453,7 +541,7 @@
       </MenuBar>
       <Label layoutX="14.0" layoutY="76.0" text="Баланс по валютам">
          <graphic>
-            <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../images/balance_currencies.png" />
                </image>
