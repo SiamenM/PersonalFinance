@@ -1,13 +1,10 @@
 package UI;
 
 import javafx.fxml.FXML;
-import javafx.geometry.Insets;
 import javafx.scene.control.*;
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import settings.Text;
 
-import java.io.File;
+import java.util.Date;
 
 public class Controller {
 
@@ -65,11 +62,10 @@ public class Controller {
     public Button button_currencies_edit;
     public Button button_currencies_delete;
     public Button button_statistics_income_on_articles;
+    public DatePicker datePicker;
 
 
     public void initialize() {
-        Image imageAdd = new Image("images/add.png");
-        Image imageDelete = new Image("images/delete.png");
         menu_file.setText(Text.get("MENU_FILE"));
         menu_edit.setText(Text.get("MENU_EDIT"));
         menu_view.setText(Text.get("MENU_VIEW"));
@@ -125,13 +121,11 @@ public class Controller {
         button_currencies_add.setText(Text.get("MENU_EDIT_ADD"));
         button_currencies_edit.setText(Text.get("MENU_EDIT_EDIT"));
         button_currencies_delete.setText(Text.get("MENU_EDIT_DELETE"));
-
-
-
-
         menu_view_statistics.setText((Text.get("MENU_VIEW_STATISTICS")));
         label_statistics.setText(Text.get("LABEL_STATISTICS"));
         button_statistics_income_on_articles.setText(Text.get("INCOME_ON_ARTICLES"));
+
+        datePicker.setPromptText(String.valueOf(new Date()));
     }
 
     public void pressExit() {
