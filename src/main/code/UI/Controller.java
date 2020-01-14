@@ -1,13 +1,18 @@
 package UI;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
 import settings.Text;
 
-import java.util.Date;
+import java.io.IOException;
 
 public class Controller {
-
 
     @FXML
     public MenuItem menu_new;
@@ -125,14 +130,33 @@ public class Controller {
         label_statistics.setText(Text.get("LABEL_STATISTICS"));
         button_statistics_income_on_articles.setText(Text.get("INCOME_ON_ARTICLES"));
 
-        datePicker.setPromptText(String.valueOf(new Date()));
+
     }
 
     public void pressExit() {
         System.exit(1);
     }
 
-    public void pressAbout() {
+    public void pressAbout() throws IOException {
+        Parent aboutRoot = FXMLLoader.load(getClass().getResource("/UI/about/About.fxml"));
 
+        Stage aboutStage = new Stage();
+        aboutStage.setScene(new Scene(aboutRoot));
+        aboutStage.setTitle(Text.get("MENU_HELP_ABOUT"));
+        aboutStage.setResizable(false);
+        Image iconAbout = new Image("images/about.png");
+        aboutStage.getIcons().add(iconAbout);
+        aboutStage.show();
+    }
+
+    public void error(ActionEvent event) throws IOException {
+        Parent errorDialog = FXMLLoader.load(getClass().getResource("/UI/dialog/ErrorDialog.fxml"));
+        Stage error = new Stage();
+        error.setScene(new Scene(errorDialog));
+        error.setTitle(Text.get("ERROR"));
+        error.setResizable(false);
+        Image iconError = new Image("images/error.png");
+        error.getIcons().add(iconError);
+        error.show();
     }
 }

@@ -150,19 +150,4 @@ public class PersonalFinance extends Application {
 //        }
     }
 
-
-
-    public void pressExit(Event exit) {
-        Platform.exit();
-    }
-    public void pressAbout(Event about) throws IOException {
-        Parent aboutRoot = FXMLLoader.load(getClass().getResource("/UI/About.fxml"));
-        Stage aboutStage = new Stage();
-        aboutStage.setScene(new Scene(aboutRoot));
-        aboutStage.setTitle(Text.get("MENU_HELP_ABOUT"));
-        aboutStage.setResizable(false);
-        Image iconMain = new Image(new File("images/about.png").toURI().toString());
-        aboutStage.getIcons().add(iconMain);
-        aboutStage.show();
-    }
 }

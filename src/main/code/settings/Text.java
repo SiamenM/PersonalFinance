@@ -4,7 +4,7 @@ import java.util.HashMap;
 
 final public class Text {
 
-    private static final HashMap<String, String> data = new HashMap<String, String>();
+    private static final HashMap<String, String> data = new HashMap<>();
 
     public static String get(String key) {
         if (data.containsKey(key)) {
@@ -81,25 +81,33 @@ final public class Text {
         data.put("MENU_PROPERTIES_LANGUAGE", "Статистика");
 
         data.put("MENU_HELP_ABOUT", "О программе");
+        data.put("LABEL_WITH_RESPECT", "С уважением Семён Маскаленчик");
+        data.put("LABEL_NAME_PROGRAM", "Домашняя бухгалтерия");
+        data.put("LABEL_DESCRIPTION_PROGRAM", "Эта программа поможет Вам отслеживать доходы и расходы");
+        data.put("LABEL_VERSION", "Версия 1.0");
+
 
         data.put("MENU_VIEW_OVERVIEW", "Обзор");
-        data.put("LABEL_LAST_TRANSACTIONS","Последние транзакции");
+        data.put("LABEL_LAST_TRANSACTIONS", "Последние транзакции");
         data.put("MENU_VIEW_ACCOUNTS", "Счета");
         data.put("LABEL_ACCOUNTS", "Счета");
-        data.put("BUTTON_ADD","Добавить");
-        data.put("BUTTON_EDIT","Изменить");
-        data.put("BUTTON_DELETE","Удалить");
+        data.put("BUTTON_ADD", "Добавить");
+        data.put("BUTTON_EDIT", "Изменить");
+        data.put("BUTTON_DELETE", "Удалить");
         data.put("MENU_VIEW_ARTICLES", "Статьи");
-        data.put("LABEL_ARTICLES","Статьи");
+        data.put("LABEL_ARTICLES", "Статьи");
         data.put("MENU_VIEW_TRANSACTIONS", "Транзакции");
-        data.put("LABEL_TRANSACTIONS","Транзакции");
+        data.put("LABEL_TRANSACTIONS", "Транзакции");
         data.put("MENU_VIEW_TRANSFERS", "Переводы");
-        data.put("LABEL_TRANSFERS","Переводы");
+        data.put("LABEL_TRANSFERS", "Переводы");
         data.put("MENU_VIEW_CURRENCIES", "Валюты");
-        data.put("LABEL_CURRENCIES","Валюты");
+        data.put("LABEL_CURRENCIES", "Валюты");
         data.put("MENU_VIEW_STATISTICS", "Статистика");
-        data.put("LABEL_STATISTICS","Статистика");
-        data.put("INCOME_ON_ARTICLES","Доходы по статьям");
+        data.put("LABEL_STATISTICS", "Статистика");
+        data.put("INCOME_ON_ARTICLES", "Доходы по статьям");
+
+        data.put("ERROR", "Ошибка!");
+        data.put("OK", "ОК");
 
 
     }
