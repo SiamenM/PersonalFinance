@@ -1,4 +1,4 @@
-package UI.dialog;
+package UI.dialogError;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

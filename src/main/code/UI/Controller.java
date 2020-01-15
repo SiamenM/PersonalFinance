@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import settings.Text;
 
@@ -137,26 +138,26 @@ public class Controller {
         System.exit(1);
     }
 
-    public void pressAbout() throws IOException {
+    public void pressAbout(ActionEvent event) throws IOException {
         Parent aboutRoot = FXMLLoader.load(getClass().getResource("/UI/about/About.fxml"));
-
-        Stage aboutStage = new Stage();
-        aboutStage.setScene(new Scene(aboutRoot));
-        aboutStage.setTitle(Text.get("MENU_HELP_ABOUT"));
-        aboutStage.setResizable(false);
         Image iconAbout = new Image("images/about.png");
-        aboutStage.getIcons().add(iconAbout);
-        aboutStage.show();
+        setAndShowStage(aboutRoot, iconAbout);
     }
 
     public void error(ActionEvent event) throws IOException {
-        Parent errorDialog = FXMLLoader.load(getClass().getResource("/UI/dialog/ErrorDialog.fxml"));
-        Stage error = new Stage();
-        error.setScene(new Scene(errorDialog));
-        error.setTitle(Text.get("ERROR"));
-        error.setResizable(false);
+        Parent errorDialog = FXMLLoader.load(getClass().getResource("/UI/dialogError/ErrorDialog.fxml"));
         Image iconError = new Image("images/error.png");
-        error.getIcons().add(iconError);
-        error.show();
+        setAndShowStage(errorDialog, iconError);
+    }
+
+    private void setAndShowStage(Parent parent, Image icon) {
+        Stage stage = new Stage();
+        stage.setScene(new Scene(parent));
+        stage.setTitle(Text.get("ERROR"));
+        stage.setResizable(false);
+        stage.initModality(Modality.WINDOW_MODAL);
+        stage.initOwner(button_accounts_add.getScene().getWindow());
+        stage.getIcons().add(icon);
+        stage.show();
     }
 }
