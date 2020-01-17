@@ -4,9 +4,10 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import settings.Text;
+
+import java.io.IOException;
 
 public class ControllerAbout {
 
@@ -17,7 +18,7 @@ public class ControllerAbout {
     public Label labelDescriptionProgram;
     public Label labelVersion;
 
-    public void initialize(){
+    public void initialize() {
 
         labelWithRespect.setText(Text.get("LABEL_WITH_RESPECT"));
         labelNameProgram.setText(Text.get("LABEL_NAME_PROGRAM"));
@@ -26,7 +27,8 @@ public class ControllerAbout {
         buttonOk.setText(Text.get("OK"));
 
     }
-    public void pressOkAbout(ActionEvent event) {
+
+    public void pressOkAbout(ActionEvent event) throws IOException {
         Stage stageAbout = (Stage) buttonOk.getScene().getWindow();
         stageAbout.close();
     }

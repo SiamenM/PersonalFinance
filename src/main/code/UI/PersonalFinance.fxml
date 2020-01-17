@@ -48,7 +48,7 @@
                      <children>
                         <HBox layoutX="178.0" layoutY="51.0" prefHeight="40.0" prefWidth="320.0" spacing="10.0">
                            <children>
-                              <Button fx:id="button_accounts_add" minWidth="100.0" mnemonicParsing="false" onAction="#error" text="Add">
+                              <Button fx:id="button_accounts_add" minWidth="100.0" mnemonicParsing="false" onAction="#pressAddAccounts" text="Add">
                                  <graphic>
                                     <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                        <image>

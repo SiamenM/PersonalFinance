@@ -45,22 +45,6 @@ public class PersonalFinance extends Application {
         primaryStage.getIcons().add(iconMain);
         primaryStage.show();
 
-
-//        window = primaryStage;
-//        window.setTitle(Text.get("PROGRAM_NAME"));
-//        window.setResizable(false);
-//
-//
-//        HBox hBox = new HBox();
-//        BorderPane borderPane = new BorderPane();//Контейнер javafx.scene.layout.BorderPane позволяет
-//        // прижать вложенные элементы управления
-//        // к одной из сторон контейнера: по верхнему, нижнему,
-//        // левому или правому краю или расположить по центру.
-//
-//        scene1 = new Scene(hBox, 600, 500);
-//
-//        window.setScene(scene1);
-//        window.show();
     }
 
     private static void testModel() throws ModelException {

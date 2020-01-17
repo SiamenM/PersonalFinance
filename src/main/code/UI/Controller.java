@@ -131,7 +131,6 @@ public class Controller {
         label_statistics.setText(Text.get("LABEL_STATISTICS"));
         button_statistics_income_on_articles.setText(Text.get("INCOME_ON_ARTICLES"));
 
-
     }
 
     public void pressExit() {
@@ -142,6 +141,7 @@ public class Controller {
         Parent aboutRoot = FXMLLoader.load(getClass().getResource("/UI/about/About.fxml"));
         Image iconAbout = new Image("images/about.png");
         setAndShowStage(aboutRoot, iconAbout);
+
     }
 
     public void error(ActionEvent event) throws IOException {
@@ -159,5 +159,10 @@ public class Controller {
         stage.initOwner(button_accounts_add.getScene().getWindow());
         stage.getIcons().add(icon);
         stage.show();
+    }
+
+    public void pressAddAccounts(ActionEvent event) {
+        Stage stage = new Stage();
+        new AddEditWindow(stage);
     }
 }
