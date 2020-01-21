@@ -137,8 +137,8 @@ public final class SaveData {
         return new Currency();
     }
 
-    public List<Currency> getEnableCurrencies() {
-        List<Currency> list = new ArrayList<>();
+    public ArrayList<Currency> getEnableCurrencies() {
+        ArrayList<Currency> list = new ArrayList<>();
         for (Currency c : currencies) {
             if (c.isOn()) {
                 list.add(c);

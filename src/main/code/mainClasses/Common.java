@@ -3,7 +3,7 @@ package mainClasses;
 
 import saveLoad.SaveData;
 
-abstract public class Common {
+abstract public class Common{
 
     public String getValueForComboBox(){
         return null;

@@ -74,17 +74,6 @@ public class Currency extends Common {
     }
 
     @Override
-    public String toString() {
-        return "Currency{" +
-                "title='" + title + '\'' +
-                ", code='" + code + '\'' +
-                ", rate=" + rate +
-                ", on=" + on +
-                ", base=" + base +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
@@ -129,7 +118,6 @@ public class Currency extends Common {
         if (base) {
             rate = 1;
             Currency old = (Currency) saveData.getOldCommon();
-
             for (Currency c : saveData.getCurrencies()) {
                 if (!this.equals(c)) {
                     c.setBase(false);
@@ -139,5 +127,16 @@ public class Currency extends Common {
                 }
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Currency{" +
+                "title='" + title + '\'' +
+                ", code='" + code + '\'' +
+                ", rate=" + rate +
+                ", on=" + on +
+                ", base=" + base +
+                '}';
     }
 }

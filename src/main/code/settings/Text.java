@@ -77,6 +77,23 @@ final public class Text {
         data.put("MENU_EDIT_ADD", "Добавить");
         data.put("MENU_EDIT_EDIT", "Изменить");
         data.put("MENU_EDIT_DELETE", "Удалить");
+        data.put("MENU_EDIT_CANCEL", "Отмена");
+        data.put("TITLE", "Наименование");
+        data.put("CURRENCY", "Валюта");
+        data.put("START_BALANCE","Начальный баланс");
+        data.put("DATE", "Дата");
+        data.put("ACCOUNT", "Счёт");
+        data.put("ARTICLE", "Статья");
+        data.put("AMOUNT", "Сумма");
+        data.put("NOTICE", "Примечание");
+        data.put("Source", "Источник");
+        data.put("Target", "Куда");
+        data.put("MARKED_OFF", "Списано");
+        data.put("ACCEPTED", "Зачислено");
+        data.put("CODE", "Код");
+        data.put("COURSE", "Курс");
+        data.put("ACTIVE", "Активная");
+        data.put("BASE", "Базовая");
 
         data.put("MENU_PROPERTIES_LANGUAGE", "Статистика");
 
