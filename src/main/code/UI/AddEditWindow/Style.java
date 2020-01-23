@@ -11,4 +11,6 @@ final class Style {
     static final ImageView ICON_DATE = new ImageView("images/date.png");
     static final ImageView ICON_ACCOUNT = new ImageView("images/account.png");
     static final ImageView ICON_ARTICLE = new ImageView("images/article.png");
+    static final ImageView ICON_ACCEPTED = new ImageView("images/accepted.png");
+    static final ImageView ICON_MARK_OFF = new ImageView("images/mark_off.png");
 }

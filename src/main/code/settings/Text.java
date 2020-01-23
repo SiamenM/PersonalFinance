@@ -86,8 +86,8 @@ final public class Text {
         data.put("ARTICLE", "Статья");
         data.put("AMOUNT", "Сумма");
         data.put("NOTICE", "Примечание");
-        data.put("Source", "Источник");
-        data.put("Target", "Куда");
+        data.put("SOURCE", "Источник");
+        data.put("TARGET", "Куда");
         data.put("MARKED_OFF", "Списано");
         data.put("ACCEPTED", "Зачислено");
         data.put("CODE", "Код");

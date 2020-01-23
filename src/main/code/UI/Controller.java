@@ -3,6 +3,7 @@ package UI;
 import UI.AddEditWindow.AccountEditDialog;
 import UI.AddEditWindow.ArticleAddEditDialog;
 import UI.AddEditWindow.TransactionAddEditDialog;
+import UI.AddEditWindow.TransferAddEditDialog;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -183,7 +184,9 @@ public class Controller {
     }
 
     public void pressAddTransfers(ActionEvent event) {
-
+        Stage stage = new Stage();
+        stage.initOwner(button_accounts_add.getScene().getWindow());
+        new TransferAddEditDialog(stage);
     }
 
     public void pressAddCurrency(ActionEvent event) {
