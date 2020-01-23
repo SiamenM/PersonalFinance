@@ -1,6 +1,7 @@
 package UI.AddEditWindow;
 
 import financeException.ModelException;
+import javafx.collections.FXCollections;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
@@ -12,12 +13,15 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import javafx.util.StringConverter;
 import mainClasses.Common;
 import settings.Text;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 abstract class AddEditWindow extends Dialog {
@@ -26,7 +30,7 @@ abstract class AddEditWindow extends Dialog {
     protected Map<String, ImageView> images = new LinkedHashMap<>();
     protected Map<String, Object> values = new LinkedHashMap<>();
     protected Common common;
-    protected DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+    protected  DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
     AddEditWindow(Stage stage) {
         VBox root = new VBox();
@@ -57,7 +61,7 @@ abstract class AddEditWindow extends Dialog {
                 }
             } else if (component instanceof DatePicker) {
                 if (values.containsKey(key)) {
-                    ((DatePicker) component).setValue(LocalDate.parse(dateTimeFormatter.format(LocalDate.now())));
+                   // ((DatePicker) component).setValue(LocalDate.parse(dateTimeFormatter.format(LocalDate.now())));
                 }
             }
             root.getChildren().addAll(label, component);
@@ -76,7 +80,6 @@ abstract class AddEditWindow extends Dialog {
         hBoxForButtons.getChildren().addAll(ok, cancel);
         root.getChildren().addAll(hBoxForButtons);
         hBoxForButtons.setAlignment(Pos.CENTER);
-        //ok.setFocusTraversable(true);
         stage.setResizable(false);
 
         stage.initModality(Modality.WINDOW_MODAL);
@@ -100,6 +103,25 @@ abstract class AddEditWindow extends Dialog {
         stage.close();
     }
 
+    protected ComboBox initComboBox(List<? extends Common> commons){
+        ComboBox<Common> comboBox = new ComboBox<>();
+        comboBox.setMinWidth(250);
+        comboBox.setItems(FXCollections.observableArrayList(commons));
+        comboBox.setConverter(new StringConverter<Common>() {
+            @Override
+            public String toString(Common object) {
+                return object.getValueForComboBox();
+            }
+
+            @Override
+            public Common fromString(String string) {
+                return null;
+            }
+        });
+        comboBox.setValue(commons.get(0));
+        comboBox.valueProperty().asString(commons.get(0).getValueForComboBox());
+        return comboBox;
+    }
     private boolean isAdd() {
         return common == null;
     }
@@ -109,32 +131,6 @@ abstract class AddEditWindow extends Dialog {
     abstract protected void setValues();
 
     abstract protected Common getCommonFromForm() throws ModelException;
-//ComboBox<Common> comboBox = new ComboBox<>();
 
-//    private List<Common> initListOfCommons() {
-//        List<Common> commonList = new LinkedList<>();
-//        for (Map.Entry<String, Object> entry : values.entrySet()) {
-//            commonList.add((Common) entry.getValue());
-//        }
-//        return commonList;
-//    }
-
-//    public <ItemT> ObservableList<Common> toObservable() {
-//        List<Common> commonList = new LinkedList<>();
-//        for (Map.Entry<String, Object> entry : values.entrySet()) {
-//            commonList.add((Common) entry.getValue());
-//        }
-//        return new ObservableListWrapper<Common>(commonList);
-//    }
-//
-//    protected class CommonComboBox extends ComboBox {
-//        ObservableList<Common> observableList = toObservable();//cast ???
-//
-//        public CommonComboBox(observableList) {
-//
-//        }
-//
-//
-//    }
 }
 

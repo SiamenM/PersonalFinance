@@ -1,7 +1,6 @@
 package UI.AddEditWindow;
 
 import financeException.ModelException;
-import javafx.geometry.Pos;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import mainClasses.Article;
