@@ -71,6 +71,8 @@ final public class Text {
         data.put("MENU_FILE_SAVE", "Сохранить");
         data.put("MENU_FILE_UPDATE_CURRENCIES", "Обновить курс валют");
         data.put("MENU_FILE_EXIT", "Выход");
+        data.put("BALANCE_CURRENCY", "Баланс по валютам");
+        data.put("FINISH_BALANCE","Итоговый баланс");
 
         data.put("MENU_EDIT_ADD", "Добавить");
         data.put("MENU_EDIT_EDIT", "Изменить");
@@ -78,7 +80,7 @@ final public class Text {
         data.put("MENU_EDIT_CANCEL", "Отмена");
         data.put("TITLE", "Наименование");
         data.put("CURRENCY", "Валюта");
-        data.put("START_BALANCE","Начальный баланс");
+        data.put("START_BALANCE", "Начальный баланс");
         data.put("DATE", "Дата");
         data.put("ACCOUNT", "Счёт");
         data.put("ARTICLE", "Статья");

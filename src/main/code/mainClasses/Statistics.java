@@ -5,7 +5,7 @@ import saveLoad.SaveData;
 import java.util.HashMap;
 import java.util.List;
 
-public class Stastistics {
+public class Statistics {
 
     public static double getBalanceCurrency(Currency currency) {
         SaveData saveData = SaveData.getInstance();

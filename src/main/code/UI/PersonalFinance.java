@@ -27,11 +27,12 @@ public class PersonalFinance extends Application {
 
 
     public static void main(String[] args) throws Exception {
+//        testModel();
+//          SaveData saveData = SaveData.getInstance();
+//        saveData.updateCurrencies();
         initialization();
         launch();
-        //testModel();
-        //  SaveData saveData = SaveData.getInstance();
-        //saveData.updateCurrencies();
+
         //System.out.println(saveData);
     }
 

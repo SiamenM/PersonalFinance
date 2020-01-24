@@ -1,6 +1,8 @@
 package UI;
 
 import UI.AddEditWindow.*;
+import com.sun.org.glassfish.external.statistics.Statistic;
+import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,9 +12,15 @@ import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
+import mainClasses.Currency;
+import mainClasses.Statistics;
+import saveLoad.SaveData;
+import settings.Format;
 import settings.Text;
 
 import java.io.IOException;
+import java.util.LinkedList;
+import java.util.List;
 
 public class Controller {
 
@@ -53,6 +61,8 @@ public class Controller {
     public Label label_transfers;
     public Label label_currencies;
     public Label label_statistics;
+    public Label label_finish_balance;
+    public Label label_currency_balance;
     public Button button_accounts_edit;
     public Button button_accounts_delete;
     public Button button_accounts_add;
@@ -70,9 +80,13 @@ public class Controller {
     public Button button_currencies_delete;
     public Button button_statistics_income_on_articles;
     public DatePicker datePicker;
+    public ListView list_balance_currencies;
+    public ListView list_finish_balance;
 
 
     public void initialize() {
+        label_currency_balance.setText(Text.get("BALANCE_CURRENCY"));
+        label_finish_balance.setText(Text.get("FINISH_BALANCE"));
         menu_file.setText(Text.get("MENU_FILE"));
         menu_edit.setText(Text.get("MENU_EDIT"));
         menu_view.setText(Text.get("MENU_VIEW"));
@@ -131,6 +145,21 @@ public class Controller {
         menu_view_statistics.setText((Text.get("MENU_VIEW_STATISTICS")));
         label_statistics.setText(Text.get("LABEL_STATISTICS"));
         button_statistics_income_on_articles.setText(Text.get("INCOME_ON_ARTICLES"));
+        initListViewBalanceCurrencyAndFinishBalance();
+    }
+
+
+    public void initListViewBalanceCurrencyAndFinishBalance() {
+        List<String> currencies = new LinkedList<>();
+        List<String> finishBalance = new LinkedList<>();
+        for (Currency currency : SaveData.getInstance().getEnableCurrencies()) {
+            currencies.add(currency.getTitle() + " " + Statistics.getBalanceCurrency(currency));
+            finishBalance.add(currency.getTitle() + " " + Format.amount(Statistics.getBalance(currency)));
+        }
+        list_balance_currencies.setPrefHeight(currencies.size() * 25);
+        list_balance_currencies.setItems(FXCollections.observableArrayList(currencies));
+        list_finish_balance.setPrefHeight(finishBalance.size() * 25);
+        list_finish_balance.setItems(FXCollections.observableArrayList(finishBalance));
 
     }
 
