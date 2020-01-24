@@ -28,7 +28,7 @@ abstract class AddEditWindow extends Dialog {
     protected Map<String, ImageView> images = new LinkedHashMap<>();
     protected Map<String, Object> values = new LinkedHashMap<>();
     protected Common common;
-    protected  DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+    protected DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
     AddEditWindow(Stage stage) {
         VBox root = new VBox();
@@ -52,6 +52,7 @@ abstract class AddEditWindow extends Dialog {
             if (component instanceof TextField) {
                 if (values.containsKey(key)) {
                     ((TextField) component).setText((String.valueOf(values.get(key))));
+                    ((TextField) component).setMaxWidth(250);
                 }
             } else if (component instanceof ComboBox) {
                 if (values.containsKey(key)) {
@@ -59,13 +60,11 @@ abstract class AddEditWindow extends Dialog {
                 }
             } else if (component instanceof DatePicker) {
                 if (values.containsKey(key)) {
-                   // ((DatePicker) component).setValue(LocalDate.parse(dateTimeFormatter.format(LocalDate.now())));
+                    // ((DatePicker) component).setValue(LocalDate.parse(dateTimeFormatter.format(LocalDate.now())));
                 }
             }
             root.getChildren().addAll(label, component);
         }
-
-
         HBox hBoxForButtons = new HBox();
         ImageView imageViewOk = new ImageView("images/ok.png");
         Button ok = new Button(Text.get("MENU_EDIT_ADD"), imageViewOk);
@@ -79,7 +78,6 @@ abstract class AddEditWindow extends Dialog {
         root.getChildren().addAll(hBoxForButtons);
         hBoxForButtons.setAlignment(Pos.CENTER);
         stage.setResizable(false);
-
         stage.initModality(Modality.WINDOW_MODAL);
         stage.setScene(scene);
         stage.show();
@@ -101,7 +99,7 @@ abstract class AddEditWindow extends Dialog {
         stage.close();
     }
 
-    protected ComboBox initComboBox(List<? extends Common> commons){
+    protected ComboBox initComboBox(List<? extends Common> commons) {
         ComboBox<Common> comboBox = new ComboBox<>();
         comboBox.setMinWidth(250);
         comboBox.setItems(FXCollections.observableArrayList(commons));
@@ -120,6 +118,7 @@ abstract class AddEditWindow extends Dialog {
         comboBox.valueProperty().asString(commons.get(0).getValueForComboBox());
         return comboBox;
     }
+
     private boolean isAdd() {
         return common == null;
     }

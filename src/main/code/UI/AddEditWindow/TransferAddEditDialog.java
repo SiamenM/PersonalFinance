@@ -1,6 +1,5 @@
 package UI.AddEditWindow;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import financeException.ModelException;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -34,7 +33,6 @@ public class TransferAddEditDialog extends AddEditWindow {
         components.put("MARKED_OFF", new TextField());
         components.put("ACCEPTED", new TextField());
         components.put("NOTICE", new TextField());
-
         images.put("DATE", Style.ICON_DATE);
         images.put("SOURCE", Style.ICON_ACCOUNT);
         images.put("TARGET", Style.ICON_ACCOUNT);
@@ -42,7 +40,6 @@ public class TransferAddEditDialog extends AddEditWindow {
         images.put("ACCEPTED", Style.ICON_ACCEPTED);
         images.put("AMOUNT", Style.ICON_START_BALANCE);
         images.put("NOTICE", Style.ICON_NOTICE);
-
         values.put("MARKED_OFF", Format.amount(0));
         values.put("ACCEPTED", Format.amount(0));
     }
@@ -62,14 +59,12 @@ public class TransferAddEditDialog extends AddEditWindow {
     protected Common getCommonFromForm() throws ModelException {
         try {
             Date date = parser.parse(components.get("DATE").getAccessibleText());
-            ;
             Account fromAccount = (Account) ((ComboBox) components.get("SOURCE")).getValue();
             Account toAccount = (Account) ((ComboBox) components.get("TARGET")).getValue();
             String fromAmount = ((TextField) components.get("MARKED_OFF")).getText();
             String toAmount = ((TextField) components.get("ACCEPTED")).getText();
             String notice = ((TextField) components.get("NOTICE")).getText();
             return new Transfer(fromAccount, toAccount, Format.fromAmountToNumber(fromAmount), Format.fromAmountToNumber(toAmount), notice, date);
-
         } catch (NumberFormatException e) {
             throw new ModelException(ModelException.AMOUNT_FORMAT);
         } catch (ParseException e) {

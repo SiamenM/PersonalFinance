@@ -33,8 +33,6 @@ final public class Text {
 
     public static void init() {
         data.put("PROGRAM_NAME", "Домашняя бухгалтерия");
-
-
         data.put("JANUARY", "Январь");
         data.put("FEBRUARY", "Февраль");
         data.put("MARCH", "Март");
@@ -92,7 +90,7 @@ final public class Text {
         data.put("ACCEPTED", "Зачислено");
         data.put("CODE", "Код");
         data.put("COURSE", "Курс");
-        data.put("ACTIVE", "Активная");
+        data.put("ON", "Активная");
         data.put("BASE", "Базовая");
 
         data.put("MENU_PROPERTIES_LANGUAGE", "Статистика");
@@ -102,7 +100,6 @@ final public class Text {
         data.put("LABEL_NAME_PROGRAM", "Домашняя бухгалтерия");
         data.put("LABEL_DESCRIPTION_PROGRAM", "Эта программа поможет Вам отслеживать доходы и расходы");
         data.put("LABEL_VERSION", "Версия 1.0");
-
 
         data.put("MENU_VIEW_OVERVIEW", "Обзор");
         data.put("LABEL_LAST_TRANSACTIONS", "Последние транзакции");

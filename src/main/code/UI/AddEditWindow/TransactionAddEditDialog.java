@@ -11,7 +11,6 @@ import mainClasses.Common;
 import mainClasses.Transaction;
 import saveLoad.SaveData;
 import settings.Format;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -38,7 +37,6 @@ public class TransactionAddEditDialog extends AddEditWindow {
         images.put("ARTICLE", Style.ICON_ARTICLE);
         images.put("AMOUNT", Style.ICON_START_BALANCE);
         images.put("NOTICE", Style.ICON_NOTICE);
-
         values.put("AMOUNT", Format.amount(0));
     }
 
@@ -55,7 +53,6 @@ public class TransactionAddEditDialog extends AddEditWindow {
     @Override
     protected Common getCommonFromForm() throws ModelException {
         try {
-
             Date date = parser.parse(components.get("DATE").getAccessibleText());
             Account account = (Account) ((ComboBox) components.get("ACCOUNT")).getValue();
             Article article = (Article) ((ComboBox) components.get("ARTICLE")).getValue();
