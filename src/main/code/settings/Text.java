@@ -125,6 +125,12 @@ final public class Text {
         data.put("ERROR", "Ошибка!");
         data.put("OK", "ОК");
 
+        data.put("TABLE_DATE","Дата");
+        data.put("TABLE_ACCOUNT","Счёт");
+        data.put("TABLE_ARTICLE","Статья");
+        data.put("TABLE_AMOUNT","Сумма");
+        data.put("TABLE_NOTICE","Примечание");
+
 
     }
 

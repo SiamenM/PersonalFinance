@@ -1,7 +1,7 @@
 package UI;
 
 import UI.AddEditWindow.*;
-import com.sun.org.glassfish.external.statistics.Statistic;
+import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -10,15 +10,18 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import mainClasses.Currency;
-import mainClasses.Statistics;
+import mainClasses.*;
 import saveLoad.SaveData;
 import settings.Format;
+import settings.Settings;
 import settings.Text;
 
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -80,8 +83,9 @@ public class Controller {
     public Button button_currencies_delete;
     public Button button_statistics_income_on_articles;
     public DatePicker datePicker;
-    public ListView list_balance_currencies;
-    public ListView list_finish_balance;
+    public ListView<String> list_balance_currencies;
+    public ListView<String> list_finish_balance;
+    public VBox vbox_overview;
 
 
     public void initialize() {
@@ -145,6 +149,7 @@ public class Controller {
         menu_view_statistics.setText((Text.get("MENU_VIEW_STATISTICS")));
         label_statistics.setText(Text.get("LABEL_STATISTICS"));
         button_statistics_income_on_articles.setText(Text.get("INCOME_ON_ARTICLES"));
+        vbox_overview.getChildren().add(InitTables.initTable());
         initListViewBalanceCurrencyAndFinishBalance();
     }
 
@@ -219,5 +224,57 @@ public class Controller {
         Stage stage = new Stage();
         stage.initOwner(button_accounts_add.getScene().getWindow());
         new CurrencyAddEditDialog(stage);
+    }
+
+    static class InitTables {
+        static TableView<Transaction> initTable() {
+            TableView<Transaction> transactionTable = new TableView<>(FXCollections.observableArrayList(SaveData.getInstance().getTransactions()));
+
+            TableColumn<Transaction, String> columnDates = new TableColumn<>(Text.get("TABLE_DATE"));
+            columnDates.setCellValueFactory(
+                    Transaction -> {
+                        SimpleObjectProperty <String> propertyData = new SimpleObjectProperty<>();
+                        String dateString = Settings.PARSER_DATE.format(Transaction.getValue().getDate());
+                        propertyData.setValue(dateString);
+                        return propertyData;
+                    });
+
+            TableColumn<Transaction, String> columnAccounts = new TableColumn<>(Text.get("TABLE_ACCOUNT"));
+            columnAccounts.setCellValueFactory(
+                    Transaction -> {
+                        SimpleObjectProperty<String> propertyAccount = new SimpleObjectProperty<>();
+                        propertyAccount.setValue(Transaction.getValue().getAccount().getTitle());
+                        return propertyAccount;
+                    });
+
+            TableColumn<Transaction, String> columnArticles = new TableColumn<>(Text.get("TABLE_ARTICLE"));
+            columnArticles.setCellValueFactory(
+                    Transaction -> {
+                        SimpleObjectProperty<String> propertyArticles = new SimpleObjectProperty<>();
+                        propertyArticles.setValue(Transaction.getValue().getArticle().getTitle());
+                        return propertyArticles;
+                    });
+//
+            TableColumn<Transaction, Double> columnAmount = new TableColumn<>(Text.get("TABLE_AMOUNT"));
+            columnAmount.setCellValueFactory(
+                    Transaction -> {
+                        SimpleObjectProperty<Double> propertyAmount = new SimpleObjectProperty<>();
+                        propertyAmount.setValue(Transaction.getValue().getAmount());
+                        return propertyAmount;
+                    }
+            );
+
+            TableColumn<Transaction, String> columnNotices = new TableColumn<>(Text.get("TABLE_NOTICE"));
+            columnNotices.setCellValueFactory(
+                    Transaction -> {
+                        SimpleObjectProperty<String> propertyNotice = new SimpleObjectProperty<>();
+                        propertyNotice.setValue(Transaction.getValue().getNotice());
+                        return propertyNotice;
+                    }
+            );
+            transactionTable.getColumns().addAll(columnDates, columnAccounts, columnArticles, columnAmount, columnNotices);
+            transactionTable.setMaxWidth(Region.USE_PREF_SIZE);
+            return transactionTable;
+        }
     }
 }

@@ -6,6 +6,7 @@ import org.ini4j.Wini;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
 import java.util.Locale;
 import java.util.prefs.Preferences;
 
@@ -20,6 +21,7 @@ public final class Settings {
     public static final String FORMAT_DATE = "dd.MM.yyyy";
     public static final String FORMAT_DATE_MONTH = "MMMM yyyy";
     public static final String FORMAT_DATE_YEAR = "yyyy";
+    public static final SimpleDateFormat PARSER_DATE = new SimpleDateFormat(FORMAT_DATE);
 
     public static final int COUNT_OVERVIEW_ROWS = 10;
 

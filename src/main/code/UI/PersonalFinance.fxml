@@ -8,6 +8,7 @@
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
 <?import javafx.scene.image.Image?>
@@ -22,21 +23,6 @@
         <TabPane cache="true" layoutX="199.0" layoutY="86.0" prefHeight="329.0" prefWidth="676.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="80.0" tabMaxWidth="80.0" tabMinHeight="80.0" tabMinWidth="80.0">
             <tabs>
                 <Tab fx:id="menu_view_overview" text="Overview">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                            <children>
-                                <Label fx:id="label_last_transactions" layoutX="272.0" text="Last transactions" textAlignment="CENTER">
-                                    <graphic>
-                                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../images/overview.png" />
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                </Label>
-                            </children>
-                        </AnchorPane>
-                    </content>
                     <graphic>
                         <ImageView fitHeight="40.0" fitWidth="40.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -44,6 +30,28 @@
                             </image>
                         </ImageView>
                     </graphic>
+               <content>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                     <content>
+                        <VBox fx:id="vbox_overview" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="239.0" prefWidth="663.0" spacing="10.0">
+                           <children>
+                                      <Label fx:id="label_last_transactions" alignment="TOP_CENTER" text="Last transactions" textAlignment="CENTER">
+                                          <graphic>
+                                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                      <Image url="@../images/overview.png" />
+                                                  </image>
+                                              </ImageView>
+                                          </graphic>
+                                      </Label>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
                 </Tab>
                 <Tab fx:id="menu_view_accounts" text="Accounts">
                     <content>

@@ -2,7 +2,9 @@ package mainClasses;
 
 import financeException.ModelException;
 import saveLoad.SaveData;
+import settings.Settings;
 
+import java.text.ParseException;
 import java.util.Date;
 
 public class Transaction extends Common {
