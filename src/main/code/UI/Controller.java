@@ -10,7 +10,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.layout.Region;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
@@ -21,7 +20,6 @@ import settings.Settings;
 import settings.Text;
 
 import java.io.IOException;
-import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -86,6 +84,10 @@ public class Controller {
     public ListView<String> list_balance_currencies;
     public ListView<String> list_finish_balance;
     public VBox vbox_overview;
+    public VBox vbox_account;
+    public VBox vbox_article;
+    public VBox vbox_transaction;
+    public VBox vbox_transfers;
 
 
     public void initialize() {
@@ -120,6 +122,7 @@ public class Controller {
         menu_about_program.setText(Text.get("MENU_HELP_ABOUT"));
         menu_view_overview.setText((Text.get("MENU_VIEW_OVERVIEW")));
 
+
         menu_view_accounts.setText((Text.get("MENU_VIEW_ACCOUNTS")));
         label_accounts.setText((Text.get("LABEL_ACCOUNTS")));
         button_accounts_add.setText(Text.get("BUTTON_ADD"));
@@ -149,7 +152,9 @@ public class Controller {
         menu_view_statistics.setText((Text.get("MENU_VIEW_STATISTICS")));
         label_statistics.setText(Text.get("LABEL_STATISTICS"));
         button_statistics_income_on_articles.setText(Text.get("INCOME_ON_ARTICLES"));
-        vbox_overview.getChildren().add(InitTables.initTable());
+        vbox_overview.getChildren().add(InitTables.initTableOverview());
+        vbox_account.getChildren().add(InitTables.initTableAccounts());
+        vbox_article.getChildren().add(InitTables.initTableArticles());
         initListViewBalanceCurrencyAndFinishBalance();
     }
 
@@ -227,18 +232,37 @@ public class Controller {
     }
 
     static class InitTables {
-        static TableView<Transaction> initTable() {
+        static TableView<Transaction> initTableOverview() {
             TableView<Transaction> transactionTable = new TableView<>(FXCollections.observableArrayList(SaveData.getInstance().getTransactions()));
+            transactionTable.getColumns().addAll(initColumnDates(), initColumnAccounts(), initColumnArticles(), initColumnAmount(), initColumnNotices());
+            return transactionTable;
+        }
 
+        static TableView<Transaction> initTableAccounts() {
+            TableView<Transaction> accountTable = new TableView<>(FXCollections.observableArrayList(SaveData.getInstance().getTransactions()));
+            accountTable.getColumns().addAll(initColumnArticles(), initColumnAmount());
+            return accountTable;
+        }
+
+        static TableView<Transaction> initTableArticles() {
+            TableView<Transaction> articleTable = new TableView<>(FXCollections.observableArrayList(SaveData.getInstance().getTransactions()));
+            articleTable.getColumns().addAll(initColumnArticles());
+            return articleTable;
+        }
+
+        static TableColumn initColumnDates() {
             TableColumn<Transaction, String> columnDates = new TableColumn<>(Text.get("TABLE_DATE"));
             columnDates.setCellValueFactory(
                     Transaction -> {
-                        SimpleObjectProperty <String> propertyData = new SimpleObjectProperty<>();
+                        SimpleObjectProperty<String> propertyData = new SimpleObjectProperty<>();
                         String dateString = Settings.PARSER_DATE.format(Transaction.getValue().getDate());
                         propertyData.setValue(dateString);
                         return propertyData;
                     });
+            return columnDates;
+        }
 
+        static TableColumn initColumnAccounts() {
             TableColumn<Transaction, String> columnAccounts = new TableColumn<>(Text.get("TABLE_ACCOUNT"));
             columnAccounts.setCellValueFactory(
                     Transaction -> {
@@ -246,7 +270,10 @@ public class Controller {
                         propertyAccount.setValue(Transaction.getValue().getAccount().getTitle());
                         return propertyAccount;
                     });
+            return columnAccounts;
+        }
 
+        static TableColumn initColumnArticles() {
             TableColumn<Transaction, String> columnArticles = new TableColumn<>(Text.get("TABLE_ARTICLE"));
             columnArticles.setCellValueFactory(
                     Transaction -> {
@@ -254,7 +281,10 @@ public class Controller {
                         propertyArticles.setValue(Transaction.getValue().getArticle().getTitle());
                         return propertyArticles;
                     });
-//
+            return columnArticles;
+        }
+
+        static TableColumn initColumnAmount() {
             TableColumn<Transaction, Double> columnAmount = new TableColumn<>(Text.get("TABLE_AMOUNT"));
             columnAmount.setCellValueFactory(
                     Transaction -> {
@@ -263,7 +293,10 @@ public class Controller {
                         return propertyAmount;
                     }
             );
+            return columnAmount;
+        }
 
+        static TableColumn initColumnNotices() {
             TableColumn<Transaction, String> columnNotices = new TableColumn<>(Text.get("TABLE_NOTICE"));
             columnNotices.setCellValueFactory(
                     Transaction -> {
@@ -272,9 +305,8 @@ public class Controller {
                         return propertyNotice;
                     }
             );
-            transactionTable.getColumns().addAll(columnDates, columnAccounts, columnArticles, columnAmount, columnNotices);
-            transactionTable.setMaxWidth(Region.USE_PREF_SIZE);
-            return transactionTable;
+            return columnNotices;
         }
+
     }
 }
