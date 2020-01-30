@@ -2,23 +2,16 @@ package UI;
 
 import financeException.ModelException;
 import javafx.application.Application;
-import javafx.application.Platform;
-import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import mainClasses.*;
 import saveLoad.SaveData;
 import settings.Settings;
 import settings.Text;
 
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
@@ -40,6 +33,8 @@ public class PersonalFinance extends Application {
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/UI/PersonalFinance.fxml"));
         primaryStage.setScene(new Scene(root));
+        String stylesheet = getClass().getResource("/UI/Tables/tableStyle.css").toExternalForm();
+        root.getStylesheets().add(stylesheet);
         primaryStage.setTitle(Text.get("PROGRAM_NAME"));
         primaryStage.setResizable(false);
         Image iconMain = new Image("images/main.png");

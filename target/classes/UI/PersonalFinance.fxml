@@ -24,7 +24,7 @@
             <tabs>
                 <Tab fx:id="menu_view_overview" text="Overview">
                <content>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="371.0" prefWidth="719.0" vbarPolicy="ALWAYS">
                      <content>
                         <VBox fx:id="vbox_overview" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="239.0" prefWidth="663.0" spacing="10.0">
                            <children>
@@ -301,51 +301,6 @@
                </content>
                 </Tab>
                 <Tab fx:id="menu_view_currencies" text="Currencies">
-                    <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                            <children>
-                                <HBox layoutX="178.0" layoutY="51.0" prefHeight="40.0" prefWidth="320.0" spacing="10.0">
-                                    <children>
-                                        <Button fx:id="button_currencies_add" minWidth="100.0" mnemonicParsing="false" onAction="#pressAddCurrency" text="Add">
-                                            <graphic>
-                                                <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                                    <image>
-                                                        <Image url="@../images/menu_edit_add.png" />
-                                                    </image>
-                                                </ImageView>
-                                            </graphic>
-                                        </Button>
-                                        <Button fx:id="button_currencies_edit" minWidth="100.0" mnemonicParsing="false" text="Edit">
-                                            <graphic>
-                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                                    <image>
-                                                        <Image url="@../images/edit.png" />
-                                                    </image>
-                                                </ImageView>
-                                            </graphic>
-                                        </Button>
-                                        <Button fx:id="button_currencies_delete" minWidth="100.0" mnemonicParsing="false" text="Delete">
-                                            <graphic>
-                                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                                    <image>
-                                                        <Image url="@../images/delete.png" />
-                                                    </image>
-                                                </ImageView>
-                                            </graphic>
-                                        </Button>
-                                    </children>
-                                </HBox>
-                                <Label fx:id="label_currencies" layoutX="288.0" text="Currencies">
-                                    <graphic>
-                                        <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                                            <image>
-                                                <Image url="@../images/currencies.png" />
-                                            </image>
-                                        </ImageView>
-                                    </graphic>
-                                </Label>
-                            </children></AnchorPane>
-                    </content>
                     <graphic>
                         <ImageView cache="true" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -353,6 +308,59 @@
                             </image>
                         </ImageView>
                     </graphic>
+               <content>
+                  <ScrollPane prefHeight="200.0" prefWidth="200.0">
+                     <content>
+                        <VBox fx:id="vbox_currencies" alignment="TOP_CENTER" prefHeight="239.0" prefWidth="663.0" spacing="10.0">
+                           <children>
+                                      <Label fx:id="label_currencies" text="Currencies">
+                                          <graphic>
+                                              <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                                  <image>
+                                                      <Image url="@../images/currencies.png" />
+                                                  </image>
+                                              </ImageView>
+                                          </graphic>
+                                      </Label>
+                                      <HBox alignment="TOP_CENTER" prefHeight="40.0" prefWidth="320.0" spacing="10.0">
+                                          <children>
+                                              <Button fx:id="button_currencies_add" minWidth="100.0" mnemonicParsing="false" onAction="#pressAddCurrency" text="Add">
+                                                  <graphic>
+                                                      <ImageView fx:id="image_add" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                          <image>
+                                                              <Image url="@../images/menu_edit_add.png" />
+                                                          </image>
+                                                      </ImageView>
+                                                  </graphic>
+                                              </Button>
+                                              <Button fx:id="button_currencies_edit" minWidth="100.0" mnemonicParsing="false" text="Edit">
+                                                  <graphic>
+                                                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                          <image>
+                                                              <Image url="@../images/edit.png" />
+                                                          </image>
+                                                      </ImageView>
+                                                  </graphic>
+                                              </Button>
+                                              <Button fx:id="button_currencies_delete" minWidth="100.0" mnemonicParsing="false" text="Delete">
+                                                  <graphic>
+                                                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                                          <image>
+                                                              <Image url="@../images/delete.png" />
+                                                          </image>
+                                                      </ImageView>
+                                                  </graphic>
+                                              </Button>
+                                          </children>
+                                      </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                        </VBox>
+                     </content>
+                  </ScrollPane>
+               </content>
                 </Tab>
                 <Tab fx:id="menu_view_statistics" text="Statistics">
                     <content>

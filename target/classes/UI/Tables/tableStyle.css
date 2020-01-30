@@ -1,0 +1,17 @@
+.table-column {
+    -fx-alignment: CENTER;
+}
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-font-weight:bold;
+    -fx-text-fill: black;
+    -fx-font-size:13px;
+}
+
+.table-view .table-cell{
+    -fx-font-weight:bold;
+    -fx-font-size:12px;
+    /* -fx-text-fill:orange; */
+}
+

@@ -1,11 +1,12 @@
 package UI;
 
 import UI.AddEditWindow.*;
-import javafx.beans.property.SimpleObjectProperty;
+import UI.Tables.*;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
@@ -13,10 +14,10 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
-import mainClasses.*;
+import mainClasses.Currency;
+import mainClasses.Statistics;
 import saveLoad.SaveData;
 import settings.Format;
-import settings.Settings;
 import settings.Text;
 
 import java.io.IOException;
@@ -88,6 +89,7 @@ public class Controller {
     public VBox vbox_article;
     public VBox vbox_transaction;
     public VBox vbox_transfers;
+    public VBox vbox_currencies;
 
 
     public void initialize() {
@@ -152,9 +154,13 @@ public class Controller {
         menu_view_statistics.setText((Text.get("MENU_VIEW_STATISTICS")));
         label_statistics.setText(Text.get("LABEL_STATISTICS"));
         button_statistics_income_on_articles.setText(Text.get("INCOME_ON_ARTICLES"));
-        vbox_overview.getChildren().add(InitTables.initTableOverview());
-        vbox_account.getChildren().add(InitTables.initTableAccounts());
-        vbox_article.getChildren().add(InitTables.initTableArticles());
+        vbox_overview.getChildren().add(new TransactionTable(SaveData.getInstance().getTransactions()).initTable());
+        vbox_account.getChildren().add(new AccountsTable(SaveData.getInstance().getAccounts()).initTable());
+        vbox_article.getChildren().add(new ArticleTables(SaveData.getInstance().getArticles()).initTable());
+        vbox_transfers.getChildren().add(new TransferTable(SaveData.getInstance().getTransfers()).initTable());
+        vbox_transaction.getChildren().add(new TransactionTable(SaveData.getInstance().getTransactions()).initTable());
+        vbox_currencies.getChildren().add(new CurrencyTable(SaveData.getInstance().getCurrencies()).initTable());
+        vbox_article.setAlignment(Pos.TOP_CENTER);
         initListViewBalanceCurrencyAndFinishBalance();
     }
 
@@ -231,82 +237,4 @@ public class Controller {
         new CurrencyAddEditDialog(stage);
     }
 
-    static class InitTables {
-        static TableView<Transaction> initTableOverview() {
-            TableView<Transaction> transactionTable = new TableView<>(FXCollections.observableArrayList(SaveData.getInstance().getTransactions()));
-            transactionTable.getColumns().addAll(initColumnDates(), initColumnAccounts(), initColumnArticles(), initColumnAmount(), initColumnNotices());
-            return transactionTable;
-        }
-
-        static TableView<Transaction> initTableAccounts() {
-            TableView<Transaction> accountTable = new TableView<>(FXCollections.observableArrayList(SaveData.getInstance().getTransactions()));
-            accountTable.getColumns().addAll(initColumnArticles(), initColumnAmount());
-            return accountTable;
-        }
-
-        static TableView<Transaction> initTableArticles() {
-            TableView<Transaction> articleTable = new TableView<>(FXCollections.observableArrayList(SaveData.getInstance().getTransactions()));
-            articleTable.getColumns().addAll(initColumnArticles());
-            return articleTable;
-        }
-
-        static TableColumn initColumnDates() {
-            TableColumn<Transaction, String> columnDates = new TableColumn<>(Text.get("TABLE_DATE"));
-            columnDates.setCellValueFactory(
-                    Transaction -> {
-                        SimpleObjectProperty<String> propertyData = new SimpleObjectProperty<>();
-                        String dateString = Settings.PARSER_DATE.format(Transaction.getValue().getDate());
-                        propertyData.setValue(dateString);
-                        return propertyData;
-                    });
-            return columnDates;
-        }
-
-        static TableColumn initColumnAccounts() {
-            TableColumn<Transaction, String> columnAccounts = new TableColumn<>(Text.get("TABLE_ACCOUNT"));
-            columnAccounts.setCellValueFactory(
-                    Transaction -> {
-                        SimpleObjectProperty<String> propertyAccount = new SimpleObjectProperty<>();
-                        propertyAccount.setValue(Transaction.getValue().getAccount().getTitle());
-                        return propertyAccount;
-                    });
-            return columnAccounts;
-        }
-
-        static TableColumn initColumnArticles() {
-            TableColumn<Transaction, String> columnArticles = new TableColumn<>(Text.get("TABLE_ARTICLE"));
-            columnArticles.setCellValueFactory(
-                    Transaction -> {
-                        SimpleObjectProperty<String> propertyArticles = new SimpleObjectProperty<>();
-                        propertyArticles.setValue(Transaction.getValue().getArticle().getTitle());
-                        return propertyArticles;
-                    });
-            return columnArticles;
-        }
-
-        static TableColumn initColumnAmount() {
-            TableColumn<Transaction, Double> columnAmount = new TableColumn<>(Text.get("TABLE_AMOUNT"));
-            columnAmount.setCellValueFactory(
-                    Transaction -> {
-                        SimpleObjectProperty<Double> propertyAmount = new SimpleObjectProperty<>();
-                        propertyAmount.setValue(Transaction.getValue().getAmount());
-                        return propertyAmount;
-                    }
-            );
-            return columnAmount;
-        }
-
-        static TableColumn initColumnNotices() {
-            TableColumn<Transaction, String> columnNotices = new TableColumn<>(Text.get("TABLE_NOTICE"));
-            columnNotices.setCellValueFactory(
-                    Transaction -> {
-                        SimpleObjectProperty<String> propertyNotice = new SimpleObjectProperty<>();
-                        propertyNotice.setValue(Transaction.getValue().getNotice());
-                        return propertyNotice;
-                    }
-            );
-            return columnNotices;
-        }
-
-    }
 }
