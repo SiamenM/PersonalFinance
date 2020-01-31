@@ -4,11 +4,10 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
-import mainClasses.Article;
 import mainClasses.Currency;
-import mainClasses.Transaction;
 import settings.Text;
 
+import java.util.Comparator;
 import java.util.List;
 
 public class CurrencyTable extends FinanceTable {
@@ -17,6 +16,25 @@ public class CurrencyTable extends FinanceTable {
         ObservableList<Currency> items = FXCollections.observableArrayList(currencies);
         this.setItems(items);
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
+        this.setSortPolicy(t -> {
+            Comparator<Currency> comparator = new Comparator<Currency>() {
+                @Override
+                public int compare(Currency currency1, Currency currency2) {
+                    if (currency1.isBase()) {
+                        return 0;
+                    }
+                    if (currency1.isOn() && currency2.isOn() || !currency1.isOn() && !currency2.isOn()) {
+                        return currency1.getTitle().compareToIgnoreCase(currency2.getTitle());
+                    } else if (currency1.isOn() && !currency2.isOn()) {
+                        return 0;
+                    } else{
+                        return 1;
+                    }
+                }
+            };
+            FXCollections.sort(this.getItems(), comparator);
+            return true;
+        });
     }
 
     @Override

@@ -1,6 +1,7 @@
 package UI;
 
 import UI.AddEditWindow.*;
+import UI.FilterPanel.FilterPanel;
 import UI.Tables.*;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
@@ -154,11 +155,11 @@ public class Controller {
         menu_view_statistics.setText((Text.get("MENU_VIEW_STATISTICS")));
         label_statistics.setText(Text.get("LABEL_STATISTICS"));
         button_statistics_income_on_articles.setText(Text.get("INCOME_ON_ARTICLES"));
-        vbox_overview.getChildren().add(new TransactionTable(SaveData.getInstance().getTransactions()).initTable());
+        vbox_overview.getChildren().add(new TransactionTable(SaveData.getInstance().getTransactionsOnCount(10)).initTable());
         vbox_account.getChildren().add(new AccountsTable(SaveData.getInstance().getAccounts()).initTable());
         vbox_article.getChildren().add(new ArticleTables(SaveData.getInstance().getArticles()).initTable());
-        vbox_transfers.getChildren().add(new TransferTable(SaveData.getInstance().getTransfers()).initTable());
-        vbox_transaction.getChildren().add(new TransactionTable(SaveData.getInstance().getTransactions()).initTable());
+        vbox_transfers.getChildren().addAll(new FilterPanel(), new TransferTable(SaveData.getInstance().getTransfers()).initTable());
+        vbox_transaction.getChildren().addAll(new FilterPanel(), new TransactionTable(SaveData.getInstance().getFilterTransactions()).initTable());
         vbox_currencies.getChildren().add(new CurrencyTable(SaveData.getInstance().getCurrencies()).initTable());
         vbox_article.setAlignment(Pos.TOP_CENTER);
         initListViewBalanceCurrencyAndFinishBalance();

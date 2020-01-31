@@ -5,7 +5,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import mainClasses.Transaction;
-import saveLoad.SaveData;
 import settings.Format;
 import settings.Settings;
 import settings.Text;
@@ -19,6 +18,8 @@ public class TransactionTable extends FinanceTable {
         this.setItems(items);
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
     }
+
+
 
     @Override
     public FinanceTable<Transaction> initTable() {
