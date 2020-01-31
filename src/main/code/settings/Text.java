@@ -72,7 +72,7 @@ final public class Text {
         data.put("MENU_FILE_UPDATE_CURRENCIES", "Обновить курс валют");
         data.put("MENU_FILE_EXIT", "Выход");
         data.put("BALANCE_CURRENCY", "Баланс по валютам");
-        data.put("FINISH_BALANCE","Итоговый баланс");
+        data.put("FINISH_BALANCE", "Итоговый баланс");
 
         data.put("MENU_EDIT_ADD", "Добавить");
         data.put("MENU_EDIT_EDIT", "Изменить");
@@ -120,12 +120,15 @@ final public class Text {
         data.put("LABEL_CURRENCIES", "Валюты");
         data.put("MENU_VIEW_STATISTICS", "Статистика");
         data.put("LABEL_STATISTICS", "Статистика");
-        data.put("INCOME_ON_ARTICLES", "Доходы по статьям");
+        data.put("INCOMES_BY_ARTICLES", "Доходы по статьям");
+        data.put("EXPENSES_BY_ARTICLES", "Расходы по статьям");
+
+        data.put("CHART_INCOMES", "Доходы");
+        data.put("CHART_DECREASE", "Расходы");
+        data.put("CHART_NO_DATA", "Для данного периода данные отсутствуют!");
 
         data.put("ERROR", "Ошибка!");
         data.put("OK", "ОК");
-
-
 
 
     }
