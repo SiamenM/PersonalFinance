@@ -3,6 +3,7 @@ package UI;
 import UI.AddEditWindow.*;
 import UI.FilterPanel.FilterPanel;
 import UI.Tables.*;
+import UI.chartPanel.ChartPanel;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -81,8 +82,6 @@ public class Controller {
     public Button button_currencies_add;
     public Button button_currencies_edit;
     public Button button_currencies_delete;
-    public Button button_statistics_income_on_articles;
-    public DatePicker datePicker;
     public ListView<String> list_balance_currencies;
     public ListView<String> list_finish_balance;
     public VBox vbox_overview;
@@ -91,6 +90,7 @@ public class Controller {
     public VBox vbox_transaction;
     public VBox vbox_transfers;
     public VBox vbox_currencies;
+    public VBox vboxStatistics;
 
 
     public void initialize() {
@@ -154,7 +154,6 @@ public class Controller {
         button_currencies_delete.setText(Text.get("MENU_EDIT_DELETE"));
         menu_view_statistics.setText((Text.get("MENU_VIEW_STATISTICS")));
         label_statistics.setText(Text.get("LABEL_STATISTICS"));
-        button_statistics_income_on_articles.setText(Text.get("INCOME_ON_ARTICLES"));
         vbox_overview.getChildren().add(new TransactionTable(SaveData.getInstance().getTransactionsOnCount(10)).initTable());
         vbox_account.getChildren().add(new AccountsTable(SaveData.getInstance().getAccounts()).initTable());
         vbox_article.getChildren().add(new ArticleTables(SaveData.getInstance().getArticles()).initTable());
@@ -162,6 +161,7 @@ public class Controller {
         vbox_transaction.getChildren().addAll(new FilterPanel(), new TransactionTable(SaveData.getInstance().getFilterTransactions()).initTable());
         vbox_currencies.getChildren().add(new CurrencyTable(SaveData.getInstance().getCurrencies()).initTable());
         vbox_article.setAlignment(Pos.TOP_CENTER);
+        vboxStatistics.getChildren().add(new ChartPanel(true));
         initListViewBalanceCurrencyAndFinishBalance();
     }
 

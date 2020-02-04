@@ -27,11 +27,11 @@ public class Statistics {
         return amount;
     }
 
-    public static HashMap<String, Double> getDataForChartOnIncomeArticles(){
+    public static HashMap<String, Double> getDataForChartOnIncomeArticles() {
         return getDataForChartOnArticles(true);
     }
 
-    public static HashMap <String, Double> getDataChartOnExpArticles(){
+    public static HashMap<String, Double> getDataChartOnExpArticles() {
         return getDataForChartOnArticles(false);
     }
 
@@ -49,14 +49,14 @@ public class Statistics {
                 if (data.containsKey(key)) {
                     sum = data.get(key);
                 }
-                sum = amount * t.getAccount().getCurrency().getRateByCurrency(SaveData.getInstance().getBaseCurrency());
-                data.put(key,round(sum));
+                sum += amount * t.getAccount().getCurrency().getRateByCurrency(SaveData.getInstance().getBaseCurrency());
+                data.put(key, round(sum));
             }
         }
         return data;
     }
 
-    private static double round(double value){
-        return (double) Math.round(value*100)/100;
+    private static double round(double value) {
+        return (double) Math.round(value * 100) / 100;
     }
 }
