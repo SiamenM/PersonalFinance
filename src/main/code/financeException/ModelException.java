@@ -1,6 +1,11 @@
 package financeException;
 
 
+import javafx.scene.control.Alert;
+import javafx.scene.image.Image;
+import javafx.stage.Stage;
+import settings.Text;
+
 public class ModelException extends Exception {
 
     public static final int TITLE_EMPTY = 1;
@@ -14,6 +19,7 @@ public class ModelException extends Exception {
     public static final int AMOUNT_FORMAT = 9;
     public static final int NO_BASE_CURRENCY = 10;
     public static final int COMMON_NOT_FOUND = 11;
+    public static final int ERROR_UPDATE_CURRENCIES = 12;
 
     private final int code;
 
@@ -45,6 +51,8 @@ public class ModelException extends Exception {
                 return settings.Text.get("ERROR_NO_BASE_CURRENCY");
             case COMMON_NOT_FOUND:
                 return settings.Text.get("COMMON_NOT_FOUND");
+            case ERROR_UPDATE_CURRENCIES:
+                return settings.Text.get("ERROR_UPDATE_CURRENCIES");
         }
         return "";
     }

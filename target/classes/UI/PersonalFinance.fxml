@@ -20,11 +20,11 @@
 
 <AnchorPane fx:id="" maxHeight="500.0" maxWidth="924.0" minHeight="489.0" minWidth="800.0" prefHeight="489.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller">
     <children>
-        <TabPane cache="true" layoutX="197.0" layoutY="34.0" prefHeight="403.0" prefWidth="719.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="100.0" tabMaxWidth="100.0" tabMinHeight="70.0" tabMinWidth="70.0">
+        <TabPane cache="true" layoutX="197.0" layoutY="34.0" prefHeight="417.0" prefWidth="719.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="100.0" tabMaxWidth="100.0" tabMinHeight="70.0" tabMinWidth="70.0">
             <tabs>
                 <Tab fx:id="menu_view_overview" text="Overview">
                <content>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="371.0" prefWidth="719.0" vbarPolicy="ALWAYS">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="337.0" prefWidth="719.0">
                      <content>
                         <VBox fx:id="vbox_overview" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="340.0" prefWidth="663.0" spacing="10.0">
                            <children>
@@ -62,7 +62,7 @@
                         </ImageView>
                     </graphic>
                <content>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
                      <content>
                         <VBox fx:id="vbox_account" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="239.0" prefWidth="663.0" spacing="10.0">
                            <children>
@@ -123,7 +123,7 @@
                         </ImageView>
                     </graphic>
                <content>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
                      <content>
                         <VBox fx:id="vbox_article" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="239.0" prefWidth="663.0" spacing="10.0">
                            <children>
@@ -185,7 +185,7 @@
                         </ImageView>
                     </graphic>
                <content>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
                      <content>
                         <VBox fx:id="vbox_transaction" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="327.0" prefWidth="663.0" spacing="10.0">
                            <padding>
@@ -247,7 +247,7 @@
                         </ImageView>
                     </graphic>
                <content>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0" vbarPolicy="ALWAYS">
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
                      <content>
                         <VBox fx:id="vbox_transfers" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="329.0" prefWidth="663.0" spacing="10.0">
                            <padding>
@@ -402,7 +402,7 @@
             <menus>
                 <Menu fx:id="menu_file" mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem fx:id="menu_new" mnemonicParsing="false" text="New">
+                        <MenuItem fx:id="menu_new" mnemonicParsing="false" onAction="#pressMenuNew" text="New">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -410,7 +410,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_open" mnemonicParsing="false" text="Open">
+                        <MenuItem fx:id="menu_open" mnemonicParsing="false" onAction="#pressMenuOpen" text="Open">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -418,7 +418,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_save" mnemonicParsing="false" text="Save">
+                        <MenuItem fx:id="menu_save" mnemonicParsing="false" onAction="#pressMenuSave" text="Save">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -426,7 +426,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_refresh" mnemonicParsing="false" text="Refresh">
+                        <MenuItem fx:id="menu_refresh" mnemonicParsing="false" onAction="#pressMenuRefreshCurrency" text="Refresh">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>

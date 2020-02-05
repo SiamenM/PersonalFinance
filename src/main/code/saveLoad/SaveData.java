@@ -20,7 +20,8 @@ public final class SaveData {
     private List<Transaction> transactions = new ArrayList<>();
     private List<Transfer> transfers = new ArrayList<>();
     private Common oldCommon;
-    private boolean saved = true;
+//    private boolean saved = true;
+    private boolean saved = false;
     private final Filter filter;
 
     private SaveData() {
@@ -228,6 +229,13 @@ public final class SaveData {
         }
     }
 
+    public void clear(){
+       articles.clear();
+       currencies.clear();
+       accounts.clear();
+       transactions.clear();
+       transfers.clear();
+    }
     @Override
     public String toString() {
         return "SaveData{" +

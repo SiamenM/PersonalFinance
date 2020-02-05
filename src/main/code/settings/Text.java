@@ -128,7 +128,24 @@ final public class Text {
         data.put("CHART_NO_DATA", "Для данного периода данные отсутствуют!");
 
         data.put("ERROR", "Ошибка!");
+        data.put("ERROR_TITLE_EMPTY", "Вы не ввели название!");
+        data.put("ERROR_IS_EXITS", "Такая запись уже существует!");
+        data.put("ERROR_DATE_FORMAT", "Некорректный формат даты!");
+        data.put("ERROR_CODE_EMPTY", "Не указан код!");
+        data.put("ERROR_CURRENCY_EMPTY", "Валюта не выбрана!");
+        data.put("ERROR_ARTICLE_EMPTY", "Статья на выбрана!");
+        data.put("ERROR_ACCOUNT_EMPTY", "Счёт не выбран!");
+        data.put("ERROR_RATE_INCORRECT", "Некорректное значение курса!");
+        data.put("ERROR_AMOUNT_FORMAT", "Некорректный формат суммы!");
+        data.put("ERROR_NO_BASE_CURRENCY", "Необходима базовая валюта!");
+        data.put("ERROR_UPDATE_CURRENCIES", "Ошибка при обновлении курсов валют!");
+
+        data.put("CONFIRM_EXIT_TEXT", "Вы уверены, что хотите выйти? Несохраннёные данные будут удалены.");
+        data.put("CONFIRM_EXIT_TITLE", "Подтверждение выхода");
         data.put("OK", "ОК");
+        data.put("EXIT", "Выйти");
+        data.put("SAVE_AND_EXIT", "Сохранить и выйти");
+        data.put("CANCEL", "Отмена");
 
 
     }

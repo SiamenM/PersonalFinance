@@ -20,11 +20,13 @@ import mainClasses.Currency;
 import mainClasses.Statistics;
 import saveLoad.SaveData;
 import settings.Format;
+import settings.Settings;
 import settings.Text;
 
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Optional;
 
 public class Controller {
 
@@ -180,9 +182,6 @@ public class Controller {
 
     }
 
-    public void pressExit() {
-        System.exit(1);
-    }
 
     public void pressAbout(ActionEvent event) throws IOException {
         Parent aboutRoot = FXMLLoader.load(getClass().getResource("/UI/about/About.fxml"));
@@ -238,4 +237,59 @@ public class Controller {
         new CurrencyAddEditDialog(stage);
     }
 
+    public void pressMenuNew(ActionEvent event) {
+        Settings.setFileSave(null);
+        SaveData.getInstance().clear();
+
+    }
+
+    public void pressMenuOpen(ActionEvent event) {
+
+    }
+
+    public void pressMenuSave(ActionEvent event) {
+
+    }
+
+    public void pressMenuRefreshCurrency(ActionEvent event) {
+        try {
+            SaveData.getInstance().updateCurrencies();
+        } catch (Exception e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle(Text.get("ERROR"));
+            alert.setHeaderText(null);
+            alert.setContentText(Text.get("ERROR_UPDATE_CURRENCIES"));
+            Stage stage = (Stage) alert.getDialogPane().getScene().getWindow();
+            stage.getIcons().add(new Image("/images/error.png"));
+            alert.showAndWait();
+        }
+    }
+
+    public void pressExit() {
+        if (SaveData.getInstance().isSaved()) {
+            System.exit(1);
+        } else {
+            Alert confirmDialog = new Alert(Alert.AlertType.CONFIRMATION);
+            confirmDialog.setTitle(Text.get("CONFIRM_EXIT_TITLE"));
+            confirmDialog.setHeaderText(Text.get("CONFIRM_EXIT_TEXT"));
+            Stage stage = (Stage) confirmDialog.getDialogPane().getScene().getWindow();
+            stage.getIcons().add(new Image("/images/question.png"));
+            ButtonType exit = new ButtonType(Text.get("EXIT"));
+            ButtonType saveAndExit = new ButtonType(Text.get("SAVE_AND_EXIT"));
+            ButtonType cancel = new ButtonType(Text.get("CANCEL"));
+            confirmDialog.getButtonTypes().clear();
+            confirmDialog.getButtonTypes().addAll(exit, saveAndExit, cancel);
+            Optional<ButtonType> option = confirmDialog.showAndWait();
+            if (option.get() == exit) {
+                System.exit(1);
+            } else if (option.get() == saveAndExit) {
+                //обработать сохранение
+                System.exit(1);
+            } else {
+                confirmDialog.close();
+            }
+
+        }
+
+    }
 }
