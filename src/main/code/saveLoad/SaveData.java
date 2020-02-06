@@ -29,7 +29,7 @@ public final class SaveData {
         this.filter = new Filter();
     }
 
-    private void load() {
+    public void load() {
         SaveLoad.load(this);
         sort();
     }

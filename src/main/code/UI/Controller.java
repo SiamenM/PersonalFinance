@@ -32,6 +32,7 @@ import java.util.Optional;
 
 public class Controller {
 
+    // private Stage primaryStage;
     @FXML
     public MenuItem menu_new;
     public MenuItem menu_open;
@@ -169,6 +170,9 @@ public class Controller {
         initListViewBalanceCurrencyAndFinishBalance();
     }
 
+//    public void start(){
+//
+//    }
 
     public void initListViewBalanceCurrencyAndFinishBalance() {
         List<String> currencies = new LinkedList<>();
@@ -240,34 +244,40 @@ public class Controller {
     }
 
     public void pressMenuOpen(ActionEvent event) {
-
+        Stage stage = new Stage();
+        stage.centerOnScreen();
+        FileChooser fileChooserOpen = new FileChooser();
+        fileChooserOpen.setTitle(Text.get("OPEN"));
+        fileChooserOpen.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("myfin", "*.myfin"));
+        fileChooserOpen.setInitialDirectory(new File("src/saves"));
+        File selectedFile = fileChooserOpen.showOpenDialog(stage);
+        if (selectedFile != null) {
+            Settings.setFileSave(selectedFile);
+            SaveData.getInstance().clear();
+            SaveData.getInstance().load();
+        }
     }
 
     public void pressMenuSave(ActionEvent event) {
         if (Settings.getFileSave() == null) {
-
-        } else {
             Stage stage = new Stage();
             stage.centerOnScreen();
 //            stage.initModality(Modality.WINDOW_MODAL);
 //            stage.initOwner(button_accounts_add.getScene().getWindow());
+            FileChooser fileChooserSave = new FileChooser();
 
-            FileChooser fileChooser = new FileChooser();
-            fileChooser.setTitle(Text.get("SAVE"));
-            fileChooser.getExtensionFilters().addAll(
-                    new FileChooser.ExtensionFilter("myfin", "*.myfin"),
-                    new FileChooser.ExtensionFilter("All Files", "*.*"));
-            fileChooser.setInitialDirectory(new File("src/saves"));
-            File selectedFile = fileChooser.showOpenDialog(stage);
-            if (selectedFile != null){
+            fileChooserSave.setTitle(Text.get("SAVE"));
+            fileChooserSave.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("myfin", "*.myfin"));
+            fileChooserSave.setInitialDirectory(new File("src/saves"));
+            File selectedFile = fileChooserSave.showOpenDialog(stage);
+            if (selectedFile != null) {
                 String pathFile = selectedFile.getAbsolutePath();
                 Settings.setFileSave(new File(pathFile));
             }
-//            pathFile = fileChooser.getS
-                stage.close();
-//            if (pathFile != null) {
-
-//            }
+            stage.close();
+        }
+        if (Settings.getFileSave() != null) {
+            SaveData.getInstance().save();
         }
     }
 

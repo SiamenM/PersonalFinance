@@ -147,6 +147,7 @@ final public class Text {
         data.put("SAVE_AND_EXIT", "Сохранить и выйти");
         data.put("CANCEL", "Отмена");
         data.put("SAVE", "Сохранить");
+        data.put("OPEN", "Открыть");
 
 
     }
