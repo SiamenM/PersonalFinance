@@ -14,6 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import mainClasses.Currency;
@@ -23,6 +24,7 @@ import settings.Format;
 import settings.Settings;
 import settings.Text;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
@@ -190,12 +192,6 @@ public class Controller {
 
     }
 
-    public void error(ActionEvent event) throws IOException {
-        Parent errorDialog = FXMLLoader.load(getClass().getResource("/UI/dialogError/ErrorDialog.fxml"));
-        Image iconError = new Image("images/error.png");
-        setAndShowStage(errorDialog, iconError);
-    }
-
     private void setAndShowStage(Parent parent, Image icon) {
         Stage stage = new Stage();
         stage.setScene(new Scene(parent));
@@ -248,7 +244,31 @@ public class Controller {
     }
 
     public void pressMenuSave(ActionEvent event) {
+        if (Settings.getFileSave() == null) {
 
+        } else {
+            Stage stage = new Stage();
+            stage.centerOnScreen();
+//            stage.initModality(Modality.WINDOW_MODAL);
+//            stage.initOwner(button_accounts_add.getScene().getWindow());
+
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle(Text.get("SAVE"));
+            fileChooser.getExtensionFilters().addAll(
+                    new FileChooser.ExtensionFilter("myfin", "*.myfin"),
+                    new FileChooser.ExtensionFilter("All Files", "*.*"));
+            fileChooser.setInitialDirectory(new File("src/saves"));
+            File selectedFile = fileChooser.showOpenDialog(stage);
+            if (selectedFile != null){
+                String pathFile = selectedFile.getAbsolutePath();
+                Settings.setFileSave(new File(pathFile));
+            }
+//            pathFile = fileChooser.getS
+                stage.close();
+//            if (pathFile != null) {
+
+//            }
+        }
     }
 
     public void pressMenuRefreshCurrency(ActionEvent event) {
@@ -288,8 +308,6 @@ public class Controller {
             } else {
                 confirmDialog.close();
             }
-
         }
-
     }
 }

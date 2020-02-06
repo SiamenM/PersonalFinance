@@ -39,6 +39,7 @@ public class PersonalFinance extends Application {
         primaryStage.setResizable(false);
         Image iconMain = new Image("images/main.png");
         primaryStage.getIcons().add(iconMain);
+
         primaryStage.show();
 
     }
