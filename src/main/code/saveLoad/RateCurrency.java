@@ -17,7 +17,7 @@ import java.util.Map;
 
 public class RateCurrency {
 
-    public static HashMap<String, Double> getRates(Currency base) throws ParserConfigurationException, IOException, SAXException {
+    static HashMap<String, Double> getRates(Currency base) throws ParserConfigurationException, IOException, SAXException {
         HashMap<String, NodeList> nodeMap = new HashMap<>();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
         String url = "http://www.nbrb.by/services/xmlexrates.aspx?ondate=" + dateFormat.format(new Date());
@@ -26,10 +26,10 @@ public class RateCurrency {
         NodeList nodeList1 = document.getElementsByTagName("Currency");
         for (int i = 0; i < nodeList1.getLength(); i++) {
             Node node = nodeList1.item(i);
-            NodeList n1Childs = node.getChildNodes();
-            for (int j = 0; j < n1Childs.getLength(); j++) {
-                if (n1Childs.item(j).getNodeName().equals("CharCode")) {
-                    nodeMap.put(n1Childs.item(j).getTextContent(), n1Childs);
+            NodeList n1Child = node.getChildNodes();
+            for (int j = 0; j < n1Child.getLength(); j++) {
+                if (n1Child.item(j).getNodeName().equals("CharCode")) {
+                    nodeMap.put(n1Child.item(j).getTextContent(), n1Child);
                 }
             }
         }

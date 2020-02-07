@@ -12,7 +12,6 @@ import java.util.prefs.Preferences;
 
 public final class Settings {
 
-    public static final File FONT_KORNILOW = new File("src/fonts/Kornilow.ttf");
     public static final File SAVE_DIR = new File("saves/");
     public static final String SAVE_FILE_EXT = "myfin";
 
@@ -22,8 +21,6 @@ public final class Settings {
     public static final String FORMAT_DATE_MONTH = "MMMM yyyy";
     public static final String FORMAT_DATE_YEAR = "yyyy";
     public static final SimpleDateFormat PARSER_DATE = new SimpleDateFormat(FORMAT_DATE);
-
-    public static final int COUNT_OVERVIEW_ROWS = 10;
 
     public static final String[] CURRENCIES_CODES = {"BLR", "USD", "EUR", "RUB", "UAH"};
 
@@ -62,7 +59,9 @@ public final class Settings {
         Wini ini = null;
         try {
             ini = new Wini(FILE_SETTINGS);
-            ini.put("Settings", "fileSave", fileSave.getAbsolutePath().replace("\\", "\\\\"));
+            if (fileSave != null) {
+                ini.put("Settings", "fileSave", fileSave.getAbsolutePath().replace("\\", "\\\\"));
+            }
             ini.store();
         } catch (IOException e) {
             e.printStackTrace();

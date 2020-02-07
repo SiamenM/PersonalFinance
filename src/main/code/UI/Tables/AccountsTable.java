@@ -5,17 +5,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import mainClasses.Account;
+import saveLoad.SaveData;
 import settings.Format;
 import settings.Text;
 
-import java.util.List;
-
 public class AccountsTable extends FinanceTable {
 
-    public AccountsTable(List<Account> accounts) {
-        ObservableList<Account> items = FXCollections.observableArrayList(accounts);
-        this.setItems(items);
+    public AccountsTable() {
+        this.fillIn();
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
+        this.initTable();
     }
 
     @Override
@@ -36,5 +35,11 @@ public class AccountsTable extends FinanceTable {
                 });
         this.getColumns().addAll(columnAccounts, columnAmount);
         return this;
+    }
+
+    @Override
+    public void fillIn() {
+        ObservableList<Account> accounts = FXCollections.observableArrayList(SaveData.getInstance().getAccounts());
+        this.setItems(accounts);
     }
 }

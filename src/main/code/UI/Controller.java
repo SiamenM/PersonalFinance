@@ -33,6 +33,14 @@ import java.util.Optional;
 public class Controller {
 
     // private Stage primaryStage;
+    private TransactionTable transactionTableOverview;
+    private AccountsTable accountsTable;
+    private ArticleTables articleTable;
+    private TransactionTable transactionTable;
+    private TransferTable transferTable;
+    private CurrencyTable currencyTable;
+    private List<FinanceTable> tables;
+
     @FXML
     public MenuItem menu_new;
     public MenuItem menu_open;
@@ -97,6 +105,21 @@ public class Controller {
     public VBox vbox_currencies;
     public VBox vboxStatistics;
 
+    {
+        transactionTableOverview = new TransactionTable(true);
+        accountsTable = new AccountsTable();
+        articleTable = new ArticleTables();
+        transactionTable = new TransactionTable(false);
+        transferTable = new TransferTable();
+        currencyTable = new CurrencyTable();
+        tables = new LinkedList<>();
+        tables.add(transactionTableOverview);
+        tables.add(accountsTable);
+        tables.add(articleTable);
+        tables.add(transactionTable);
+        tables.add(transferTable);
+        tables.add(currencyTable);
+    }
 
     public void initialize() {
         label_currency_balance.setText(Text.get("BALANCE_CURRENCY"));
@@ -159,20 +182,22 @@ public class Controller {
         button_currencies_delete.setText(Text.get("MENU_EDIT_DELETE"));
         menu_view_statistics.setText((Text.get("MENU_VIEW_STATISTICS")));
         label_statistics.setText(Text.get("LABEL_STATISTICS"));
-        vbox_overview.getChildren().add(new TransactionTable(SaveData.getInstance().getTransactionsOnCount(10)).initTable());
-        vbox_account.getChildren().add(new AccountsTable(SaveData.getInstance().getAccounts()).initTable());
-        vbox_article.getChildren().add(new ArticleTables(SaveData.getInstance().getArticles()).initTable());
-        vbox_transfers.getChildren().addAll(new FilterPanel(), new TransferTable(SaveData.getInstance().getTransfers()).initTable());
-        vbox_transaction.getChildren().addAll(new FilterPanel(), new TransactionTable(SaveData.getInstance().getFilterTransactions()).initTable());
-        vbox_currencies.getChildren().add(new CurrencyTable(SaveData.getInstance().getCurrencies()).initTable());
+        vbox_overview.getChildren().add(transactionTableOverview);
+        vbox_account.getChildren().add(accountsTable);
+        vbox_article.getChildren().add(articleTable);
+        vbox_transfers.getChildren().addAll(new FilterPanel(), transferTable);
+        vbox_transaction.getChildren().addAll(new FilterPanel(), transactionTable);
+        vbox_currencies.getChildren().add(currencyTable);
         vbox_article.setAlignment(Pos.TOP_CENTER);
         vboxStatistics.getChildren().add(new ChartPanel(true));
         initListViewBalanceCurrencyAndFinishBalance();
     }
 
-//    public void start(){
-//
-//    }
+    private void refreshTables() {
+        for (FinanceTable table : tables) {
+            table.fillIn();
+        }
+    }
 
     public void initListViewBalanceCurrencyAndFinishBalance() {
         List<String> currencies = new LinkedList<>();
@@ -240,7 +265,7 @@ public class Controller {
     public void pressMenuNew(ActionEvent event) {
         Settings.setFileSave(null);
         SaveData.getInstance().clear();
-
+        refreshTables();
     }
 
     public void pressMenuOpen(ActionEvent event) {
@@ -255,6 +280,7 @@ public class Controller {
             Settings.setFileSave(selectedFile);
             SaveData.getInstance().clear();
             SaveData.getInstance().load();
+            refreshTables();
         }
     }
 
@@ -295,7 +321,7 @@ public class Controller {
         }
     }
 
-    public void pressExit() {
+    public void pressExit(ActionEvent event) {
         if (SaveData.getInstance().isSaved()) {
             System.exit(1);
         } else {
@@ -313,11 +339,12 @@ public class Controller {
             if (option.get() == exit) {
                 System.exit(1);
             } else if (option.get() == saveAndExit) {
-                //обработать сохранение
+                pressMenuSave(event);
                 System.exit(1);
             } else {
                 confirmDialog.close();
             }
         }
     }
+
 }

@@ -4,18 +4,16 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
-import mainClasses.Account;
 import mainClasses.Article;
+import saveLoad.SaveData;
 import settings.Text;
-
-import java.util.List;
 
 public class ArticleTables extends FinanceTable {
 
-    public ArticleTables(List<Article> articles) {
-        ObservableList<Article> items = FXCollections.observableArrayList(articles);
-        this.setItems(items);
+    public ArticleTables() {
+        this.fillIn();
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
+        this.initTable();
     }
 
     @Override
@@ -29,5 +27,11 @@ public class ArticleTables extends FinanceTable {
                 });
         this.getColumns().addAll(columnArticle);
         return this;
+    }
+
+    @Override
+    public void fillIn() {
+        ObservableList<Article> articles = FXCollections.observableArrayList(SaveData.getInstance().getArticles());
+        this.setItems(articles);
     }
 }

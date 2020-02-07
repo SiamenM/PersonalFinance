@@ -5,16 +5,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import mainClasses.Currency;
+import saveLoad.SaveData;
 import settings.Text;
 
 import java.util.Comparator;
-import java.util.List;
 
 public class CurrencyTable extends FinanceTable {
 
-    public CurrencyTable(List<Currency> currencies) {
-        ObservableList<Currency> items = FXCollections.observableArrayList(currencies);
-        this.setItems(items);
+    public CurrencyTable() {
+        this.fillIn();
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
         this.setSortPolicy(t -> {
             Comparator<Currency> comparator = new Comparator<Currency>() {
@@ -27,7 +26,7 @@ public class CurrencyTable extends FinanceTable {
                         return currency1.getTitle().compareToIgnoreCase(currency2.getTitle());
                     } else if (currency1.isOn() && !currency2.isOn()) {
                         return 0;
-                    } else{
+                    } else {
                         return 1;
                     }
                 }
@@ -35,6 +34,7 @@ public class CurrencyTable extends FinanceTable {
             FXCollections.sort(this.getItems(), comparator);
             return true;
         });
+        this.initTable();
     }
 
     @Override
@@ -85,5 +85,11 @@ public class CurrencyTable extends FinanceTable {
                 });
         this.getColumns().addAll(columnTitle, columnCode, columnCourse, columnIsOn, columnIsBase);
         return this;
+    }
+
+    @Override
+    public void fillIn() {
+        ObservableList<Currency> currencies = FXCollections.observableArrayList(SaveData.getInstance().getCurrencies());
+        this.setItems(currencies);
     }
 }

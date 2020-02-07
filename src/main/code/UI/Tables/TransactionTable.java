@@ -5,21 +5,34 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import mainClasses.Transaction;
+import saveLoad.SaveData;
 import settings.Format;
 import settings.Settings;
 import settings.Text;
 
-import java.util.List;
-
 public class TransactionTable extends FinanceTable {
 
-    public TransactionTable(List<Transaction> transactions) {
-        ObservableList<Transaction> items = FXCollections.observableArrayList(transactions);
-        this.setItems(items);
+    private boolean isOverview;
+
+    public TransactionTable(boolean isOverview) {
+        this.isOverview = isOverview;
+        this.fillIn();
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
+        this.initTable();
     }
 
+    public void fillIn() {
+        ObservableList<Transaction> transactions = initItems();
+        this.setItems(transactions);
+    }
 
+    private ObservableList<Transaction> initItems() {
+        if (isOverview) {
+            return FXCollections.observableArrayList(SaveData.getInstance().getTransactionsOnCount(10));
+        } else {
+            return FXCollections.observableArrayList(SaveData.getInstance().getTransactions());
+        }
+    }
 
     @Override
     public FinanceTable<Transaction> initTable() {

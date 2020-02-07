@@ -5,24 +5,23 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
 import mainClasses.Transfer;
+import saveLoad.SaveData;
 import settings.Format;
 import settings.Settings;
 import settings.Text;
 
-import java.util.List;
-
 public class TransferTable extends FinanceTable {
 
-    public TransferTable(List<Transfer> transfers) {
-        ObservableList<Transfer> items = FXCollections.observableArrayList(transfers);
-        this.setItems(items);
+    public TransferTable() {
+        this.fillIn();
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
+        this.initTable();
     }
 
     @Override
     public FinanceTable initTable() {
         TableColumn<Transfer, String> columnDates = new TableColumn<>(Text.get("DATE"));
-                columnDates.setCellValueFactory(
+        columnDates.setCellValueFactory(
                 Transfer -> {
                     SimpleObjectProperty<String> propertyData = new SimpleObjectProperty<>();
                     String dateString = Settings.PARSER_DATE.format(Transfer.getValue().getDate());
@@ -66,6 +65,12 @@ public class TransferTable extends FinanceTable {
                 });
         this.getColumns().addAll(columnDates, columnSource, columnTarget, columnMarkedOff, columnAccepted, columnNotices);
         return this;
+    }
+
+    @Override
+    public void fillIn() {
+        ObservableList<Transfer> transfers = FXCollections.observableArrayList(SaveData.getInstance().getTransfers());
+        this.setItems(transfers);
     }
 
 }
