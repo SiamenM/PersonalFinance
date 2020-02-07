@@ -42,7 +42,12 @@ public class Currency extends Common {
     }
 
     public String getCode() {
-        return code;
+        if(code!=null){
+            return code;
+        } else {
+            return "BLR";
+        }
+
     }
 
     public void setCode(String code) {

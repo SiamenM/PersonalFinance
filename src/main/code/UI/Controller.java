@@ -1,5 +1,6 @@
 package UI;
 
+import UI.AddEditDeletePanel.AddEditDeletePanel;
 import UI.AddEditWindow.*;
 import UI.FilterPanel.FilterPanel;
 import UI.Tables.*;
@@ -19,11 +20,13 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import mainClasses.Currency;
 import mainClasses.Statistics;
+import org.xml.sax.SAXException;
 import saveLoad.SaveData;
 import settings.Format;
 import settings.Settings;
 import settings.Text;
 
+import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -80,21 +83,21 @@ public class Controller {
     public Label label_statistics;
     public Label label_finish_balance;
     public Label label_currency_balance;
-    public Button button_accounts_edit;
-    public Button button_accounts_delete;
-    public Button button_accounts_add;
-    public Button button_articles_add;
-    public Button button_articles_edit;
-    public Button button_articles_delete;
-    public Button button_transactions_add;
-    public Button button_transactions_edit;
-    public Button button_transactions_delete;
-    public Button button_transfers_add;
-    public Button button_transfers_edit;
-    public Button button_transfers_delete;
-    public Button button_currencies_add;
-    public Button button_currencies_edit;
-    public Button button_currencies_delete;
+//    public Button button_accounts_edit;
+//    public Button button_accounts_delete;
+  //  public Button label_last_transactions;
+//    public Button button_articles_add;
+//    public Button button_articles_edit;
+//    public Button button_articles_delete;
+//    public Button button_transactions_add;
+//    public Button button_transactions_edit;
+//    public Button button_transactions_delete;
+//    public Button button_transfers_add;
+//    public Button button_transfers_edit;
+//    public Button button_transfers_delete;
+//    public Button button_currencies_add;
+//    public Button button_currencies_edit;
+//    public Button button_currencies_delete;
     public ListView<String> list_balance_currencies;
     public ListView<String> list_finish_balance;
     public VBox vbox_overview;
@@ -156,38 +159,38 @@ public class Controller {
 
         menu_view_accounts.setText((Text.get("MENU_VIEW_ACCOUNTS")));
         label_accounts.setText((Text.get("LABEL_ACCOUNTS")));
-        button_accounts_add.setText(Text.get("BUTTON_ADD"));
 
-        button_accounts_edit.setText(Text.get("BUTTON_EDIT"));
-        button_accounts_delete.setText(Text.get("BUTTON_DELETE"));
+//        label_last_transactions.setText(Text.get("BUTTON_ADD"));
+//        button_accounts_edit.setText(Text.get("BUTTON_EDIT"));
+//        button_accounts_delete.setText(Text.get("BUTTON_DELETE"));
+//        button_articles_add.setText(Text.get("MENU_EDIT_ADD"));
+//        button_articles_edit.setText(Text.get("MENU_EDIT_EDIT"));
+//        button_articles_delete.setText(Text.get("MENU_EDIT_DELETE"));
+//        button_transactions_add.setText(Text.get("MENU_EDIT_ADD"));
+//        button_transactions_edit.setText(Text.get("MENU_EDIT_EDIT"));
+//        button_transactions_delete.setText(Text.get("MENU_EDIT_DELETE"));
+//        button_transfers_add.setText(Text.get("MENU_EDIT_ADD"));
+//        button_transfers_edit.setText(Text.get("MENU_EDIT_EDIT"));
+//        button_transfers_delete.setText(Text.get("MENU_EDIT_DELETE"));
+//        button_currencies_add.setText(Text.get("MENU_EDIT_ADD"));
+//        button_currencies_edit.setText(Text.get("MENU_EDIT_EDIT"));
+//        button_currencies_delete.setText(Text.get("MENU_EDIT_DELETE"));
         menu_view_articles.setText(Text.get("MENU_VIEW_ARTICLES"));
         label_articles.setText(Text.get("LABEL_ARTICLES"));
-        button_articles_add.setText(Text.get("MENU_EDIT_ADD"));
-        button_articles_edit.setText(Text.get("MENU_EDIT_EDIT"));
-        button_articles_delete.setText(Text.get("MENU_EDIT_DELETE"));
         menu_view_transactions.setText((Text.get("MENU_VIEW_TRANSACTIONS")));
         label_transactions.setText(Text.get("LABEL_TRANSACTIONS"));
-        button_transactions_add.setText(Text.get("MENU_EDIT_ADD"));
-        button_transactions_edit.setText(Text.get("MENU_EDIT_EDIT"));
-        button_transactions_delete.setText(Text.get("MENU_EDIT_DELETE"));
         menu_view_transfer.setText((Text.get("MENU_VIEW_TRANSFERS")));
         label_transfers.setText(Text.get("LABEL_TRANSFERS"));
-        button_transfers_add.setText(Text.get("MENU_EDIT_ADD"));
-        button_transfers_edit.setText(Text.get("MENU_EDIT_EDIT"));
-        button_transfers_delete.setText(Text.get("MENU_EDIT_DELETE"));
+        menu_view_statistics.setText((Text.get("MENU_VIEW_STATISTICS")));
         menu_view_currencies.setText((Text.get("MENU_VIEW_CURRENCIES")));
         label_currencies.setText(Text.get("LABEL_CURRENCIES"));
-        button_currencies_add.setText(Text.get("MENU_EDIT_ADD"));
-        button_currencies_edit.setText(Text.get("MENU_EDIT_EDIT"));
-        button_currencies_delete.setText(Text.get("MENU_EDIT_DELETE"));
-        menu_view_statistics.setText((Text.get("MENU_VIEW_STATISTICS")));
         label_statistics.setText(Text.get("LABEL_STATISTICS"));
         vbox_overview.getChildren().add(transactionTableOverview);
-        vbox_account.getChildren().add(accountsTable);
-        vbox_article.getChildren().add(articleTable);
-        vbox_transfers.getChildren().addAll(new FilterPanel(), transferTable);
-        vbox_transaction.getChildren().addAll(new FilterPanel(), transactionTable);
-        vbox_currencies.getChildren().add(currencyTable);
+        vbox_account.getChildren().addAll(new AddEditDeletePanel(),accountsTable);
+        vbox_article.getChildren().addAll(new AddEditDeletePanel(),articleTable);
+        vbox_transfers.getChildren().addAll(new AddEditDeletePanel(),new FilterPanel(), transferTable);
+        vbox_transaction.getChildren().addAll(new AddEditDeletePanel(),new FilterPanel(), transactionTable);
+        vbox_currencies.getChildren().addAll(new AddEditDeletePanel(),currencyTable);
         vbox_article.setAlignment(Pos.TOP_CENTER);
         vboxStatistics.getChildren().add(new ChartPanel(true));
         initListViewBalanceCurrencyAndFinishBalance();
@@ -227,38 +230,38 @@ public class Controller {
         stage.setTitle(Text.get("ERROR"));
         stage.setResizable(false);
         stage.initModality(Modality.WINDOW_MODAL);
-        stage.initOwner(button_accounts_add.getScene().getWindow());
+        stage.initOwner(label_last_transactions.getScene().getWindow());
         stage.getIcons().add(icon);
         stage.show();
     }
 
     public void pressAddAccounts(ActionEvent event) {
         Stage stage = new Stage();
-        stage.initOwner(button_accounts_add.getScene().getWindow());
+        stage.initOwner(label_last_transactions.getScene().getWindow());
         new AccountEditDialog(stage);
     }
 
     public void pressAddArticle(ActionEvent event) {
         Stage stage = new Stage();
-        stage.initOwner(button_accounts_add.getScene().getWindow());
+        stage.initOwner(label_last_transactions.getScene().getWindow());
         new ArticleAddEditDialog(stage);
     }
 
     public void pressAddTransaction(ActionEvent event) {
         Stage stage = new Stage();
-        stage.initOwner(button_accounts_add.getScene().getWindow());
+        stage.initOwner(label_last_transactions.getScene().getWindow());
         new TransactionAddEditDialog(stage);
     }
 
     public void pressAddTransfers(ActionEvent event) {
         Stage stage = new Stage();
-        stage.initOwner(button_accounts_add.getScene().getWindow());
+        stage.initOwner(label_last_transactions.getScene().getWindow());
         new TransferAddEditDialog(stage);
     }
 
     public void pressAddCurrency(ActionEvent event) {
         Stage stage = new Stage();
-        stage.initOwner(button_accounts_add.getScene().getWindow());
+        stage.initOwner(label_last_transactions.getScene().getWindow());
         new CurrencyAddEditDialog(stage);
     }
 
@@ -266,6 +269,7 @@ public class Controller {
         Settings.setFileSave(null);
         SaveData.getInstance().clear();
         refreshTables();
+        initListViewBalanceCurrencyAndFinishBalance();
     }
 
     public void pressMenuOpen(ActionEvent event) {
@@ -289,13 +293,13 @@ public class Controller {
             Stage stage = new Stage();
             stage.centerOnScreen();
 //            stage.initModality(Modality.WINDOW_MODAL);
-//            stage.initOwner(button_accounts_add.getScene().getWindow());
+//            stage.initOwner(label_last_transactions.getScene().getWindow());
             FileChooser fileChooserSave = new FileChooser();
 
             fileChooserSave.setTitle(Text.get("SAVE"));
             fileChooserSave.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("myfin", "*.myfin"));
             fileChooserSave.setInitialDirectory(new File("src/saves"));
-            File selectedFile = fileChooserSave.showOpenDialog(stage);
+            File selectedFile = fileChooserSave.showSaveDialog(stage);
             if (selectedFile != null) {
                 String pathFile = selectedFile.getAbsolutePath();
                 Settings.setFileSave(new File(pathFile));
@@ -310,7 +314,9 @@ public class Controller {
     public void pressMenuRefreshCurrency(ActionEvent event) {
         try {
             SaveData.getInstance().updateCurrencies();
-        } catch (Exception e) {
+            initListViewBalanceCurrencyAndFinishBalance();
+        } catch (SAXException | ParserConfigurationException | IOException e) {
+            e.printStackTrace();
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle(Text.get("ERROR"));
             alert.setHeaderText(null);
@@ -321,7 +327,7 @@ public class Controller {
         }
     }
 
-    public void pressExit(ActionEvent event) {
+        public void pressExit(ActionEvent event) {
         if (SaveData.getInstance().isSaved()) {
             System.exit(1);
         } else {

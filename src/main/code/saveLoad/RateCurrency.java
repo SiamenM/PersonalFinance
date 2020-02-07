@@ -20,7 +20,8 @@ public class RateCurrency {
     static HashMap<String, Double> getRates(Currency base) throws ParserConfigurationException, IOException, SAXException {
         HashMap<String, NodeList> nodeMap = new HashMap<>();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
-        String url = "http://www.nbrb.by/services/xmlexrates.aspx?ondate=" + dateFormat.format(new Date());
+        //Deprecated String url = "http://www.nbrb.by/Services/XmlExRates.aspx?ondate=" + dateFormat.format(new Date());
+        String url = "http://www.nbrb.by/services/xmlexratesref.aspx";
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         Document document = factory.newDocumentBuilder().parse(new URL(url).openStream());
         NodeList nodeList1 = document.getElementsByTagName("Currency");
