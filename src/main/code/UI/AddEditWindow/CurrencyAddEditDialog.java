@@ -1,5 +1,6 @@
 package UI.AddEditWindow;
 
+import UI.Controller;
 import financeException.ModelException;
 import javafx.collections.FXCollections;
 import javafx.scene.control.ComboBox;
@@ -13,8 +14,8 @@ import settings.Text;
 
 public class CurrencyAddEditDialog extends AddEditWindow {
 
-    public CurrencyAddEditDialog(Stage stage) {
-        super(stage);
+    public CurrencyAddEditDialog(Controller controller, Currency currency) {
+        super(controller,currency);
     }
 
     @Override

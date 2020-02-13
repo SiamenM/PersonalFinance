@@ -4,10 +4,13 @@ import javafx.beans.property.SimpleObjectProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TablePosition;
 import mainClasses.Account;
+import mainClasses.Common;
 import saveLoad.SaveData;
 import settings.Format;
 import settings.Text;
+
 
 public class AccountsTable extends FinanceTable {
 
@@ -42,4 +45,13 @@ public class AccountsTable extends FinanceTable {
         ObservableList<Account> accounts = FXCollections.observableArrayList(SaveData.getInstance().getAccounts());
         this.setItems(accounts);
     }
+
+//    @Override
+//    public Common getCommon() {
+//        TablePosition position = (TablePosition) this.getSelectionModel().getSelectedCells().get(0);
+//        int index = position.getRow();
+//        Account account = (Account)this.getItems().get(index);
+//        return account;
+//    }
+
 }

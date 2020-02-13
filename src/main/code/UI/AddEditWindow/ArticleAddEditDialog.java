@@ -1,5 +1,6 @@
 package UI.AddEditWindow;
 
+import UI.Controller;
 import financeException.ModelException;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -8,8 +9,8 @@ import mainClasses.Common;
 
 public class ArticleAddEditDialog extends AddEditWindow {
 
-    public ArticleAddEditDialog(Stage stage) {
-        super(stage);
+    public ArticleAddEditDialog(Controller controller,Article article) {
+        super(controller,article);
     }
 
     @Override

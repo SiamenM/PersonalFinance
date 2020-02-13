@@ -1,14 +1,12 @@
 package UI.AddEditWindow;
 
+import UI.Controller;
 import financeException.ModelException;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import mainClasses.Account;
-import mainClasses.Article;
-import mainClasses.Common;
-import mainClasses.Transaction;
+import mainClasses.*;
 import saveLoad.SaveData;
 import settings.Format;
 import settings.Settings;
@@ -20,8 +18,8 @@ import java.util.Date;
 
 public class TransactionAddEditDialog extends AddEditWindow {
 
-    public TransactionAddEditDialog(Stage stage) {
-        super(stage);
+    public TransactionAddEditDialog(Controller controller, Transaction transaction) {
+        super(controller, transaction);
     }
 
     @Override

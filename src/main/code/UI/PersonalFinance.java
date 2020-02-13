@@ -33,6 +33,7 @@ public class PersonalFinance extends Application {
     public void start(Stage primaryStage) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("/UI/PersonalFinance.fxml"));
         primaryStage.setScene(new Scene(root));
+
         String stylesheet = getClass().getResource("/UI/Style.css").toExternalForm();
         root.getStylesheets().add(stylesheet);
         primaryStage.setTitle(Text.get("PROGRAM_NAME"));

@@ -1,5 +1,6 @@
 package UI.AddEditWindow;
 
+import UI.Controller;
 import financeException.ModelException;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
@@ -19,8 +20,8 @@ import java.util.Date;
 public class TransferAddEditDialog extends AddEditWindow {
     private SimpleDateFormat parser = new SimpleDateFormat("yyyy-MM-dd");
 
-   public  TransferAddEditDialog(Stage stage) {
-        super(stage);
+   public  TransferAddEditDialog(Controller controller,Transfer transfer) {
+        super(controller,transfer);
     }
 
     @Override

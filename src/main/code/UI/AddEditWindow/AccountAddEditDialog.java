@@ -1,20 +1,20 @@
 package UI.AddEditWindow;
 
+import UI.Controller;
 import financeException.ModelException;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import mainClasses.Account;
 import mainClasses.Common;
 import mainClasses.Currency;
 import saveLoad.SaveData;
 import settings.Format;
 
-public class AccountEditDialog extends AddEditWindow {
+public class AccountAddEditDialog extends AddEditWindow {
 
 
-    public AccountEditDialog(Stage stage) {
-        super(stage);
+    public AccountAddEditDialog(Controller controller, Account account) {
+        super(controller,account);
     }
 
     @Override

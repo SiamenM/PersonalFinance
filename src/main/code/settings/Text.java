@@ -139,6 +139,7 @@ final public class Text {
         data.put("ERROR_AMOUNT_FORMAT", "Некорректный формат суммы!");
         data.put("ERROR_NO_BASE_CURRENCY", "Необходима базовая валюта!");
         data.put("ERROR_UPDATE_CURRENCIES", "Ошибка при обновлении курсов валют!");
+        data.put("ERROR_NULL_ROW", "Строка не выбрана");
 
         data.put("CONFIRM_EXIT_TEXT", "Вы уверены, что хотите выйти? Несохраннёные данные будут удалены.");
         data.put("CONFIRM_EXIT_TITLE", "Подтверждение выхода");

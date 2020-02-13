@@ -1,10 +1,13 @@
 package UI.AddEditWindow;
 
+import UI.Controller;
 import financeException.ModelException;
 import javafx.collections.FXCollections;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
@@ -17,10 +20,12 @@ import javafx.util.StringConverter;
 import mainClasses.Common;
 import settings.Text;
 
+import java.io.IOException;
 import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Objects;
 
 abstract class AddEditWindow extends Dialog {
 
@@ -30,7 +35,16 @@ abstract class AddEditWindow extends Dialog {
     protected Common common;
     protected DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 
-    AddEditWindow(Stage stage) {
+    AddEditWindow(Controller controller, Common common)  {
+        Parent rootCon = null;
+        try {
+            rootCon = FXMLLoader.load(getClass().getResource("/UI/PersonalFinance.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        this.common = common;
+        Stage stage = new Stage();
+        stage.setScene(new Scene(Objects.requireNonNull(rootCon)));
         VBox root = new VBox();
         root.setPadding(new Insets(10));
         root.setSpacing(10);
@@ -42,7 +56,7 @@ abstract class AddEditWindow extends Dialog {
             stage.getIcons().add(new Image("images/add.png"));
         } else {
             setValues();
-            stage.setTitle(Text.get("DIALOG_EDIT"));
+            stage.setTitle(Text.get("MENU_EDIT_EDIT"));
             stage.getIcons().add(new Image("images/edit.png"));
         }
         for (Map.Entry<String, Node> entry : components.entrySet()) {
