@@ -297,41 +297,6 @@
                         </ImageView>
                     </graphic>
                 </Menu>
-                <Menu fx:id="menu_edit" mnemonicParsing="false" text="Edit">
-                    <items>
-                        <MenuItem fx:id="menu_add" mnemonicParsing="false" text="Add">
-                            <graphic>
-                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../images/menu_edit_add.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic></MenuItem>
-                        <MenuItem fx:id="menu_change" mnemonicParsing="false" text="Change">
-                            <graphic>
-                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../images/menu_edit_edit.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic></MenuItem>
-                        <MenuItem fx:id="menu_delete" mnemonicParsing="false" text="Delete">
-                            <graphic>
-                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                    <image>
-                                        <Image url="@../images/menu_edit_delete.png" />
-                                    </image>
-                                </ImageView>
-                            </graphic></MenuItem>
-                    </items>
-                    <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                            <image>
-                                <Image url="@../images/menu_edit.png" />
-                            </image>
-                        </ImageView>
-                    </graphic>
-                </Menu>
                 <Menu fx:id="menu_view" mnemonicParsing="false" text="View">
                     <items>
                         <MenuItem fx:id="menu_overview" mnemonicParsing="false" text="Overview">

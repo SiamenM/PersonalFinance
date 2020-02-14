@@ -61,7 +61,6 @@ final public class Text {
         data.put("NO", "НЕТ");
 
         data.put("MENU_FILE", "Файл");
-        data.put("MENU_EDIT", "Правка");
         data.put("MENU_VIEW", "Вид");
         data.put("MENU_PROPERTIES", "Настройки");
         data.put("MENU_HELP", "Помощь");
@@ -74,10 +73,6 @@ final public class Text {
         data.put("BALANCE_CURRENCY", "Баланс по валютам");
         data.put("FINISH_BALANCE", "Итоговый баланс");
 
-        data.put("MENU_EDIT_ADD", "Добавить");
-        data.put("MENU_EDIT_EDIT", "Изменить");
-        data.put("MENU_EDIT_DELETE", "Удалить");
-        data.put("MENU_EDIT_CANCEL", "Отмена");
         data.put("TITLE", "Наименование");
         data.put("CURRENCY", "Валюта");
         data.put("START_BALANCE", "Начальный баланс");
@@ -143,16 +138,17 @@ final public class Text {
 
         data.put("CONFIRM_EXIT_TEXT", "Вы уверены, что хотите выйти? Несохраннёные данные будут удалены.");
         data.put("CONFIRM_EXIT_TITLE", "Подтверждение выхода");
-        data.put("CONFIRM_DELETE_TITLE","Подтверждение удаления");
-        data.put("CONFIRM_DELETE_TEXT","Вы уверены, что хотите удалить, выбранные данные?");
+        data.put("CONFIRM_DELETE_TITLE", "Подтверждение удаления");
+        data.put("CONFIRM_DELETE_TEXT", "Вы уверены, что хотите удалить, выбранные данные?");
         data.put("OK", "ОК");
         data.put("EXIT", "Выйти");
         data.put("SAVE_AND_EXIT", "Сохранить и выйти");
         data.put("CANCEL", "Отмена");
         data.put("SAVE", "Сохранить");
         data.put("OPEN", "Открыть");
-
-
+        data.put("EDIT", "Изменить");
+        data.put("DELETE", "Удалить");
+        data.put("ADD", "Добавить");
     }
 
 }

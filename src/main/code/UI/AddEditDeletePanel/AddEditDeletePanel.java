@@ -17,9 +17,11 @@ import settings.Text;
 import java.util.Optional;
 
 abstract class AddEditDeletePanel extends HBox {
+    private Controller controller;
 
     AddEditDeletePanel(Controller controller) {
         super();
+        this.controller = controller;
         setAlignment(Pos.CENTER);
         setPadding(new Insets(5, 5, 5, 5));
         setSpacing(10);
@@ -27,11 +29,11 @@ abstract class AddEditDeletePanel extends HBox {
     }
 
     private void initPanel() {
-        Button add = new Button(Text.get("MENU_EDIT_ADD"), new ImageView("/images/add.png"));
+        Button add = new Button(Text.get("ADD"), new ImageView("/images/add.png"));
         add.setMinWidth(120);
         add.setMaxWidth(120);
         add.setOnAction(event -> showAddEditWindow(null));
-        Button edit = new Button(Text.get("MENU_EDIT_EDIT"), new ImageView("/images/edit.png"));
+        Button edit = new Button(Text.get("EDIT"), new ImageView("/images/edit.png"));
         edit.setMinWidth(120);
         edit.setMaxWidth(120);
         edit.setOnAction(event -> {
@@ -42,7 +44,7 @@ abstract class AddEditDeletePanel extends HBox {
                 Controller.showAlert(Text.get("ERROR_NULL_ROW"));
             }
         });
-        Button delete = new Button(Text.get("MENU_EDIT_DELETE"), new ImageView("/images/delete.png"));
+        Button delete = new Button(Text.get("DELETE"), new ImageView("/images/delete.png"));
         delete.setMinWidth(120);
         delete.setMaxWidth(120);
         delete.setOnAction(event -> {
@@ -61,6 +63,7 @@ abstract class AddEditDeletePanel extends HBox {
                 if (option.get() == delete1) {
                     try {
                         deleteRow(common);
+                        controller.initListViewBalanceCurrencyAndFinishBalance();
                     } catch (ModelException e) {
                         e.printStackTrace();
                     }
