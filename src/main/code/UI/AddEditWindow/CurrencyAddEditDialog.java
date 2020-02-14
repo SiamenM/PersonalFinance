@@ -5,7 +5,6 @@ import financeException.ModelException;
 import javafx.collections.FXCollections;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import mainClasses.Common;
 import mainClasses.Currency;
 import settings.Format;

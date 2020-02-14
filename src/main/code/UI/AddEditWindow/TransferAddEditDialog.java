@@ -5,7 +5,6 @@ import financeException.ModelException;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import mainClasses.Account;
 import mainClasses.Common;
 import mainClasses.Transfer;

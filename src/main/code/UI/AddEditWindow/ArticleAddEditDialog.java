@@ -3,7 +3,6 @@ package UI.AddEditWindow;
 import UI.Controller;
 import financeException.ModelException;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import mainClasses.Article;
 import mainClasses.Common;
 

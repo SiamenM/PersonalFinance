@@ -18,15 +18,15 @@
 
 <AnchorPane fx:id="" maxHeight="500.0" maxWidth="924.0" minHeight="489.0" minWidth="800.0" prefHeight="489.0" prefWidth="924.0" styleClass="/UI/Style.css" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.Controller">
     <children>
-        <TabPane cache="true" layoutX="197.0" layoutY="34.0" prefHeight="417.0" prefWidth="719.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="100.0" tabMaxWidth="100.0" tabMinHeight="70.0" tabMinWidth="70.0">
+        <TabPane fx:id="tabPane" cache="true" layoutX="197.0" layoutY="34.0" prefHeight="417.0" prefWidth="719.0" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="100.0" tabMaxWidth="100.0" tabMinHeight="70.0" tabMinWidth="70.0">
             <tabs>
-                <Tab fx:id="menu_view_overview" text="Overview">
+                <Tab fx:id="menuViewOverview" text="Overview">
                <content>
                   <ScrollPane hbarPolicy="NEVER" prefHeight="337.0" prefWidth="719.0">
                      <content>
-                        <VBox fx:id="vbox_overview" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="340.0" prefWidth="663.0" spacing="10.0">
+                        <VBox fx:id="vboxOverview" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="340.0" prefWidth="663.0" spacing="10.0">
                            <children>
-                                      <Label fx:id="label_last_transactions" alignment="TOP_CENTER" text="Last transactions" textAlignment="CENTER">
+                                      <Label fx:id="labelLastTransactions" alignment="TOP_CENTER" text="Last transactions" textAlignment="CENTER">
                                           <graphic>
                                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                                   <image>
@@ -51,7 +51,7 @@
                         </ImageView>
                </graphic>
                 </Tab>
-                <Tab fx:id="menu_view_accounts" text="Accounts">
+                <Tab fx:id="menuViewAccounts" text="Accounts">
                     <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -62,9 +62,9 @@
                <content>
                   <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
                      <content>
-                        <VBox fx:id="vbox_account" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="239.0" prefWidth="663.0" spacing="10.0">
+                        <VBox fx:id="vboxAccount" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="239.0" prefWidth="663.0" spacing="10.0">
                            <children>
-                                      <Label fx:id="label_accounts" text="Accounts">
+                                      <Label fx:id="labelAccounts" text="Accounts">
                                           <graphic>
                                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                                   <image>
@@ -84,7 +84,7 @@
                      </content>
                   </ScrollPane>
                </content></Tab>
-                <Tab fx:id="menu_view_articles" text="Articles">
+                <Tab fx:id="menuViewArticles" text="Articles">
                     <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -95,9 +95,9 @@
                <content>
                   <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
                      <content>
-                        <VBox fx:id="vbox_article" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="239.0" prefWidth="663.0" spacing="10.0">
+                        <VBox fx:id="vboxArticle" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="239.0" prefWidth="663.0" spacing="10.0">
                            <children>
-                                      <Label fx:id="label_articles" text="Articles">
+                                      <Label fx:id="labelArticles" text="Articles">
                                           <graphic>
                                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                                   <image>
@@ -115,7 +115,7 @@
                   </ScrollPane>
                </content>
                 </Tab>
-                <Tab fx:id="menu_view_transactions" text="Transactions">
+                <Tab fx:id="menuViewTransactions" text="Transactions">
                     <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -126,12 +126,12 @@
                <content>
                   <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
                      <content>
-                        <VBox fx:id="vbox_transaction" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="327.0" prefWidth="663.0" spacing="10.0">
+                        <VBox fx:id="vboxTransaction" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="327.0" prefWidth="663.0" spacing="10.0">
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                            <children>
-                                      <Label fx:id="label_transactions" text="Transactions">
+                                      <Label fx:id="labelTransactions" text="Transactions">
                                           <graphic>
                                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                                   <image>
@@ -146,7 +146,7 @@
                   </ScrollPane>
                </content>
                 </Tab>
-                <Tab fx:id="menu_view_transfer" text="Transfers">
+                <Tab fx:id="menuViewTransfer" text="Transfers">
                     <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -157,12 +157,12 @@
                <content>
                   <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" prefWidth="200.0">
                      <content>
-                        <VBox fx:id="vbox_transfers" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="329.0" prefWidth="663.0" spacing="10.0">
+                        <VBox fx:id="vboxTransfers" alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" prefHeight="329.0" prefWidth="663.0" spacing="10.0">
                            <padding>
                               <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                            </padding>
                            <children>
-                                      <Label fx:id="label_transfers" text="Transfers">
+                                      <Label fx:id="labelTransfers" text="Transfers">
                                           <graphic>
                                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                                   <image>
@@ -177,7 +177,7 @@
                   </ScrollPane>
                </content>
                 </Tab>
-                <Tab fx:id="menu_view_currencies" text="Currencies">
+                <Tab fx:id="menuViewCurrencies" text="Currencies">
                     <graphic>
                         <ImageView cache="true" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -188,9 +188,9 @@
                <content>
                   <ScrollPane prefHeight="200.0" prefWidth="200.0">
                      <content>
-                        <VBox fx:id="vbox_currencies" alignment="TOP_CENTER" prefHeight="239.0" prefWidth="663.0" spacing="10.0">
+                        <VBox fx:id="vboxCurrencies" alignment="TOP_CENTER" prefHeight="239.0" prefWidth="663.0" spacing="10.0">
                            <children>
-                                      <Label fx:id="label_currencies" text="Currencies">
+                                      <Label fx:id="labelCurrencies" text="Currencies">
                                           <graphic>
                                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                                   <image>
@@ -208,7 +208,7 @@
                   </ScrollPane>
                </content>
                 </Tab>
-                <Tab fx:id="menu_view_statistics" text="Statistics">
+                <Tab fx:id="menuViewStatistics" text="Statistics">
                     <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                             <image>
@@ -221,7 +221,7 @@
                      <children>
                         <VBox fx:id="vboxStatistics" alignment="TOP_CENTER" prefHeight="333.0" prefWidth="719.0" spacing="20.0">
                            <children>
-                                      <Label fx:id="label_statistics" text="Statistics">
+                                      <Label fx:id="labelStatistics" text="Statistics">
                                           <graphic>
                                               <ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
                                                   <image>
@@ -246,9 +246,9 @@
         </TabPane>
         <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="32.0" prefWidth="924.0" AnchorPane.rightAnchor="0.0">
             <menus>
-                <Menu fx:id="menu_file" mnemonicParsing="false" text="File">
+                <Menu fx:id="menuFile" mnemonicParsing="false" text="File">
                     <items>
-                        <MenuItem fx:id="menu_new" mnemonicParsing="false" onAction="#pressMenuNew" text="New">
+                        <MenuItem fx:id="menuNew" mnemonicParsing="false" onAction="#pressMenuNew" text="New">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -256,7 +256,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_open" mnemonicParsing="false" onAction="#pressMenuOpen" text="Open">
+                        <MenuItem fx:id="menuOpen" mnemonicParsing="false" onAction="#pressMenuOpen" text="Open">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -264,7 +264,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_save" mnemonicParsing="false" onAction="#pressMenuSave" text="Save">
+                        <MenuItem fx:id="menuSave" mnemonicParsing="false" onAction="#pressMenuSave" text="Save">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -272,7 +272,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_refresh" mnemonicParsing="false" onAction="#pressMenuRefreshCurrency" text="Refresh">
+                        <MenuItem fx:id="menuRefresh" mnemonicParsing="false" onAction="#pressMenuRefreshCurrency" text="Refresh">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -280,7 +280,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_close" mnemonicParsing="false" onAction="#pressExit" onMenuValidation="#pressExit" text="Close">
+                        <MenuItem fx:id="menuClose" mnemonicParsing="false" onAction="#pressExit" onMenuValidation="#pressExit" text="Close">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -297,9 +297,9 @@
                         </ImageView>
                     </graphic>
                 </Menu>
-                <Menu fx:id="menu_view" mnemonicParsing="false" text="View">
+                <Menu fx:id="menuView" mnemonicParsing="false" text="View">
                     <items>
-                        <MenuItem fx:id="menu_overview" mnemonicParsing="false" text="Overview">
+                        <MenuItem fx:id="menuOverview" mnemonicParsing="false" onAction="#clickMenuOverview" text="Overview">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -307,7 +307,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_accounts" mnemonicParsing="false" text="Accounts">
+                        <MenuItem fx:id="menuAccounts" mnemonicParsing="false" onAction="#clickMenuAccounts" text="Accounts">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -315,7 +315,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_articles" mnemonicParsing="false" text="Articles">
+                        <MenuItem fx:id="menuArticles" mnemonicParsing="false" onAction="#clickMenuArticles" text="Articles">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -323,7 +323,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_transaction" mnemonicParsing="false" text="Transactions">
+                        <MenuItem fx:id="menuTransaction" mnemonicParsing="false" onAction="#clickMenuTransaction" text="Transactions">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -331,7 +331,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_transfer" mnemonicParsing="false" text="Transfers">
+                        <MenuItem fx:id="menuTransfer" mnemonicParsing="false" onAction="#clickMenuTransfer" text="Transfers">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -339,7 +339,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_currencies" mnemonicParsing="false" text="Currencies">
+                        <MenuItem fx:id="menuCurrencies" mnemonicParsing="false" onAction="#clickMenuCurrencies" text="Currencies">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -347,7 +347,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menu_statistics" mnemonicParsing="false" text="Statistics">
+                        <MenuItem fx:id="menuStatistics" mnemonicParsing="false" onAction="#clickMenuStatistics" text="Statistics">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -364,9 +364,9 @@
                         </ImageView>
                     </graphic>
                 </Menu>
-                <Menu fx:id="menu_properties" mnemonicParsing="false" text="Properties">
+                <Menu fx:id="menuProperties" mnemonicParsing="false" text="Properties">
                     <items>
-                        <MenuItem fx:id="menu_language" mnemonicParsing="false" text="Action 1" />
+                        <MenuItem fx:id="menuLanguage" mnemonicParsing="false" text="Action 1" />
                     </items>
                     <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
@@ -376,9 +376,9 @@
                         </ImageView>
                     </graphic>
                 </Menu>
-                <Menu fx:id="menu_help" mnemonicParsing="false" text="Help">
+                <Menu fx:id="menuHelp" mnemonicParsing="false" text="Help">
                     <items>
-                        <MenuItem fx:id="menu_about_program" mnemonicParsing="false" onAction="#pressAbout" text="About Program">
+                        <MenuItem fx:id="menuAboutProgram" mnemonicParsing="false" onAction="#pressAbout" text="About Program">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -407,7 +407,7 @@
          <children>
             <VBox alignment="CENTER_LEFT">
                <children>
-                    <Label fx:id="label_currency_balance" text="Баланс по валютам">
+                    <Label fx:id="labelCurrencyBalance" text="Баланс по валютам">
                         <graphic>
                             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                 <image>
@@ -419,12 +419,12 @@
                             <Font name="Arial" size="14.0" />
                         </font>
                   </Label>
-                  <ListView fx:id="list_balance_currencies" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="listBalanceCurrencies" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
             <VBox alignment="CENTER_LEFT">
                <children>
-                    <Label fx:id="label_finish_balance" text="Итоговый баланс" textAlignment="CENTER">
+                    <Label fx:id="labelFinishBalance" text="Итоговый баланс" textAlignment="CENTER">
                         <graphic>
                             <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                 <image>
@@ -436,7 +436,7 @@
                             <Font name="Arial" size="14.0" />
                         </font>
                   </Label>
-                  <ListView fx:id="list_finish_balance" prefHeight="200.0" prefWidth="200.0" />
+                  <ListView fx:id="listFinishBalance" prefHeight="200.0" prefWidth="200.0" />
                </children>
             </VBox>
          </children>

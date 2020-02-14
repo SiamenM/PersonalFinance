@@ -5,14 +5,15 @@ import financeException.ModelException;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
-import mainClasses.*;
+import mainClasses.Account;
+import mainClasses.Article;
+import mainClasses.Common;
+import mainClasses.Transaction;
 import saveLoad.SaveData;
 import settings.Format;
 import settings.Settings;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.util.Date;
 

@@ -42,6 +42,7 @@ public class Controller {
     private TransferTable transferTable;
     private CurrencyTable currencyTable;
     private List<FinanceTable> tables;
+    private SingleSelectionModel<Tab> selectionModel;
     public Stage stage;
 
     @FXML
@@ -157,7 +158,7 @@ public class Controller {
         vboxArticle.setAlignment(Pos.TOP_CENTER);
         vboxStatistics.getChildren().add(new ChartPanel(true));
         initListViewBalanceCurrencyAndFinishBalance();
-
+        this.selectionModel = tabPane.getSelectionModel();
     }
 
     private void refreshTables() {
@@ -314,7 +315,32 @@ public class Controller {
         return currencyTable;
     }
 
-    public void clickMenuCurrencies(ActionEvent event) {
-
+    public void clickMenuOverview() {
+        selectionModel.select(menuViewOverview);
     }
+
+    public void clickMenuAccounts() {
+        selectionModel.select(menuViewAccounts);
+    }
+
+    public void clickMenuArticles() {
+        selectionModel.select(menuViewArticles);
+    }
+
+    public void clickMenuTransaction() {
+        selectionModel.select(menuViewTransactions);
+    }
+
+    public void clickMenuTransfer() {
+        selectionModel.select(menuViewTransfer);
+    }
+
+    public void clickMenuCurrencies() {
+        selectionModel.select(menuViewCurrencies);
+    }
+
+    public void clickMenuStatistics() {
+        selectionModel.select(menuViewStatistics);
+    }
+
 }

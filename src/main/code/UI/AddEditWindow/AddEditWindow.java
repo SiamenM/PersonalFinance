@@ -52,11 +52,11 @@ abstract class AddEditWindow extends Dialog {
         Scene scene = new Scene(root);
         init();
         if (isAdd()) {
-            stage.setTitle(Text.get("MENU_EDIT_ADD"));
+            stage.setTitle(Text.get("ADD"));
             stage.getIcons().add(new Image("images/add.png"));
         } else {
             setValues();
-            stage.setTitle(Text.get("MENU_EDIT_EDIT"));
+            stage.setTitle(Text.get("EDIT"));
             stage.getIcons().add(new Image("images/edit.png"));
         }
         for (Map.Entry<String, Node> entry : components.entrySet()) {
@@ -81,12 +81,12 @@ abstract class AddEditWindow extends Dialog {
         }
         HBox hBoxForButtons = new HBox();
         ImageView imageViewOk = new ImageView("images/ok.png");
-        Button ok = new Button(Text.get("MENU_EDIT_ADD"), imageViewOk);
+        Button ok = new Button(Text.get("ADD"), imageViewOk);
         if (!isAdd()) {
-            ok.setText(Text.get("MENU_EDIT_EDIT"));
+            ok.setText(Text.get("EDIT"));
         }
         ImageView imageViewCancel = new ImageView("images/cancel.png");
-        Button cancel = new Button(Text.get("MENU_EDIT_CANCEL"), imageViewCancel);
+        Button cancel = new Button(Text.get("CANCEL"), imageViewCancel);
         hBoxForButtons.setSpacing(40);
         hBoxForButtons.getChildren().addAll(ok, cancel);
         root.getChildren().addAll(hBoxForButtons);

@@ -299,7 +299,7 @@
                 </Menu>
                 <Menu fx:id="menuView" mnemonicParsing="false" text="View">
                     <items>
-                        <MenuItem fx:id="menuOverview" mnemonicParsing="false" text="Overview">
+                        <MenuItem fx:id="menuOverview" mnemonicParsing="false" onAction="#clickMenuOverview" text="Overview">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -307,7 +307,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menuAccounts" mnemonicParsing="false" text="Accounts">
+                        <MenuItem fx:id="menuAccounts" mnemonicParsing="false" onAction="#clickMenuAccounts" text="Accounts">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -315,7 +315,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menuArticles" mnemonicParsing="false" text="Articles">
+                        <MenuItem fx:id="menuArticles" mnemonicParsing="false" onAction="#clickMenuArticles" text="Articles">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -323,7 +323,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menuTransaction" mnemonicParsing="false" text="Transactions">
+                        <MenuItem fx:id="menuTransaction" mnemonicParsing="false" onAction="#clickMenuTransaction" text="Transactions">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -331,7 +331,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menuTransfer" mnemonicParsing="false" text="Transfers">
+                        <MenuItem fx:id="menuTransfer" mnemonicParsing="false" onAction="#clickMenuTransfer" text="Transfers">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
@@ -347,7 +347,7 @@
                                     </image>
                                 </ImageView>
                             </graphic></MenuItem>
-                        <MenuItem fx:id="menuStatistics" mnemonicParsing="false" text="Statistics">
+                        <MenuItem fx:id="menuStatistics" mnemonicParsing="false" onAction="#clickMenuStatistics" text="Statistics">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                     <image>
