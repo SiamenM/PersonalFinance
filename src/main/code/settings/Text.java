@@ -143,6 +143,8 @@ final public class Text {
 
         data.put("CONFIRM_EXIT_TEXT", "Вы уверены, что хотите выйти? Несохраннёные данные будут удалены.");
         data.put("CONFIRM_EXIT_TITLE", "Подтверждение выхода");
+        data.put("CONFIRM_DELETE_TITLE","Подтверждение удаления");
+        data.put("CONFIRM_DELETE_TEXT","Вы уверены, что хотите удалить, выбранные данные?");
         data.put("OK", "ОК");
         data.put("EXIT", "Выйти");
         data.put("SAVE_AND_EXIT", "Сохранить и выйти");

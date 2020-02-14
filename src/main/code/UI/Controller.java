@@ -171,11 +171,6 @@ public class Controller {
 
     }
 
-
-//    private void showAddEditWindow(Common c) {
-//        new AccountAddEditDialog(this);
-//    }
-
     private void refreshTables() {
         for (FinanceTable table : tables) {
             table.fillIn();
@@ -213,36 +208,6 @@ public class Controller {
         stage.initOwner(label_last_transactions.getScene().getWindow());
         stage.getIcons().add(icon);
         stage.show();
-    }
-
-    public void pressAddAccounts(ActionEvent event) {
-        Stage stage = new Stage();
-        stage.initOwner(label_last_transactions.getScene().getWindow());
-      //  new AccountAddEditDialog(this);
-    }
-
-    public void pressAddArticle(ActionEvent event) {
-        Stage stage = new Stage();
-        stage.initOwner(label_last_transactions.getScene().getWindow());
-      //  new ArticleAddEditDialog(this);
-    }
-
-    public void pressAddTransaction(ActionEvent event) {
-        Stage stage = new Stage();
-        stage.initOwner(label_last_transactions.getScene().getWindow());
-      //  new TransactionAddEditDialog(this);
-    }
-
-    public void pressAddTransfers(ActionEvent event) {
-        Stage stage = new Stage();
-        stage.initOwner(label_last_transactions.getScene().getWindow());
-      //  new TransferAddEditDialog(this);
-    }
-
-    public void pressAddCurrency(ActionEvent event) {
-        Stage stage = new Stage();
-        stage.initOwner(label_last_transactions.getScene().getWindow());
-        //new CurrencyAddEditDialog(this);
     }
 
     public void pressMenuNew(ActionEvent event) {
@@ -310,6 +275,7 @@ public class Controller {
         stage.getIcons().add(new Image("/images/error.png"));
         alert.showAndWait();
     }
+
 
     public void pressExit(ActionEvent event) {
         if (SaveData.getInstance().isSaved()) {

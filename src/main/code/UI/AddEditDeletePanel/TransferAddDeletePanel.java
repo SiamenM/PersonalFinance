@@ -2,8 +2,10 @@ package UI.AddEditDeletePanel;
 
 import UI.AddEditWindow.TransferAddEditDialog;
 import UI.Controller;
+import financeException.ModelException;
 import mainClasses.Common;
 import mainClasses.Transfer;
+import saveLoad.SaveData;
 
 public class TransferAddDeletePanel extends AddEditDeletePanel {
 
@@ -15,8 +17,18 @@ public class TransferAddDeletePanel extends AddEditDeletePanel {
     }
 
     @Override
+    void deleteRow(Common common) throws ModelException {
+        SaveData.getInstance().remove(common);
+        controller.getTransferTable().fillIn();
+    }
+
+    @Override
     void showAddEditWindow(Common common) {
-        Transfer transfer = (Transfer) common;
-        new TransferAddEditDialog(controller, transfer);
+        new TransferAddEditDialog(controller, (Transfer) common);
+    }
+
+    @Override
+    Common getSelectedCommon() {
+        return controller.getTransferTable().getCommon();
     }
 }
