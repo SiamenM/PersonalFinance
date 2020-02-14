@@ -7,12 +7,12 @@ import UI.chartPanel.ChartPanel;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
 import javafx.stage.Modality;
@@ -43,7 +43,6 @@ public class Controller {
     private CurrencyTable currencyTable;
     private List<FinanceTable> tables;
     private SingleSelectionModel<Tab> selectionModel;
-    public Stage stage;
 
     @FXML
     public TabPane tabPane;
@@ -105,7 +104,6 @@ public class Controller {
         tables.add(transactionTable);
         tables.add(transferTable);
         tables.add(currencyTable);
-        stage = new Stage();
     }
 
     public void initialize() {
@@ -181,10 +179,15 @@ public class Controller {
 
     }
 
-    public void pressAbout(ActionEvent event) throws IOException {
-        Parent aboutRoot = FXMLLoader.load(getClass().getResource("/UI/about/About.fxml"));
-        Image iconAbout = new Image("images/about.png");
-        setAndShowStage(aboutRoot, iconAbout);
+    public void pressAbout() {
+        Alert about = new Alert(Alert.AlertType.INFORMATION);
+        about.setTitle(Text.get("MENU_HELP_ABOUT"));
+        about.setGraphic(new ImageView("/images/main.png"));
+        about.setHeaderText(Text.get("LABEL_NAME_PROGRAM"));
+        about.setContentText(Text.get("LABEL_DESCRIPTION_PROGRAM"));
+        Stage stage = (Stage) about.getDialogPane().getScene().getWindow();
+        stage.getIcons().add(new Image("/images/main.png"));
+        about.showAndWait();
     }
 
     private void setAndShowStage(Parent parent, Image icon) {

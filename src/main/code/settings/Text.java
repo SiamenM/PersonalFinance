@@ -94,9 +94,8 @@ final public class Text {
 
         data.put("MENU_HELP_ABOUT", "О программе");
         data.put("LABEL_WITH_RESPECT", "С уважением Семён Маскаленчик");
-        data.put("LABEL_NAME_PROGRAM", "Домашняя бухгалтерия");
+        data.put("LABEL_NAME_PROGRAM", "Домашняя бухгалтерия, версия 1.0");
         data.put("LABEL_DESCRIPTION_PROGRAM", "Эта программа поможет Вам отслеживать доходы и расходы");
-        data.put("LABEL_VERSION", "Версия 1.0");
 
         data.put("MENU_VIEW_OVERVIEW", "Обзор");
         data.put("LABEL_LAST_TRANSACTIONS", "Последние транзакции");
