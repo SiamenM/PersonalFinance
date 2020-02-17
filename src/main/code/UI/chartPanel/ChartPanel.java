@@ -27,16 +27,16 @@ public class ChartPanel extends VBox {
     }
 
     //предусмотреть смену панелей
-    private void initChartPanel() {
-        Button button;
+    public void initChartPanel() {
+        Button button = new Button();
         Map<String, Double> mapData;
-        FilterPanel filterPanel = new FilterPanel();
+        FilterPanel filterPanel = new FilterPanel(this);
         if (income) {
             mapData = Statistics.getDataForChartOnIncomeArticles();
-            button = new Button(Text.get("INCOMES_BY_ARTICLES"));
+            button.setText(Text.get("INCOMES_BY_ARTICLES"));
         } else {
             mapData = Statistics.getDataChartOnExpArticles();
-            button = new Button(Text.get("EXPENSES_BY_ARTICLES"));
+            button.setText(Text.get("EXPENSES_BY_ARTICLES"));
         }
         if (mapData.size() == 0) {
             Label noDataText = new Label("No data");
@@ -56,8 +56,14 @@ public class ChartPanel extends VBox {
             chart.setPrefHeight(600);
             chart.setPrefWidth(400);
             this.getChildren().addAll(filterPanel, button, chart);
+            button.setOnAction(event -> {
+                income = !income;
+                this.initChartPanel();
+            });
         }
     }
+
+    public void refresh(){}
 
 
 }

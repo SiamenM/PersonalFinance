@@ -47,10 +47,6 @@ public final class Format {
         return Double.parseDouble(amount);
     }
 
-    public static String yesNo(boolean yes) {
-        return yes ? Text.get("YES") : Text.get("NO");
-    }
-
     public static String getTitleFilter(Filter filter) {
         Date time = filter.getTo();
         switch (filter.getStep()) {
@@ -58,16 +54,15 @@ public final class Format {
                 return date(time);
             case Filter.STEP_MONTH:
                 return dateMonth(time);
-            case Filter.STEP_YEAR:
+            default:
                 return dateYear(time);
         }
-        return "";
     }
 
     private static class MainDateFormatSymbols extends DateFormatSymbols {
         @Override
         public String[] getMonths() {
-        return Text.getMonth();
+            return Text.getMonth();
         }
     }
 }

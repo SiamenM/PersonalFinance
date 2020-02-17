@@ -13,16 +13,23 @@ import settings.Text;
 public class TransactionTable extends FinanceTable {
 
     private boolean isOverview;
+    private boolean isFiltred;
 
     public TransactionTable(boolean isOverview) {
         this.isOverview = isOverview;
+        this.isFiltred = !isOverview;
         this.fillIn();
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
         this.initTable();
     }
 
     public void fillIn() {
-        ObservableList<Transaction> transactions = initItems();
+        ObservableList<Transaction> transactions;
+        if (isFiltred) {
+            transactions = FXCollections.observableArrayList(SaveData.getInstance().getFilterTransactions());
+        } else {
+            transactions = initItems();
+        }
         this.setItems(transactions);
     }
 

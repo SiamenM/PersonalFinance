@@ -150,8 +150,8 @@ public class Controller {
         vboxOverview.getChildren().add(transactionTableOverview);
         vboxAccount.getChildren().addAll(new AccountAddDeletePanel(this), accountsTable);
         vboxArticle.getChildren().addAll(new ArticleAddDeletePanel(this), articleTable);
-        vboxTransfers.getChildren().addAll(new TransferAddDeletePanel(this), new FilterPanel(), transferTable);
-        vboxTransaction.getChildren().addAll(new TransactionAddDeletePanel(this), new FilterPanel(), transactionTable);
+        vboxTransfers.getChildren().addAll(new TransferAddDeletePanel(this), new FilterPanel(transferTable), transferTable);
+        vboxTransaction.getChildren().addAll(new TransactionAddDeletePanel(this), new FilterPanel(transactionTable), transactionTable);
         vboxCurrencies.getChildren().addAll(new CurrencyAddDeletePanel(this), currencyTable);
         vboxArticle.setAlignment(Pos.TOP_CENTER);
         vboxStatistics.getChildren().add(new ChartPanel(true));
@@ -176,7 +176,6 @@ public class Controller {
         listBalanceCurrencies.setItems(FXCollections.observableArrayList(currencies));
         listFinishBalance.setPrefHeight(finishBalance.size() * 25);
         listFinishBalance.setItems(FXCollections.observableArrayList(finishBalance));
-
     }
 
     public void pressAbout() {
@@ -266,7 +265,6 @@ public class Controller {
         stage.getIcons().add(new Image("/images/error.png"));
         alert.showAndWait();
     }
-
 
     public void pressExit(ActionEvent event) {
         if (SaveData.getInstance().isSaved()) {

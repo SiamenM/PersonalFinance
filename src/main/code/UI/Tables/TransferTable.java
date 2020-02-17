@@ -12,6 +12,7 @@ import settings.Text;
 
 public class TransferTable extends FinanceTable {
 
+
     public TransferTable() {
         this.fillIn();
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
@@ -69,7 +70,7 @@ public class TransferTable extends FinanceTable {
 
     @Override
     public void fillIn() {
-        ObservableList<Transfer> transfers = FXCollections.observableArrayList(SaveData.getInstance().getTransfers());
+        ObservableList<Transfer> transfers = FXCollections.observableArrayList(SaveData.getInstance().getFilterTransfers());
         this.setItems(transfers);
     }
 

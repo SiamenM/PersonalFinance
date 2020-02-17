@@ -225,7 +225,6 @@ public final class SaveData {
         } else {
             throw new ModelException(ModelException.COMMON_NOT_FOUND);
         }
-
     }
 
     public void updateCurrencies() throws IOException, SAXException, ParserConfigurationException {
