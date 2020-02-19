@@ -8,14 +8,11 @@ import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 import mainClasses.Currency;
 import mainClasses.Statistics;
@@ -189,17 +186,6 @@ public class Controller {
         about.showAndWait();
     }
 
-    private void setAndShowStage(Parent parent, Image icon) {
-        Stage stage = new Stage();
-        stage.setScene(new Scene(parent));
-        stage.setTitle(Text.get("ERROR"));
-        stage.setResizable(false);
-        stage.initModality(Modality.WINDOW_MODAL);
-        stage.initOwner(labelLastTransactions.getScene().getWindow());
-        stage.getIcons().add(icon);
-        stage.show();
-    }
-
     public void pressMenuNew(ActionEvent event) {
         Settings.setFileSave(null);
         SaveData.getInstance().clear();
@@ -223,7 +209,7 @@ public class Controller {
         }
     }
 
-    public void pressMenuSave(ActionEvent event) {
+    public void pressMenuSave() {
         if (Settings.getFileSave() == null) {
             Stage stage = new Stage();
             stage.centerOnScreen();
@@ -246,7 +232,7 @@ public class Controller {
         }
     }
 
-    public void pressMenuRefreshCurrency(ActionEvent event) {
+    public void pressMenuRefreshCurrency() {
         try {
             SaveData.getInstance().updateCurrencies();
             initListViewBalanceCurrencyAndFinishBalance();
@@ -266,7 +252,11 @@ public class Controller {
         alert.showAndWait();
     }
 
-    public void pressExit(ActionEvent event) {
+    public void pressExit() {
+        exitProgram();
+    }
+
+    void exitProgram() {
         if (SaveData.getInstance().isSaved()) {
             System.exit(1);
         } else {
@@ -284,7 +274,7 @@ public class Controller {
             if (option.get() == exit) {
                 System.exit(1);
             } else if (option.get() == saveAndExit) {
-                pressMenuSave(event);
+                pressMenuSave();
                 System.exit(1);
             } else {
                 confirmDialog.close();

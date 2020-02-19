@@ -1,6 +1,5 @@
 package UI.FilterPanel;
 
-import UI.Controller;
 import UI.Tables.FinanceTable;
 import UI.chartPanel.ChartPanel;
 import javafx.geometry.Insets;
@@ -39,7 +38,7 @@ public class FilterPanel extends HBox {
             if(chartPanel==null){
                 financeTable.fillIn();
             } else {
-                chartPanel.initChartPanel();
+                chartPanel.refresh();
             }
 
         });
@@ -50,7 +49,7 @@ public class FilterPanel extends HBox {
             if(chartPanel==null){
                 financeTable.fillIn();
             } else {
-                chartPanel.initChartPanel();
+                chartPanel.refresh();
             }
         });
         Button right = new Button("", new ImageView("/images/right.png"));
@@ -60,7 +59,7 @@ public class FilterPanel extends HBox {
             if(chartPanel==null){
                 financeTable.fillIn();
             } else {
-                chartPanel.initChartPanel();
+                chartPanel.refresh();
             }
         });
         step.setPrefHeight(left.getPrefHeight());

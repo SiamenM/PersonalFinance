@@ -2,11 +2,13 @@ package UI;
 
 import financeException.ModelException;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 import mainClasses.*;
 import saveLoad.SaveData;
 import settings.Settings;
@@ -31,7 +33,8 @@ public class PersonalFinance extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("/UI/PersonalFinance.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/UI/PersonalFinance.fxml"));
+        Parent root = loader.load();
         primaryStage.setScene(new Scene(root));
 
         String stylesheet = getClass().getResource("/UI/Style.css").toExternalForm();
@@ -42,6 +45,13 @@ public class PersonalFinance extends Application {
         primaryStage.getIcons().add(iconMain);
 
         primaryStage.show();
+        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
+            @Override
+            public void handle(WindowEvent event) {
+                Controller controller = loader.getController();
+                controller.exitProgram();
+            }
+        });
 
     }
 
