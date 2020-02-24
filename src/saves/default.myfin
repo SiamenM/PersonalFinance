@@ -12,53 +12,8 @@
         <startAmount>0.0</startAmount>
         <title>deposit in usd</title>
     </accounts>
-    <accounts>
-        <amount>7894.0</amount>
-        <currency>
-            <base>true</base>
-            <code>BLR</code>
-            <on>true</on>
-            <rate>1.0</rate>
-            <title>Белорусский рубль</title>
-        </currency>
-        <startAmount>1000.0</startAmount>
-        <title>Кошелёк</title>
-    </accounts>
-    <accounts>
-        <amount>15000.0</amount>
-        <currency>
-            <base>true</base>
-            <code>BLR</code>
-            <on>true</on>
-            <rate>1.0</rate>
-            <title>Белорусский рубль</title>
-        </currency>
-        <startAmount>10000.0</startAmount>
-        <title>deposit in rub</title>
-    </accounts>
-    <accounts>
-        <amount>73587.0</amount>
-        <currency>
-            <base>true</base>
-            <code>BLR</code>
-            <on>true</on>
-            <rate>1.0</rate>
-            <title>Белорусский рубль</title>
-        </currency>
-        <startAmount>0.0</startAmount>
-        <title>VISA</title>
-    </accounts>
     <articles>
         <title>Cafe</title>
-    </articles>
-    <articles>
-        <title>Food</title>
-    </articles>
-    <articles>
-        <title>Home</title>
-    </articles>
-    <articles>
-        <title>Salary</title>
     </articles>
     <currencies>
         <base>true</base>
@@ -127,66 +82,6 @@
         </article>
         <date>2020-01-24T13:56:50.666+02:00</date>
         <notice>Buy some food</notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-5500.0</amount>
-        <article>
-            <title>Home</title>
-        </article>
-        <date>2020-01-24T13:56:50.666+02:00</date>
-        <notice>Home</notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-4000.0</amount>
-        <article>
-            <title>Home</title>
-        </article>
-        <date>2020-01-24T13:56:50.666+02:00</date>
-        <notice>Second home</notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>15000.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>10000.0</startAmount>
-            <title>deposit in rub</title>
-        </account>
-        <amount>1000.0</amount>
-        <article>
-            <title>Percents of deposit</title>
-        </article>
-        <date>2020-01-24T13:56:50.666+02:00</date>
-        <notice></notice>
     </transactions>
     <transactions>
         <account>

@@ -18,7 +18,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class PersonalFinance extends Application {
+public class PersonalFinanceMain extends Application {
 
 
     public static void main(String[] args) throws Exception {
@@ -135,12 +135,6 @@ public class PersonalFinance extends Application {
     private static void initialization() {
         Settings.init();
         Text.init();
-//        GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
-//        try {
-//            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT, Settings.FONT_KORNILOW));
-//        } catch (FontFormatException | IOException e) {
-//            e.printStackTrace();
-//        }
     }
 
 }

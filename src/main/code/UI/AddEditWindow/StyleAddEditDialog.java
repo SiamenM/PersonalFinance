@@ -2,7 +2,7 @@ package UI.AddEditWindow;
 
 import javafx.scene.image.ImageView;
 
-final class Style {
+final class StyleAddEditDialog {
 
     static final ImageView ICON_NOTICE = new ImageView("images/notice.png");
     static final ImageView ICON_TITLE = new ImageView("images/title.png");

@@ -5,6 +5,7 @@ import financeException.ModelException;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import mainClasses.Account;
 import mainClasses.Article;
 import mainClasses.Common;
@@ -12,15 +13,19 @@ import mainClasses.Transaction;
 import saveLoad.SaveData;
 import settings.Format;
 import settings.Settings;
-
 import java.text.ParseException;
 import java.time.LocalDate;
 import java.util.Date;
 
 public class TransactionAddEditDialog extends AddEditWindow {
 
+    private Controller controller;
+    private Stage stage;
+
     public TransactionAddEditDialog(Controller controller, Transaction transaction) {
-        super(controller, transaction);
+        super(controller,transaction);
+        this.controller = controller;
+        this.stage = super.stage;
     }
 
     @Override
@@ -32,11 +37,11 @@ public class TransactionAddEditDialog extends AddEditWindow {
         components.put("NOTICE", new TextField());
         components.put("ACCOUNT", initComboBox(SaveData.getInstance().getAccounts()));
         components.put("ARTICLE", initComboBox(SaveData.getInstance().getArticles()));
-        images.put("DATE", Style.ICON_DATE);
-        images.put("ACCOUNT", Style.ICON_ACCOUNT);
-        images.put("ARTICLE", Style.ICON_ARTICLE);
-        images.put("AMOUNT", Style.ICON_START_BALANCE);
-        images.put("NOTICE", Style.ICON_NOTICE);
+        images.put("DATE", StyleAddEditDialog.ICON_DATE);
+        images.put("ACCOUNT", StyleAddEditDialog.ICON_ACCOUNT);
+        images.put("ARTICLE", StyleAddEditDialog.ICON_ARTICLE);
+        images.put("AMOUNT", StyleAddEditDialog.ICON_START_BALANCE);
+        images.put("NOTICE", StyleAddEditDialog.ICON_NOTICE);
         values.put("AMOUNT", Format.amount(0));
     }
 
@@ -65,4 +70,15 @@ public class TransactionAddEditDialog extends AddEditWindow {
             throw new ModelException(ModelException.DATE_FORMAT);
         }
     }
+
+    @Override
+    protected void addCommon() {
+
+    }
+
+    @Override
+    protected void editCommon(Common common) {
+
+    }
+
 }

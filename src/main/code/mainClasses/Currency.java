@@ -29,8 +29,12 @@ public class Currency extends Common {
         this.title = title;
         this.code = code;
         this.rate = rate;
-        this.on = on;
         this.base = base;
+        if (this.base) {
+            this.on = true;
+        } else {
+            this.on = on;
+        }
     }
 
     public String getTitle() {
@@ -42,7 +46,7 @@ public class Currency extends Common {
     }
 
     public String getCode() {
-        if(code!=null){
+        if (code != null) {
             return code;
         } else {
             return "BLR";
@@ -112,9 +116,22 @@ public class Currency extends Common {
     @Override
     public void postEdit(SaveData saveData) {
         clearBase(saveData);
-        for (Account a : saveData.getAccounts()) {
-            if (a.getCurrency().equals(saveData.getOldCommon())) {
-                a.setCurrency(this);
+        for (Account account : saveData.getAccounts()) {
+            if (account.getCurrency().equals(saveData.getOldCommon())) {
+                account.setCurrency(this);
+            }
+            for (Transaction transaction : saveData.getTransactions()) {
+                if (transaction.getAccount().getCurrency().equals(saveData.getOldCommon())) {
+                    transaction.getAccount().setCurrency(this);
+                }
+            }
+            for (Transfer transfer : saveData.getTransfers()) {
+                if (transfer.getFromAccount().getCurrency().equals(saveData.getOldCommon())) {
+                    transfer.getFromAccount().setCurrency(this);
+                }
+                if (transfer.getToAccount().getCurrency().equals(saveData.getOldCommon())) {
+                    transfer.getToAccount().setCurrency(this);
+                }
             }
         }
     }

@@ -5,6 +5,7 @@ import financeException.ModelException;
 import javafx.collections.FXCollections;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import mainClasses.Common;
 import mainClasses.Currency;
 import settings.Format;
@@ -13,8 +14,13 @@ import settings.Text;
 
 public class CurrencyAddEditDialog extends AddEditWindow {
 
+    private Controller controller;
+    private Stage stage;
+
     public CurrencyAddEditDialog(Controller controller, Currency currency) {
         super(controller,currency);
+        this.controller = controller;
+        this.stage = super.stage;
     }
 
     @Override
@@ -25,11 +31,11 @@ public class CurrencyAddEditDialog extends AddEditWindow {
         components.put("COURSE", new TextField());
         components.put("ON",initComboBox(yesNo));
         components.put("BASE", initComboBox(yesNo));
-        images.put("TITLE", Style.ICON_TITLE);
-        images.put("CODE", Style.ICON_CODE_CURRENCY);
-        images.put("ON", Style.ICON_ON_CURRENCY);
-        images.put("COURSE", Style.ICON_RATE_CURRENCY);
-        images.put("BASE", Style.ICON_BASE_CURRENCY);
+        images.put("TITLE", StyleAddEditDialog.ICON_TITLE);
+        images.put("CODE", StyleAddEditDialog.ICON_CODE_CURRENCY);
+        images.put("ON", StyleAddEditDialog.ICON_ON_CURRENCY);
+        images.put("COURSE", StyleAddEditDialog.ICON_RATE_CURRENCY);
+        images.put("BASE", StyleAddEditDialog.ICON_BASE_CURRENCY);
         values.put("RATE", Format.amount(1));
     }
 
@@ -81,4 +87,7 @@ public class CurrencyAddEditDialog extends AddEditWindow {
             throw new ModelException(ModelException.AMOUNT_FORMAT);
         }
     }
+
+
+
 }

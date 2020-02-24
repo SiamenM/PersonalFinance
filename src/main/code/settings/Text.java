@@ -46,16 +46,19 @@ final public class Text {
         data.put("NOVEMBER", "Ноябрь");
         data.put("DECEMBER", "Декабрь");
 
-        data.put("TITLE_EMPTY", "Название не введено!");
-        data.put("IS_EXITS", "Такая запись уже существует!");
-        data.put("DATE_FORMAT", "Некорректный формат даты!");
-        data.put("CODE_EMPTY", "Не указан код!");
-        data.put("CURRENCY_EMPTY", "Валюта не выбрана!");
-        data.put("ARTICLE_EMPTY", "Статья не выбрана!");
-        data.put("ACCOUNT_EMPTY", "Счёт не выбран!");
-        data.put("RATE_INCORRECT", "Некорректное значение курса!");
-        data.put("AMOUNT_FORMAT", "Некорректный формат суммы!");
-        data.put("NO_BASE_CURRENCY", "Установите базовую валюту!");
+        data.put("ERROR", "Ошибка!");
+        data.put("ERROR_TITLE_EMPTY", "Название не введено!");
+        data.put("ERROR_IS_EXITS", "Такая запись уже существует!");
+        data.put("ERROR_DATE_FORMAT", "Некорректный формат даты!");
+        data.put("ERROR_CODE_EMPTY", "Не указан код!");
+        data.put("ERROR_CURRENCY_EMPTY", "Валюта не выбрана!");
+        data.put("ERROR_ARTICLE_EMPTY", "Статья на выбрана!");
+        data.put("ERROR_ACCOUNT_EMPTY", "Счёт не выбран!");
+        data.put("ERROR_RATE_INCORRECT", "Некорректное значение курса!");
+        data.put("ERROR_AMOUNT_FORMAT", "Некорректный формат суммы!");
+        data.put("ERROR_NO_BASE_CURRENCY", "Необходима базовая валюта!");
+        data.put("ERROR_UPDATE_CURRENCIES", "Ошибка при обновлении курсов валют!");
+        data.put("ERROR_NULL_ROW", "Строка не выбрана");
 
         data.put("YES", "ДА");
         data.put("NO", "НЕТ");
@@ -120,20 +123,6 @@ final public class Text {
         data.put("CHART_INCOMES", "Доходы");
         data.put("CHART_DECREASE", "Расходы");
         data.put("CHART_NO_DATA", "Для данного периода данные отсутствуют!");
-
-        data.put("ERROR", "Ошибка!");
-        data.put("ERROR_TITLE_EMPTY", "Вы не ввели название!");
-        data.put("ERROR_IS_EXITS", "Такая запись уже существует!");
-        data.put("ERROR_DATE_FORMAT", "Некорректный формат даты!");
-        data.put("ERROR_CODE_EMPTY", "Не указан код!");
-        data.put("ERROR_CURRENCY_EMPTY", "Валюта не выбрана!");
-        data.put("ERROR_ARTICLE_EMPTY", "Статья на выбрана!");
-        data.put("ERROR_ACCOUNT_EMPTY", "Счёт не выбран!");
-        data.put("ERROR_RATE_INCORRECT", "Некорректное значение курса!");
-        data.put("ERROR_AMOUNT_FORMAT", "Некорректный формат суммы!");
-        data.put("ERROR_NO_BASE_CURRENCY", "Необходима базовая валюта!");
-        data.put("ERROR_UPDATE_CURRENCIES", "Ошибка при обновлении курсов валют!");
-        data.put("ERROR_NULL_ROW", "Строка не выбрана");
 
         data.put("CONFIRM_EXIT_TEXT", "Вы уверены, что хотите выйти? Несохраннёные данные будут удалены.");
         data.put("CONFIRM_EXIT_TITLE", "Подтверждение выхода");

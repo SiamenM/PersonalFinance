@@ -5,6 +5,7 @@ import financeException.ModelException;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import mainClasses.Account;
 import mainClasses.Common;
 import mainClasses.Transfer;
@@ -17,10 +18,15 @@ import java.time.LocalDate;
 import java.util.Date;
 
 public class TransferAddEditDialog extends AddEditWindow {
-    private SimpleDateFormat parser = new SimpleDateFormat("yyyy-MM-dd");
 
-   public  TransferAddEditDialog(Controller controller,Transfer transfer) {
+    private SimpleDateFormat parser = new SimpleDateFormat("yyyy-MM-dd");
+    private Controller controller;
+    private Stage stage;
+
+    public TransferAddEditDialog(Controller controller, Transfer transfer) {
         super(controller,transfer);
+        this.controller = controller;
+        this.stage = super.stage;
     }
 
     @Override
@@ -33,13 +39,13 @@ public class TransferAddEditDialog extends AddEditWindow {
         components.put("MARKED_OFF", new TextField());
         components.put("ACCEPTED", new TextField());
         components.put("NOTICE", new TextField());
-        images.put("DATE", Style.ICON_DATE);
-        images.put("SOURCE", Style.ICON_ACCOUNT);
-        images.put("TARGET", Style.ICON_ACCOUNT);
-        images.put("MARKED_OFF",Style.ICON_MARK_OFF);
-        images.put("ACCEPTED", Style.ICON_ACCEPTED);
-        images.put("AMOUNT", Style.ICON_START_BALANCE);
-        images.put("NOTICE", Style.ICON_NOTICE);
+        images.put("DATE", StyleAddEditDialog.ICON_DATE);
+        images.put("SOURCE", StyleAddEditDialog.ICON_ACCOUNT);
+        images.put("TARGET", StyleAddEditDialog.ICON_ACCOUNT);
+        images.put("MARKED_OFF", StyleAddEditDialog.ICON_MARK_OFF);
+        images.put("ACCEPTED", StyleAddEditDialog.ICON_ACCEPTED);
+        images.put("AMOUNT", StyleAddEditDialog.ICON_START_BALANCE);
+        images.put("NOTICE", StyleAddEditDialog.ICON_NOTICE);
         values.put("MARKED_OFF", Format.amount(0));
         values.put("ACCEPTED", Format.amount(0));
     }
@@ -71,4 +77,5 @@ public class TransferAddEditDialog extends AddEditWindow {
             throw new ModelException(ModelException.DATE_FORMAT);
         }
     }
+
 }

@@ -18,10 +18,10 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.util.StringConverter;
 import mainClasses.Common;
+import saveLoad.SaveData;
 import settings.Text;
 
 import java.io.IOException;
-import java.time.format.DateTimeFormatter;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -33,9 +33,10 @@ abstract class AddEditWindow extends Dialog {
     protected Map<String, ImageView> images = new LinkedHashMap<>();
     protected Map<String, Object> values = new LinkedHashMap<>();
     protected Common common;
-    protected DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+     Stage stage;
+     Controller controller;
 
-    AddEditWindow(Controller controller, Common common)  {
+    AddEditWindow(Controller controller, Common common) {
         Parent rootCon = null;
         try {
             rootCon = FXMLLoader.load(getClass().getResource("/UI/PersonalFinance.fxml"));
@@ -43,7 +44,8 @@ abstract class AddEditWindow extends Dialog {
             e.printStackTrace();
         }
         this.common = common;
-        Stage stage = new Stage();
+        this.controller = controller;
+        this.stage = new Stage();
         stage.setScene(new Scene(Objects.requireNonNull(rootCon)));
         VBox root = new VBox();
         root.setPadding(new Insets(10));
@@ -82,11 +84,22 @@ abstract class AddEditWindow extends Dialog {
         HBox hBoxForButtons = new HBox();
         ImageView imageViewOk = new ImageView("images/ok.png");
         Button ok = new Button(Text.get("ADD"), imageViewOk);
-        if (!isAdd()) {
+        if (isAdd()) {
+            ok.setOnAction(event -> {
+                addCommon();
+            });
+        } else {
             ok.setText(Text.get("EDIT"));
+            ok.setOnAction(event -> {
+                editCommon(this.common);
+            });
         }
+
         ImageView imageViewCancel = new ImageView("images/cancel.png");
         Button cancel = new Button(Text.get("CANCEL"), imageViewCancel);
+        cancel.setOnAction(event -> {
+            stage.close();
+        });
         hBoxForButtons.setSpacing(40);
         hBoxForButtons.getChildren().addAll(ok, cancel);
         root.getChildren().addAll(hBoxForButtons);
@@ -103,14 +116,6 @@ abstract class AddEditWindow extends Dialog {
 
     public void setCommon(Common common) {
         this.common = common;
-    }
-
-    public final void CloseDialog(Stage stage) {
-        this.common = null;
-        images.clear();
-        values.clear();
-        components.clear();
-        stage.close();
     }
 
     protected ComboBox initComboBox(List<? extends Common> commons) {
@@ -133,6 +138,28 @@ abstract class AddEditWindow extends Dialog {
         return comboBox;
     }
 
+    protected void addCommon(){
+        try {
+            SaveData.getInstance().add(getCommonFromForm());
+            controller.refreshTables();
+            controller.initListViewBalanceCurrencyAndFinishBalance();
+            stage.close();
+        } catch (ModelException e) {
+            Controller.showAlert(e.getMessage());
+        }
+    }
+
+    protected void editCommon(Common common){
+        try {
+            SaveData.getInstance().edit(common, getCommonFromForm());
+            controller.refreshTables();
+            controller.initListViewBalanceCurrencyAndFinishBalance();
+            stage.close();
+        } catch (ModelException e) {
+            Controller.showAlert(e.getMessage());
+        }
+    }
+
     private boolean isAdd() {
         return common == null;
     }
@@ -143,5 +170,6 @@ abstract class AddEditWindow extends Dialog {
 
     abstract protected Common getCommonFromForm() throws ModelException;
 
-}
+
+   }
 

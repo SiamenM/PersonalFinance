@@ -156,7 +156,7 @@ public class Controller {
         this.selectionModel = tabPane.getSelectionModel();
     }
 
-    private void refreshTables() {
+    public void refreshTables() {
         for (FinanceTable table : tables) {
             table.fillIn();
         }

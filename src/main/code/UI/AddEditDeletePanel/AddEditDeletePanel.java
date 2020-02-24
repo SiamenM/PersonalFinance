@@ -53,7 +53,7 @@ abstract class AddEditDeletePanel extends HBox {
                 Alert confirmDialog = new Alert(Alert.AlertType.CONFIRMATION);
                 confirmDialog.setTitle(Text.get("CONFIRM_DELETE_TITLE"));
                 confirmDialog.setHeaderText(Text.get("CONFIRM_DELETE_TEXT"));
-                ButtonType delete1 = new ButtonType(Text.get("MENU_EDIT_DELETE"));
+                ButtonType delete1 = new ButtonType(Text.get("DELETE"));
                 ButtonType cancel = new ButtonType(Text.get("CANCEL"));
                 Stage stage = (Stage) confirmDialog.getDialogPane().getScene().getWindow();
                 stage.getIcons().add(new Image("/images/question.png"));
