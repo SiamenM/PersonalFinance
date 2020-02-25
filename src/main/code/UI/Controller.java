@@ -40,6 +40,7 @@ public class Controller {
     private CurrencyTable currencyTable;
     private List<FinanceTable> tables;
     private SingleSelectionModel<Tab> selectionModel;
+    private Stage stage;
 
     @FXML
     public TabPane tabPane;
@@ -101,6 +102,7 @@ public class Controller {
         tables.add(transactionTable);
         tables.add(transferTable);
         tables.add(currencyTable);
+        stage = new Stage();
     }
 
     public void initialize() {
@@ -214,7 +216,7 @@ public class Controller {
             Stage stage = new Stage();
             stage.centerOnScreen();
 //            stage.initModality(Modality.WINDOW_MODAL);
-//            stage.initOwner(labelLastTransactions.getScene().getWindow());
+//            stage.initOwner(labelLastTransactions.getScene().setParentWindow());
             FileChooser fileChooserSave = new FileChooser();
 
             fileChooserSave.setTitle(Text.get("SAVE"));
@@ -282,6 +284,11 @@ public class Controller {
         }
     }
 
+    public void setParentWindow(Stage stage) {
+        stage.initOwner(labelLastTransactions.getScene().getWindow());
+
+    }
+    
     public TransactionTable getTransactionTableOverview() {
         return transactionTableOverview;
     }

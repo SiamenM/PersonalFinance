@@ -1,17 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <data>
-    <accounts>
-        <amount>90.0</amount>
-        <currency>
-            <base>false</base>
-            <code>USD</code>
-            <on>true</on>
-            <rate>65.0</rate>
-            <title>Доллар США</title>
-        </currency>
-        <startAmount>0.0</startAmount>
-        <title>deposit in usd</title>
-    </accounts>
     <articles>
         <title>Cafe</title>
     </articles>

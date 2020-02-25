@@ -51,7 +51,6 @@ public class Currency extends Common {
         } else {
             return "BLR";
         }
-
     }
 
     public void setCode(String code) {

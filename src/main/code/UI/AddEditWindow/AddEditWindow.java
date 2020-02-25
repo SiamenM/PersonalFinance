@@ -74,10 +74,6 @@ abstract class AddEditWindow extends Dialog {
                 if (values.containsKey(key)) {
                     ((ComboBox) component).setValue(values.get(key));
                 }
-            } else if (component instanceof DatePicker) {
-                if (values.containsKey(key)) {
-                    // ((DatePicker) component).setValue(LocalDate.parse(dateTimeFormatter.format(LocalDate.now())));
-                }
             }
             root.getChildren().addAll(label, component);
         }
@@ -94,7 +90,6 @@ abstract class AddEditWindow extends Dialog {
                 editCommon(this.common);
             });
         }
-
         ImageView imageViewCancel = new ImageView("images/cancel.png");
         Button cancel = new Button(Text.get("CANCEL"), imageViewCancel);
         cancel.setOnAction(event -> {
@@ -105,7 +100,11 @@ abstract class AddEditWindow extends Dialog {
         root.getChildren().addAll(hBoxForButtons);
         hBoxForButtons.setAlignment(Pos.CENTER);
         stage.setResizable(false);
+
+//            stage.initOwner(labelLastTransactions.getScene().setParentWindow());
         stage.initModality(Modality.WINDOW_MODAL);
+
+        controller.setParentWindow(stage);
         stage.setScene(scene);
         stage.show();
     }
