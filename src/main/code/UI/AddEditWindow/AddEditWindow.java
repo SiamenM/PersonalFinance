@@ -100,11 +100,8 @@ abstract class AddEditWindow extends Dialog {
         root.getChildren().addAll(hBoxForButtons);
         hBoxForButtons.setAlignment(Pos.CENTER);
         stage.setResizable(false);
-
-//            stage.initOwner(labelLastTransactions.getScene().setParentWindow());
         stage.initModality(Modality.WINDOW_MODAL);
-
-        controller.setParentWindow(stage);
+        controller.setParentWindowFromController(stage);
         stage.setScene(scene);
         stage.show();
     }

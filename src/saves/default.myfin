@@ -1,5 +1,62 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <data>
+    <accounts>
+        <amount>4254.0</amount>
+        <currency>
+            <base>true</base>
+            <code>BLR</code>
+            <on>true</on>
+            <rate>1.0</rate>
+            <title>Белорусский рубль</title>
+        </currency>
+        <startAmount>1000.0</startAmount>
+        <title>Кошелёк</title>
+    </accounts>
+    <accounts>
+        <amount>73814.0</amount>
+        <currency>
+            <base>true</base>
+            <code>BLR</code>
+            <on>true</on>
+            <rate>1.0</rate>
+            <title>Белорусский рубль</title>
+        </currency>
+        <startAmount>0.0</startAmount>
+        <title>VISA</title>
+    </accounts>
+    <accounts>
+        <amount>15000.0</amount>
+        <currency>
+            <base>true</base>
+            <code>BLR</code>
+            <on>true</on>
+            <rate>1.0</rate>
+            <title>Белорусский рубль</title>
+        </currency>
+        <startAmount>10000.0</startAmount>
+        <title>deposit in rub</title>
+    </accounts>
+    <accounts>
+        <amount>90.0</amount>
+        <currency>
+            <base>false</base>
+            <code>USD</code>
+            <on>true</on>
+            <rate>0.0</rate>
+            <title>Доллар США</title>
+        </currency>
+        <startAmount>0.0</startAmount>
+        <title>deposit in usd</title>
+    </accounts>
+    <articles>
+        <title>Food</title>
+    </articles>
+    <articles>
+        <title>Home</title>
+    </articles>
+    <articles>
+        <title>Salary</title>
+    </articles>
     <articles>
         <title>Cafe</title>
     </articles>
@@ -12,28 +69,28 @@
     </currencies>
     <currencies>
         <base>false</base>
-        <code>UAH</code>
-        <on>false</on>
-        <rate>2.5</rate>
-        <title>Гривна</title>
+        <code>USD</code>
+        <on>true</on>
+        <rate>0.0</rate>
+        <title>Доллар США</title>
     </currencies>
     <currencies>
         <base>false</base>
         <code>EUR</code>
         <on>false</on>
-        <rate>75.0</rate>
+        <rate>0.0</rate>
         <title>Евро</title>
     </currencies>
     <currencies>
         <base>false</base>
-        <code>USD</code>
-        <on>true</on>
-        <rate>65.0</rate>
-        <title>Доллар США</title>
+        <code>UAH</code>
+        <on>false</on>
+        <rate>0.0</rate>
+        <title>Гривна</title>
     </currencies>
     <transactions>
         <account>
-            <amount>73587.0</amount>
+            <amount>73814.0</amount>
             <currency>
                 <base>true</base>
                 <code>BLR</code>
@@ -48,12 +105,12 @@
         <article>
             <title>Salary</title>
         </article>
-        <date>2020-01-24T13:56:50.666+02:00</date>
+        <date>2020-02-26T12:14:03.081+02:00</date>
         <notice></notice>
     </transactions>
     <transactions>
         <account>
-            <amount>73587.0</amount>
+            <amount>73814.0</amount>
             <currency>
                 <base>true</base>
                 <code>BLR</code>
@@ -68,112 +125,12 @@
         <article>
             <title>Food</title>
         </article>
-        <date>2020-01-24T13:56:50.666+02:00</date>
+        <date>2020-02-26T12:14:03.081+02:00</date>
         <notice>Buy some food</notice>
     </transactions>
     <transactions>
         <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-709.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-24T13:04:39.205+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-144.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-24T01:22:01.108+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-255.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-23T17:44:32.835+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-465.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-23T09:07:07.530+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-958.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-22T21:21:52.776+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
+            <amount>4254.0</amount>
             <currency>
                 <base>true</base>
                 <code>BLR</code>
@@ -184,16 +141,16 @@
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
         </account>
-        <amount>-745.0</amount>
+        <amount>-5500.0</amount>
         <article>
-            <title>Food</title>
+            <title>Home</title>
         </article>
-        <date>2020-01-22T19:19:48.951+02:00</date>
-        <notice></notice>
+        <date>2020-02-26T12:14:03.081+02:00</date>
+        <notice>Home</notice>
     </transactions>
     <transactions>
         <account>
-            <amount>7894.0</amount>
+            <amount>4254.0</amount>
             <currency>
                 <base>true</base>
                 <code>BLR</code>
@@ -204,16 +161,16 @@
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
         </account>
-        <amount>-390.0</amount>
+        <amount>-4000.0</amount>
         <article>
-            <title>Food</title>
+            <title>Home</title>
         </article>
-        <date>2020-01-21T03:19:22.316+02:00</date>
-        <notice></notice>
+        <date>2020-02-26T12:14:03.081+02:00</date>
+        <notice>Second home</notice>
     </transactions>
     <transactions>
         <account>
-            <amount>73587.0</amount>
+            <amount>15000.0</amount>
             <currency>
                 <base>true</base>
                 <code>BLR</code>
@@ -221,859 +178,19 @@
                 <rate>1.0</rate>
                 <title>Белорусский рубль</title>
             </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
+            <startAmount>10000.0</startAmount>
+            <title>deposit in rub</title>
         </account>
-        <amount>-383.0</amount>
+        <amount>1000.0</amount>
         <article>
-            <title>Food</title>
+            <title>Percents of deposit</title>
         </article>
-        <date>2020-01-20T21:41:47.493+02:00</date>
+        <date>2020-02-26T12:14:03.081+02:00</date>
         <notice></notice>
     </transactions>
     <transactions>
         <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-940.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-20T11:41:52.797+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-618.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-19T23:55:36.677+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-768.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-19T11:10:08.462+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-512.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-19T03:07:51.962+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-361.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-19T00:55:16.868+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-18.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-18T23:18:49.179+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-772.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-18T21:36:14.119+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-51.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-18T21:17:40.322+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-743.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-18T17:32:22.039+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-578.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-16T05:22:50.576+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-461.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-15T04:03:18.907+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-137.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-15T02:40:56.081+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-553.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-14T16:32:30.197+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-697.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-13T21:34:03.265+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-945.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-12T19:05:47.618+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-573.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-12T14:19:46.694+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-718.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-11T15:52:20.591+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-74.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-11T07:21:09.473+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-300.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-10T07:05:08.912+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-318.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-10T06:05:55.591+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-429.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-10T05:13:59.614+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-774.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-09T05:53:32.385+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-953.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-08T08:22:11.748+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-162.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-08T04:53:01.537+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-338.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-07T11:01:48.649+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-81.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-07T04:46:56.938+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-171.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-06T20:46:49.137+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-652.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-06T06:05:04.153+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-667.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-06T03:59:14.611+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-432.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-05T21:18:35.100+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-180.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-05T16:52:27.056+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-80.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-04T08:09:45.068+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-298.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2020-01-04T06:13:40.772+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-168.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2019-12-30T21:17:58.181+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-111.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2019-12-30T17:52:48.348+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-598.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2019-12-30T06:32:31.248+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-76.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2019-12-30T01:27:52.279+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-828.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2019-12-29T22:49:44.159+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-483.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2019-12-26T18:08:39.968+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-225.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2019-12-26T17:47:44.376+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>7894.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>1000.0</startAmount>
-            <title>Кошелёк</title>
-        </account>
-        <amount>-116.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2019-12-26T06:25:34.012+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
-            <currency>
-                <base>true</base>
-                <code>BLR</code>
-                <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
-            </currency>
-            <startAmount>0.0</startAmount>
-            <title>VISA</title>
-        </account>
-        <amount>-511.0</amount>
-        <article>
-            <title>Food</title>
-        </article>
-        <date>2019-12-26T01:27:17.226+02:00</date>
-        <notice></notice>
-    </transactions>
-    <transactions>
-        <account>
-            <amount>73587.0</amount>
+            <amount>73814.0</amount>
             <currency>
                 <base>true</base>
                 <code>BLR</code>
@@ -1088,7 +205,7 @@
         <article>
             <title>Salary</title>
         </article>
-        <date>2019-12-25T13:56:50.666+02:00</date>
+        <date>2020-01-27T12:14:03.081+02:00</date>
         <notice></notice>
     </transactions>
     <transactions>
@@ -1108,13 +225,1013 @@
         <article>
             <title>Percents of deposit</title>
         </article>
-        <date>2019-12-25T13:56:50.666+02:00</date>
+        <date>2020-01-27T12:14:03.081+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-515.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-03T22:49:57.592+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-853.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-08T14:16:20.821+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-741.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-16T04:37:16.409+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-548.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-08T08:52:42.814+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-399.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-19T20:38:52.097+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-609.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-18T20:00:27.257+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-389.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-23T07:19:14.273+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-215.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-10T23:31:38.080+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-458.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-15T10:08:58.480+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-380.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-01-29T13:38:37.951+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-258.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-01T20:43:07.687+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-412.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-14T23:22:56.596+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-598.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-10T12:21:58.998+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-96.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-11T11:06:48.711+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-130.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-01-31T13:33:50.373+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-202.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-19T01:57:56.680+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-212.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-24T00:36:42.623+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-29.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-11T16:28:41.052+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-721.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-01-29T09:30:17.542+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-428.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-10T15:02:34.137+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-704.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-01-29T18:21:22.592+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-307.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-19T03:50:54.006+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-257.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-09T06:30:25.613+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-790.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-12T04:42:39.059+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-838.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-09T08:34:35.369+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-789.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-11T00:10:33.109+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-399.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-13T21:38:21.435+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-548.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-13T05:37:20.047+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-708.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-17T06:07:37.312+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-243.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-02T01:06:40.884+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-750.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-25T20:51:24.939+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-760.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-09T12:56:14.060+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-993.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-01-29T20:58:24.931+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-515.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-24T06:02:53.330+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-231.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-01-30T07:57:41.942+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-443.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-10T13:46:21.453+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-691.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-04T08:55:31.902+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-878.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-14T08:53:23.816+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-786.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-10T21:57:28.112+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-894.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-18T14:35:01.355+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-574.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-15T19:48:05.884+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-173.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-20T08:00:16.281+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-120.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-18T03:34:38.275+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-599.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-05T00:05:24.394+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>73814.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>0.0</startAmount>
+            <title>VISA</title>
+        </account>
+        <amount>-331.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-14T10:45:36.777+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-587.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-20T18:14:47.160+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-560.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-11T07:47:20.694+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-700.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-17T11:01:35.364+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-595.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-01-28T02:49:16.138+02:00</date>
+        <notice></notice>
+    </transactions>
+    <transactions>
+        <account>
+            <amount>4254.0</amount>
+            <currency>
+                <base>true</base>
+                <code>BLR</code>
+                <on>true</on>
+                <rate>1.0</rate>
+                <title>Белорусский рубль</title>
+            </currency>
+            <startAmount>1000.0</startAmount>
+            <title>Кошелёк</title>
+        </account>
+        <amount>-976.0</amount>
+        <article>
+            <title>Food</title>
+        </article>
+        <date>2020-02-07T15:51:14.973+02:00</date>
         <notice></notice>
     </transactions>
     <transfers>
-        <date>2020-01-24T13:56:50.668+02:00</date>
+        <date>2020-02-26T12:14:03.083+02:00</date>
         <fromAccount>
-            <amount>73587.0</amount>
+            <amount>73814.0</amount>
             <currency>
                 <base>true</base>
                 <code>BLR</code>
@@ -1128,7 +1245,7 @@
         <fromAmount>25000.0</fromAmount>
         <notice></notice>
         <toAccount>
-            <amount>7894.0</amount>
+            <amount>4254.0</amount>
             <currency>
                 <base>true</base>
                 <code>BLR</code>
@@ -1142,9 +1259,9 @@
         <toAmount>25000.0</toAmount>
     </transfers>
     <transfers>
-        <date>2020-01-24T13:56:50.668+02:00</date>
+        <date>2020-02-26T12:14:03.083+02:00</date>
         <fromAccount>
-            <amount>73587.0</amount>
+            <amount>73814.0</amount>
             <currency>
                 <base>true</base>
                 <code>BLR</code>
@@ -1172,9 +1289,9 @@
         <toAmount>3000.0</toAmount>
     </transfers>
     <transfers>
-        <date>2020-01-24T13:56:50.668+02:00</date>
+        <date>2020-02-26T12:14:03.083+02:00</date>
         <fromAccount>
-            <amount>73587.0</amount>
+            <amount>73814.0</amount>
             <currency>
                 <base>true</base>
                 <code>BLR</code>
@@ -1193,7 +1310,7 @@
                 <base>false</base>
                 <code>USD</code>
                 <on>true</on>
-                <rate>65.0</rate>
+                <rate>0.0</rate>
                 <title>Доллар США</title>
             </currency>
             <startAmount>0.0</startAmount>

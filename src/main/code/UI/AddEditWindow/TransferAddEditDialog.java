@@ -5,13 +5,11 @@ import financeException.ModelException;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import mainClasses.Account;
 import mainClasses.Common;
 import mainClasses.Transfer;
 import saveLoad.SaveData;
 import settings.Format;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
@@ -20,13 +18,9 @@ import java.util.Date;
 public class TransferAddEditDialog extends AddEditWindow {
 
     private SimpleDateFormat parser = new SimpleDateFormat("yyyy-MM-dd");
-    private Controller controller;
-    private Stage stage;
 
     public TransferAddEditDialog(Controller controller, Transfer transfer) {
         super(controller,transfer);
-        this.controller = controller;
-        this.stage = super.stage;
     }
 
     @Override
@@ -77,5 +71,4 @@ public class TransferAddEditDialog extends AddEditWindow {
             throw new ModelException(ModelException.DATE_FORMAT);
         }
     }
-
 }

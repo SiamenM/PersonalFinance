@@ -138,6 +138,5 @@ final public class Text {
         data.put("DELETE", "Удалить");
         data.put("ADD", "Добавить");
     }
-
 }
 

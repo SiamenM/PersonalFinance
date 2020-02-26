@@ -6,13 +6,18 @@ import UI.Tables.*;
 import UI.chartPanel.ChartPanel;
 import javafx.collections.FXCollections;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
+import javafx.scene.control.Label;
+import javafx.scene.control.Menu;
+import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
 import javafx.stage.FileChooser;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import mainClasses.Currency;
 import mainClasses.Statistics;
@@ -23,6 +28,7 @@ import settings.Settings;
 import settings.Text;
 
 import javax.xml.parsers.ParserConfigurationException;
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -40,7 +46,6 @@ public class Controller {
     private CurrencyTable currencyTable;
     private List<FinanceTable> tables;
     private SingleSelectionModel<Tab> selectionModel;
-    private Stage stage;
 
     @FXML
     public TabPane tabPane;
@@ -102,7 +107,6 @@ public class Controller {
         tables.add(transactionTable);
         tables.add(transferTable);
         tables.add(currencyTable);
-        stage = new Stage();
     }
 
     public void initialize() {
@@ -215,10 +219,12 @@ public class Controller {
         if (Settings.getFileSave() == null) {
             Stage stage = new Stage();
             stage.centerOnScreen();
-//            stage.initModality(Modality.WINDOW_MODAL);
-//            stage.initOwner(labelLastTransactions.getScene().setParentWindow());
+           //stage.setScene(labelLastTransactions.getScene());
+            stage.initOwner(this.labelLastTransactions.getScene().getWindow());
+           // setParentWindowFromController(stage);
+         //  stage.initOwner(labelLastTransactions.getScene().getWindow());
+            stage.initModality(Modality.WINDOW_MODAL);
             FileChooser fileChooserSave = new FileChooser();
-
             fileChooserSave.setTitle(Text.get("SAVE"));
             fileChooserSave.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("myfin", "*.myfin"));
             fileChooserSave.setInitialDirectory(new File("src/saves"));
@@ -228,8 +234,7 @@ public class Controller {
                 Settings.setFileSave(new File(pathFile));
             }
             stage.close();
-        }
-        if (Settings.getFileSave() != null) {
+        } else {
             SaveData.getInstance().save();
         }
     }
@@ -278,17 +283,17 @@ public class Controller {
             } else if (option.get() == saveAndExit) {
                 pressMenuSave();
                 System.exit(1);
-            } else {
+            } else if(option.get() == cancel) {
                 confirmDialog.close();
             }
         }
     }
 
-    public void setParentWindow(Stage stage) {
+    public void setParentWindowFromController(Stage stage) {
         stage.initOwner(labelLastTransactions.getScene().getWindow());
 
     }
-    
+
     public TransactionTable getTransactionTableOverview() {
         return transactionTableOverview;
     }

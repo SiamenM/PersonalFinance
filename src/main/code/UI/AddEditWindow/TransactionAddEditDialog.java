@@ -5,7 +5,6 @@ import financeException.ModelException;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import mainClasses.Account;
 import mainClasses.Article;
 import mainClasses.Common;
@@ -19,13 +18,8 @@ import java.util.Date;
 
 public class TransactionAddEditDialog extends AddEditWindow {
 
-    private Controller controller;
-    private Stage stage;
-
     public TransactionAddEditDialog(Controller controller, Transaction transaction) {
         super(controller,transaction);
-        this.controller = controller;
-        this.stage = super.stage;
     }
 
     @Override
@@ -80,5 +74,4 @@ public class TransactionAddEditDialog extends AddEditWindow {
     protected void editCommon(Common common) {
 
     }
-
 }

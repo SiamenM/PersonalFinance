@@ -13,7 +13,6 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import mainClasses.Common;
 import settings.Text;
-
 import java.util.Optional;
 
 abstract class AddEditDeletePanel extends HBox {

@@ -39,7 +39,6 @@ public final class Settings {
         } catch (IOException e) {
             save();
         }
-
     }
 
     private static void setLocale() {
@@ -56,7 +55,7 @@ public final class Settings {
     }
 
     private static void save() {
-        Wini ini = null;
+        Wini ini;
         try {
             ini = new Wini(FILE_SETTINGS);
             if (fileSave != null) {

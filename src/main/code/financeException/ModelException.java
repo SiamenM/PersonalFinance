@@ -1,11 +1,6 @@
 package financeException;
 
 
-import javafx.scene.control.Alert;
-import javafx.scene.image.Image;
-import javafx.stage.Stage;
-import settings.Text;
-
 public class ModelException extends Exception {
 
     public static final int TITLE_EMPTY = 1;

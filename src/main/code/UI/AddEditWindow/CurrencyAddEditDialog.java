@@ -5,7 +5,6 @@ import financeException.ModelException;
 import javafx.collections.FXCollections;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
-import javafx.stage.Stage;
 import mainClasses.Common;
 import mainClasses.Currency;
 import settings.Format;
@@ -14,13 +13,8 @@ import settings.Text;
 
 public class CurrencyAddEditDialog extends AddEditWindow {
 
-    private Controller controller;
-    private Stage stage;
-
     public CurrencyAddEditDialog(Controller controller, Currency currency) {
         super(controller,currency);
-        this.controller = controller;
-        this.stage = super.stage;
     }
 
     @Override
@@ -87,7 +81,4 @@ public class CurrencyAddEditDialog extends AddEditWindow {
             throw new ModelException(ModelException.AMOUNT_FORMAT);
         }
     }
-
-
-
 }
