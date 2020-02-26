@@ -11,12 +11,13 @@ import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
 public class RateCurrency {
 
+    //debug
+    //// http://www.nbrb.by/services/xmlexrates.aspx?ondate=01/31/2011
     static HashMap<String, Double> getRates(Currency base) throws ParserConfigurationException, IOException, SAXException {
         HashMap<String, NodeList> nodeMap = new HashMap<>();
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");

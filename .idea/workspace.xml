@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e672c6a-f0bb-402d-ae50-4a882801f059" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/code/settings/HandlerCode.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/settings/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/settings/Settings.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/code/saveLoad/RateCurrency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/saveLoad/RateCurrency.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -64,11 +63,50 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/code/settings/Settings.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
               <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/code/settings/Text.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-969">
+              <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/code/mainClasses/Transfer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/code/UI/FilterPanel/FilterPanel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/code/saveLoad/RateCurrency.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -142,7 +180,6 @@
         <option value="$PROJECT_DIR$/src/main/code/mainClasses/Statistics.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/Tables/ArticleTables.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/Tables/CurrencyTable.java" />
-        <option value="$PROJECT_DIR$/src/main/code/saveLoad/RateCurrency.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/Tables/tableStyle.css" />
         <option value="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/AccountEditDialog.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -179,6 +216,7 @@
         <option value="$PROJECT_DIR$/src/main/code/UI/PersonalFinanceMain.java" />
         <option value="$PROJECT_DIR$/src/main/code/mainClasses/Currency.java" />
         <option value="$PROJECT_DIR$/src/main/code/settings/Settings.java" />
+        <option value="$PROJECT_DIR$/src/main/code/saveLoad/RateCurrency.java" />
       </list>
     </option>
   </component>
@@ -262,7 +300,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="settings" type="462c0819:PsiDirectoryNode" />
+              <item name="saveLoad" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
@@ -280,15 +318,6 @@
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="UI" type="462c0819:PsiDirectoryNode" />
               <item name="FilterPanel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="UI" type="462c0819:PsiDirectoryNode" />
-              <item name="Tables" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -366,7 +395,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582718067498" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582720605346" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -543,7 +572,7 @@
       <workItem from="1582172472027" duration="596000" />
       <workItem from="1582540055695" duration="7611000" />
       <workItem from="1582604628906" duration="6498000" />
-      <workItem from="1582690371952" duration="2899000" />
+      <workItem from="1582690371952" duration="3880000" />
     </task>
     <task id="LOCAL-00001" summary="handle exit in window">
       <created>1582114581891</created>
@@ -563,7 +592,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="268813000" />
+    <option name="totallyTimeSpent" value="269794000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -704,7 +733,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/code/saveLoad/RateCurrency.java</url>
-          <line>20</line>
+          <line>21</line>
           <properties />
           <option name="timeStamp" value="3" />
         </line-breakpoint>
@@ -720,7 +749,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/code/UI/dialogConfirm/ConfirmDialog.fxml" />
     <entry file="file://$PROJECT_DIR$/src/main/code/UI/dialogConfirm/ConfirmDialogController.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/text/DateFormat.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -753,13 +781,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="1773" selection-start-line="1773" selection-end-line="1773" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/saveLoad/RateCurrency.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="52" column="41" lean-forward="true" selection-start-line="52" selection-start-column="41" selection-end-line="52" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -987,16 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/UI/FilterPanel/FilterPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/code/UI/AddEditWindow/StyleAddEditDialog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1022,13 +1033,6 @@
             <element signature="e#834#835#0" expanded="true" />
             <element signature="e#866#867#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Text.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2380">
-          <caret line="140" selection-start-line="140" selection-end-line="140" />
         </state>
       </provider>
     </entry>
@@ -1144,6 +1148,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Text.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-969">
+          <caret line="15" lean-forward="true" selection-start-line="15" selection-end-line="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/mainClasses/Transfer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/UI/FilterPanel/FilterPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="31" column="23" lean-forward="true" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/saveLoad/RateCurrency.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
         </state>
       </provider>
     </entry>
