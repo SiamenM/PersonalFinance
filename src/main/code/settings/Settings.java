@@ -31,9 +31,9 @@ public final class Settings {
         try {
             Ini ini = new Ini(FILE_SETTINGS);
             Preferences prefs = new IniPreferences(ini);
-            String s = prefs.node("Settings").get("fileSave", null);
-            if (s != null) {
-                fileSave = new File(s);
+            String file = prefs.node("Settings").get("fileSave", null);
+            if (file != null) {
+                fileSave = new File(file);
             }
             setLocale();
         } catch (IOException e) {

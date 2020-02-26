@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7e672c6a-f0bb-402d-ae50-4a882801f059" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/UI/AddEditDeletePanel/AddEditDeletePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/UI/AddEditDeletePanel/AddEditDeletePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/AccountAddEditDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/AccountAddEditDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/AddEditWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/AddEditWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/ArticleAddEditDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/ArticleAddEditDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/CurrencyAddEditDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/CurrencyAddEditDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/TransactionAddEditDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/TransactionAddEditDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/TransferAddEditDialog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/TransferAddEditDialog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/UI/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/UI/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/financeException/ModelException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/financeException/ModelException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/mainClasses/Currency.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/mainClasses/Currency.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/code/settings/HandlerCode.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/code/settings/Settings.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/settings/Settings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/code/settings/Text.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/code/settings/Text.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/saves/default.myfin" beforeDir="false" afterPath="$PROJECT_DIR$/src/saves/default.myfin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/financeException/ModelException.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/financeException/ModelException.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/settings/Settings.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/settings/Settings.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -69,11 +55,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/code/mainClasses/Currency.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
               <caret line="122" column="13" lean-forward="true" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/code/settings/Settings.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -178,12 +173,12 @@
         <option value="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/TransactionAddEditDialog.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/AddEditWindow/TransferAddEditDialog.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/AddEditDeletePanel/AddEditDeletePanel.java" />
-        <option value="$PROJECT_DIR$/src/main/code/settings/Settings.java" />
         <option value="$PROJECT_DIR$/src/main/code/settings/Text.java" />
         <option value="$PROJECT_DIR$/src/main/code/financeException/ModelException.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/Controller.java" />
         <option value="$PROJECT_DIR$/src/main/code/UI/PersonalFinanceMain.java" />
         <option value="$PROJECT_DIR$/src/main/code/mainClasses/Currency.java" />
+        <option value="$PROJECT_DIR$/src/main/code/settings/Settings.java" />
       </list>
     </option>
   </component>
@@ -260,6 +255,14 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
               <item name="mainClasses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PersonalFinance" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="settings" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PersonalFinance" type="b2602c69:ProjectViewProjectNode" />
@@ -363,7 +366,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582713788004" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1582718067498" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
@@ -540,7 +543,7 @@
       <workItem from="1582172472027" duration="596000" />
       <workItem from="1582540055695" duration="7611000" />
       <workItem from="1582604628906" duration="6498000" />
-      <workItem from="1582690371952" duration="2048000" />
+      <workItem from="1582690371952" duration="2899000" />
     </task>
     <task id="LOCAL-00001" summary="handle exit in window">
       <created>1582114581891</created>
@@ -560,7 +563,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267962000" />
+    <option name="totallyTimeSpent" value="268813000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -584,7 +587,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32900432" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733475" weight="0.34632036" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49733475" visible="true" weight="0.34632036" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -717,7 +720,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/code/UI/dialogError/ErrorDialog.fxml" />
     <entry file="file://$PROJECT_DIR$/src/main/code/UI/dialogConfirm/ConfirmDialog.fxml" />
     <entry file="file://$PROJECT_DIR$/src/main/code/UI/dialogConfirm/ConfirmDialogController.java" />
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/text/DateFormat.java">
@@ -1030,13 +1032,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Settings.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="57" column="17" lean-forward="true" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/code/settings/Format.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
@@ -1135,6 +1130,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="122" column="13" lean-forward="true" selection-start-line="122" selection-start-column="13" selection-end-line="122" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/settings/HandlerCode.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="33" column="45" lean-forward="true" selection-start-line="33" selection-start-column="45" selection-end-line="33" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/code/settings/Settings.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="26" column="60" selection-start-line="26" selection-start-column="60" selection-end-line="26" selection-end-column="60" />
         </state>
       </provider>
     </entry>
