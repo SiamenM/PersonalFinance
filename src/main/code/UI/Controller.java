@@ -5,14 +5,9 @@ import UI.FilterPanel.FilterPanel;
 import UI.Tables.*;
 import UI.chartPanel.ChartPanel;
 import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.control.*;
-import javafx.scene.control.Label;
-import javafx.scene.control.Menu;
-import javafx.scene.control.MenuItem;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.VBox;
@@ -28,7 +23,6 @@ import settings.Settings;
 import settings.Text;
 
 import javax.xml.parsers.ParserConfigurationException;
-import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
@@ -46,6 +40,11 @@ public class Controller {
     private CurrencyTable currencyTable;
     private List<FinanceTable> tables;
     private SingleSelectionModel<Tab> selectionModel;
+    private AccountAddDeletePanel accountAddDeletePanel;
+    private ArticleAddDeletePanel articleAddDeletePanel;
+    private TransferAddDeletePanel transferAddDeletePanel;
+    private TransactionAddDeletePanel transactionAddDeletePanel;
+    private CurrencyAddDeletePanel currencyAddDeletePanel;
 
     @FXML
     public TabPane tabPane;
@@ -61,11 +60,13 @@ public class Controller {
     public MenuItem menuTransfer;
     public MenuItem menuCurrencies;
     public MenuItem menuStatistics;
-    public MenuItem menuLanguage;
     public MenuItem menuAboutProgram;
     public Menu menuFile;
     public Menu menuView;
     public Menu menuProperties;
+    public Menu menuLanguage;
+    public MenuItem menuRussian;
+    public MenuItem menuEnglish;
     public Menu menuHelp;
     public Tab menuViewOverview;
     public Tab menuViewAccounts;
@@ -93,6 +94,7 @@ public class Controller {
     public VBox vboxCurrencies;
     public VBox vboxStatistics;
 
+
     public Controller() {
         transactionTableOverview = new TransactionTable(true);
         accountsTable = new AccountsTable();
@@ -100,6 +102,11 @@ public class Controller {
         transactionTable = new TransactionTable(false);
         transferTable = new TransferTable();
         currencyTable = new CurrencyTable();
+        accountAddDeletePanel = new AccountAddDeletePanel(this);
+        articleAddDeletePanel = new ArticleAddDeletePanel(this);
+        transferAddDeletePanel = new TransferAddDeletePanel(this);
+        transactionAddDeletePanel = new TransactionAddDeletePanel(this);
+        currencyAddDeletePanel = new CurrencyAddDeletePanel(this);
         tables = new LinkedList<>();
         tables.add(transactionTableOverview);
         tables.add(accountsTable);
@@ -110,56 +117,62 @@ public class Controller {
     }
 
     public void initialize() {
+        setComponentsName();
+        vboxOverview.getChildren().add(transactionTableOverview);
+        vboxAccount.getChildren().addAll(accountAddDeletePanel, accountsTable);
+        vboxArticle.getChildren().addAll(articleAddDeletePanel, articleTable);
+        vboxTransfers.getChildren().addAll(transferAddDeletePanel, new FilterPanel(transferTable), transferTable);
+        vboxTransaction.getChildren().addAll(transactionAddDeletePanel, new FilterPanel(transactionTable), transactionTable);
+        vboxCurrencies.getChildren().addAll(currencyAddDeletePanel, currencyTable);
+        vboxArticle.setAlignment(Pos.TOP_CENTER);
+        vboxStatistics.getChildren().add(new ChartPanel(true));
+        initListViewBalanceCurrencyAndFinishBalance();
+        this.selectionModel = tabPane.getSelectionModel();
+    }
+
+    private void setComponentsName() {
         labelCurrencyBalance.setText(Text.get("BALANCE_CURRENCY"));
         labelFinishBalance.setText(Text.get("FINISH_BALANCE"));
         menuFile.setText(Text.get("MENU_FILE"));
         menuView.setText(Text.get("MENU_VIEW"));
         menuProperties.setText(Text.get("MENU_PROPERTIES"));
+        menuLanguage.setText(Text.get("LANGUAGE"));
+        menuRussian.setText(Text.get("RUSSIAN"));
+        menuEnglish.setText(Text.get("ENGLISH"));
         menuHelp.setText(Text.get("MENU_HELP"));
-
         menuNew.setText(Text.get("MENU_FILE_NEW"));
-        menuOpen.setText(Text.get("MENU_FILE_OPEN"));
-        menuSave.setText(Text.get("MENU_FILE_SAVE"));
+        menuOpen.setText(Text.get("OPEN"));
+        menuSave.setText(Text.get("SAVE"));
         menuRefresh.setText(Text.get("MENU_FILE_UPDATE_CURRENCIES"));
         menuClose.setText(Text.get("MENU_FILE_EXIT"));
 
         menuOverview.setText(Text.get("MENU_VIEW_OVERVIEW"));
         labelLastTransactions.setText(Text.get("LABEL_LAST_TRANSACTIONS"));
-        menuAccounts.setText(Text.get("MENU_VIEW_ACCOUNTS"));
-        menuArticles.setText(Text.get("MENU_VIEW_ARTICLES"));
-        menuTransaction.setText(Text.get("MENU_VIEW_TRANSACTIONS"));
-        menuTransfer.setText(Text.get("MENU_VIEW_TRANSFERS"));
+        menuAccounts.setText(Text.get("ACCOUNTS"));
+        menuArticles.setText(Text.get("ARTICLES"));
+        menuTransaction.setText(Text.get("TRANSACTIONS"));
+        menuTransfer.setText(Text.get("TRANSFERS"));
 
-        menuCurrencies.setText(Text.get("MENU_VIEW_CURRENCIES"));
-        menuStatistics.setText(Text.get("MENU_VIEW_STATISTICS"));
+        menuCurrencies.setText(Text.get("CURRENCIES"));
+        menuStatistics.setText(Text.get("STATISTICS"));
 
         menuLanguage.setText(Text.get("MENU_PROPERTIES_LANGUAGE"));
         menuAboutProgram.setText(Text.get("MENU_HELP_ABOUT"));
         menuViewOverview.setText((Text.get("MENU_VIEW_OVERVIEW")));
 
-        menuViewAccounts.setText((Text.get("MENU_VIEW_ACCOUNTS")));
-        labelAccounts.setText((Text.get("LABEL_ACCOUNTS")));
+        menuViewAccounts.setText((Text.get("ACCOUNTS")));
+        labelAccounts.setText((Text.get("ACCOUNTS")));
 
-        menuViewArticles.setText(Text.get("MENU_VIEW_ARTICLES"));
-        labelArticles.setText(Text.get("LABEL_ARTICLES"));
-        menuViewTransactions.setText((Text.get("MENU_VIEW_TRANSACTIONS")));
-        labelTransactions.setText(Text.get("LABEL_TRANSACTIONS"));
-        menuViewTransfer.setText((Text.get("MENU_VIEW_TRANSFERS")));
-        labelTransfers.setText(Text.get("LABEL_TRANSFERS"));
-        menuViewStatistics.setText((Text.get("MENU_VIEW_STATISTICS")));
-        menuViewCurrencies.setText((Text.get("MENU_VIEW_CURRENCIES")));
-        labelCurrencies.setText(Text.get("LABEL_CURRENCIES"));
-        labelStatistics.setText(Text.get("LABEL_STATISTICS"));
-        vboxOverview.getChildren().add(transactionTableOverview);
-        vboxAccount.getChildren().addAll(new AccountAddDeletePanel(this), accountsTable);
-        vboxArticle.getChildren().addAll(new ArticleAddDeletePanel(this), articleTable);
-        vboxTransfers.getChildren().addAll(new TransferAddDeletePanel(this), new FilterPanel(transferTable), transferTable);
-        vboxTransaction.getChildren().addAll(new TransactionAddDeletePanel(this), new FilterPanel(transactionTable), transactionTable);
-        vboxCurrencies.getChildren().addAll(new CurrencyAddDeletePanel(this), currencyTable);
-        vboxArticle.setAlignment(Pos.TOP_CENTER);
-        vboxStatistics.getChildren().add(new ChartPanel(true));
-        initListViewBalanceCurrencyAndFinishBalance();
-        this.selectionModel = tabPane.getSelectionModel();
+        menuViewArticles.setText(Text.get("ARTICLES"));
+        labelArticles.setText(Text.get("ARTICLES"));
+        menuViewTransactions.setText((Text.get("TRANSACTIONS")));
+        labelTransactions.setText(Text.get("TRANSACTIONS"));
+        menuViewTransfer.setText((Text.get("TRANSFERS")));
+        labelTransfers.setText(Text.get("TRANSFERS"));
+        menuViewStatistics.setText((Text.get("STATISTICS")));
+        menuViewCurrencies.setText((Text.get("CURRENCIES")));
+        labelCurrencies.setText(Text.get("CURRENCIES"));
+        labelStatistics.setText(Text.get("STATISTICS"));
     }
 
     public void refreshTables() {
@@ -192,14 +205,14 @@ public class Controller {
         about.showAndWait();
     }
 
-    public void pressMenuNew(ActionEvent event) {
+    public void pressMenuNew() {
         Settings.setFileSave(null);
         SaveData.getInstance().clear();
         refreshTables();
         initListViewBalanceCurrencyAndFinishBalance();
     }
 
-    public void pressMenuOpen(ActionEvent event) {
+    public void pressMenuOpen() {
         Stage stage = new Stage();
         stage.centerOnScreen();
         FileChooser fileChooserOpen = new FileChooser();
@@ -219,10 +232,10 @@ public class Controller {
         if (Settings.getFileSave() == null) {
             Stage stage = new Stage();
             stage.centerOnScreen();
-           //stage.setScene(labelLastTransactions.getScene());
+            //stage.setScene(labelLastTransactions.getScene());
             stage.initOwner(this.labelLastTransactions.getScene().getWindow());
-           // setParentWindowFromController(stage);
-         //  stage.initOwner(labelLastTransactions.getScene().getWindow());
+            // setParentWindowFromController(stage);
+            //  stage.initOwner(labelLastTransactions.getScene().getWindow());
             stage.initModality(Modality.WINDOW_MODAL);
             FileChooser fileChooserSave = new FileChooser();
             fileChooserSave.setTitle(Text.get("SAVE"));
@@ -283,7 +296,7 @@ public class Controller {
             } else if (option.get() == saveAndExit) {
                 pressMenuSave();
                 System.exit(1);
-            } else if(option.get() == cancel) {
+            } else if (option.get() == cancel) {
                 confirmDialog.close();
             }
         }
@@ -291,11 +304,20 @@ public class Controller {
 
     public void setParentWindowFromController(Stage stage) {
         stage.initOwner(labelLastTransactions.getScene().getWindow());
-
     }
 
-    public TransactionTable getTransactionTableOverview() {
-        return transactionTableOverview;
+    private void changeLanguage(String language) {
+        if (Settings.getProgramLanguage().equals(language)) {
+            return;
+        }
+        Settings.setProgramLanguage(language);
+        Text.init();
+        setComponentsName();
+        accountAddDeletePanel.refreshButtonsName();
+        articleAddDeletePanel.refreshButtonsName();
+        transferAddDeletePanel.refreshButtonsName();
+        transactionAddDeletePanel.refreshButtonsName();
+        currencyAddDeletePanel.refreshButtonsName();
     }
 
     public AccountsTable getAccountsTable() {
@@ -346,4 +368,11 @@ public class Controller {
         selectionModel.select(menuViewStatistics);
     }
 
+    public void clickMenuEnglish() {
+        changeLanguage("en");
+    }
+
+    public void clickMenuRussian() {
+        changeLanguage("ru");
+    }
 }

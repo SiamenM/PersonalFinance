@@ -13,11 +13,11 @@ import settings.Text;
 public class TransactionTable extends FinanceTable {
 
     private boolean isOverview;
-    private boolean isFiltred;
+    private boolean isFiltered;
 
     public TransactionTable(boolean isOverview) {
         this.isOverview = isOverview;
-        this.isFiltred = !isOverview;
+        this.isFiltered = !isOverview;
         this.fillIn();
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
         this.initTable();
@@ -25,7 +25,7 @@ public class TransactionTable extends FinanceTable {
 
     public void fillIn() {
         ObservableList<Transaction> transactions;
-        if (isFiltred) {
+        if (isFiltered) {
             transactions = FXCollections.observableArrayList(SaveData.getInstance().getFilterTransactions());
         } else {
             transactions = initItems();
@@ -51,7 +51,6 @@ public class TransactionTable extends FinanceTable {
                     propertyData.setValue(dateString);
                     return propertyData;
                 });
-
         TableColumn<Transaction, String> columnAccounts = new TableColumn<>(Text.get("ACCOUNT"));
         columnAccounts.setCellValueFactory(
                 Transaction -> {
@@ -59,7 +58,6 @@ public class TransactionTable extends FinanceTable {
                     propertyAccount.setValue(Transaction.getValue().getAccount().getTitle());
                     return propertyAccount;
                 });
-
         TableColumn<Transaction, String> columnArticles = new TableColumn<>(Text.get("ARTICLE"));
         columnArticles.setCellValueFactory(
                 Transaction -> {
@@ -67,7 +65,6 @@ public class TransactionTable extends FinanceTable {
                     propertyArticles.setValue(Transaction.getValue().getArticle().getTitle());
                     return propertyArticles;
                 });
-
         TableColumn<Transaction, String> columnAmount = new TableColumn<>(Text.get("AMOUNT"));
         columnAmount.setCellValueFactory(
                 Transaction -> {
@@ -81,7 +78,6 @@ public class TransactionTable extends FinanceTable {
                     return propertyAmount;
                 }
         );
-
         TableColumn<Transaction, String> columnNotices = new TableColumn<>(Text.get("NOTICE"));
         columnNotices.setCellValueFactory(
                 Transaction -> {

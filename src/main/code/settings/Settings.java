@@ -26,12 +26,17 @@ public final class Settings {
 
     private static final File FILE_SETTINGS = new File("src/saves/settings.ini");
     private static File fileSave = new File("src/saves/default.myfin");
+    private static String programLanguage = "ru";
 
     public static void init() {
         try {
             Ini ini = new Ini(FILE_SETTINGS);
             Preferences prefs = new IniPreferences(ini);
             String file = prefs.node("Settings").get("fileSave", null);
+            String language = prefs.node("Settings").get("programLanguage",null);
+            if (language != null){
+                programLanguage = language;
+            }
             if (file != null) {
                 fileSave = new File(file);
             }
@@ -41,8 +46,22 @@ public final class Settings {
         }
     }
 
+    public static String getProgramLanguage() {
+        return programLanguage;
+    }
+
+    public static void setProgramLanguage(String programLanguage) {
+        Settings.programLanguage = programLanguage;
+        setLocale();
+        save();
+    }
+
     private static void setLocale() {
-        Locale.setDefault(new Locale("ru"));
+        if("ru".equals(programLanguage)){
+            Locale.setDefault(new Locale("ru"));
+        } else {
+            Locale.setDefault(new Locale("en"));
+        }
     }
 
     public static File getFileSave() {

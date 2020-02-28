@@ -13,10 +13,15 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import mainClasses.Common;
 import settings.Text;
+
 import java.util.Optional;
 
 abstract class AddEditDeletePanel extends HBox {
+
     private Controller controller;
+    private Button add;
+    private Button edit;
+    private Button delete;
 
     AddEditDeletePanel(Controller controller) {
         super();
@@ -28,11 +33,11 @@ abstract class AddEditDeletePanel extends HBox {
     }
 
     private void initPanel() {
-        Button add = new Button(Text.get("ADD"), new ImageView("/images/add.png"));
+        add = new Button(Text.get("ADD"), new ImageView("/images/add.png"));
         add.setMinWidth(120);
         add.setMaxWidth(120);
         add.setOnAction(event -> showAddEditWindow(null));
-        Button edit = new Button(Text.get("EDIT"), new ImageView("/images/edit.png"));
+        edit = new Button(Text.get("EDIT"), new ImageView("/images/edit.png"));
         edit.setMinWidth(120);
         edit.setMaxWidth(120);
         edit.setOnAction(event -> {
@@ -43,7 +48,8 @@ abstract class AddEditDeletePanel extends HBox {
                 Controller.showAlert(Text.get("ERROR_NULL_ROW"));
             }
         });
-        Button delete = new Button(Text.get("DELETE"), new ImageView("/images/delete.png"));
+
+        delete = new Button(Text.get("DELETE"), new ImageView("/images/delete.png"));
         delete.setMinWidth(120);
         delete.setMaxWidth(120);
         delete.setOnAction(event -> {
@@ -74,6 +80,12 @@ abstract class AddEditDeletePanel extends HBox {
             }
         });
         this.getChildren().addAll(add, edit, delete);
+    }
+
+    public void refreshButtonsName() {
+        add.setText(Text.get("ADD"));
+        edit.setText(Text.get("EDIT"));
+        delete.setText(Text.get("DELETE"));
     }
 
     abstract void deleteRow(Common c) throws ModelException;

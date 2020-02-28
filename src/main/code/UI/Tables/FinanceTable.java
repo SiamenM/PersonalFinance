@@ -12,14 +12,14 @@ abstract public class FinanceTable<S> extends TableView {
     abstract public void fillIn();
 
     public Common getCommon() {
-        Common common = null;
+        Common common;
         try {
             TablePosition position = (TablePosition) this.getSelectionModel().getSelectedCells().get(0);
             int index = position.getRow();
             common = (Common) this.getItems().get(index);
             return common;
         } catch (IndexOutOfBoundsException e) {
-            return common;
+            return null;
         }
     }
 }

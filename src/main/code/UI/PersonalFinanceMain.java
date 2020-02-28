@@ -45,12 +45,9 @@ public class PersonalFinanceMain extends Application {
         primaryStage.getIcons().add(iconMain);
 
         primaryStage.show();
-        primaryStage.setOnCloseRequest(new EventHandler<WindowEvent>() {
-            @Override
-            public void handle(WindowEvent event) {
-                Controller controller = loader.getController();
-                controller.exitProgram();
-            }
+        primaryStage.setOnCloseRequest(event -> {
+            Controller controller = loader.getController();
+            controller.exitProgram();
         });
 
     }

@@ -267,7 +267,7 @@
                         <MenuItem fx:id="menuSave" mnemonicParsing="false" onAction="#pressMenuSave" text="Save">
                             <graphic>
                                 <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                                    <Image url="@../images/menu_file_save.png"/>
+                                    <Image url="@../images/menu_file_save.png" />
                                 </ImageView>
                             </graphic></MenuItem>
                         <MenuItem fx:id="menuRefresh" mnemonicParsing="false" onAction="#pressMenuRefreshCurrency" text="Refresh">
@@ -364,7 +364,34 @@
                 </Menu>
                 <Menu fx:id="menuProperties" mnemonicParsing="false" text="Properties">
                     <items>
-                        <MenuItem fx:id="menuLanguage" mnemonicParsing="false" text="Action 1" />
+                  <Menu fx:id="menuLanguage" mnemonicParsing="false" text="languages">
+                    <items>
+                        <MenuItem fx:id="menuEnglish" mnemonicParsing="false" onAction="#clickMenuEnglish" text="english">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/menu_settings_language_english.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </MenuItem>
+                        <MenuItem fx:id="menuRussian" mnemonicParsing="false" onAction="#clickMenuRussian" text="russian">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/menu_settings_language_russian.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </MenuItem>
+                    </items>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/englishRussian.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Menu>
                     </items>
                     <graphic>
                         <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
