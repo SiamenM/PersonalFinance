@@ -1,5 +1,6 @@
 package UI.chartPanel;
 
+import UI.Controller;
 import UI.FilterPanel.FilterPanel;
 import javafx.collections.FXCollections;
 import javafx.geometry.Pos;
@@ -20,17 +21,21 @@ public class ChartPanel extends VBox {
     private boolean income;
     private FilterPanel filterPanel;
     private Button button;
+    private Controller controller;
+    private PieChart chart;
+    private Map<String, Double> mapData;
 
-    public ChartPanel(boolean income) {
+    public ChartPanel(Controller controller, boolean income) {
         this.income = income;
         this.setAlignment(Pos.CENTER);
         this.initChartPanel();
+        this.controller = controller;
     }
 
     //предусмотреть смену панелей
     public void initChartPanel() {
-        Map<String, Double> mapData;
-        filterPanel = new FilterPanel(this);
+
+        filterPanel = new FilterPanel(controller, this);
         if (income) {
             mapData = Statistics.getDataForChartOnIncomeArticles();
             button = new Button(Text.get("INCOMES_BY_ARTICLES"));
@@ -38,11 +43,24 @@ public class ChartPanel extends VBox {
             mapData = Statistics.getDataChartOnExpArticles();
             button = new Button(Text.get("EXPENSES_BY_ARTICLES"));
         }
+        chart = this.initPieChart(this.mapData);
+//
+        if(chart==null){
+            initEmptyChart();
+        } else {
+            chart.setMaxWidth(600);
+            chart.setMaxHeight(400);
+            chart.setPrefHeight(600);
+            chart.setPrefWidth(400);
+            this.getChildren().addAll(filterPanel, button, chart);
+        }
+    }
+
+
+    private PieChart initPieChart(Map<String, Double> mapData) {
+
         if (mapData.size() == 0) {
-            Label noDataText = new Label("No data");
-            noDataText.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
-            Label noData = new Label("", new ImageView("/images/nodata.png"));
-            this.getChildren().addAll(filterPanel, button, noDataText, noData);
+            return null;
         } else {
             PieChart.Data[] data = new PieChart.Data[mapData.size()];
             int i = 0;
@@ -50,22 +68,23 @@ public class ChartPanel extends VBox {
                 data[i] = new PieChart.Data(entry.getKey(), entry.getValue());
                 i++;
             }
-            PieChart chart = new PieChart(FXCollections.observableArrayList(data));
-            chart.setMaxWidth(600);
-            chart.setMaxHeight(400);
-            chart.setPrefHeight(600);
-            chart.setPrefWidth(400);
-            button.setOnAction(event -> {
-                this.refresh();
-            });
-            this.getChildren().addAll(filterPanel, button, chart);
+            return new PieChart(FXCollections.observableArrayList(data));
         }
+
     }
 
-    public void refresh() {
-        this.getChildren().removeAll();
-        this.initChartPanel();
+    private void initEmptyChart() {
+        Label noDataText = new Label("No data");
+        noDataText.setFont(Font.font("Verdana", FontWeight.BOLD, 25));
+        Label noData = new Label("", new ImageView("/images/nodata.png"));
+        this.getChildren().addAll(filterPanel, button, noDataText, noData);
     }
+
+
+//        public void refresh () {
+//            this.getChildren().removeAll();
+//            this.initChartPanel();
+//        }
 
     public void refreshChartPanelLanguage() {
         filterPanel.refreshStepButtonName();
@@ -75,7 +94,6 @@ public class ChartPanel extends VBox {
             button.setText(Text.get("EXPENSES_BY_ARTICLES"));
         }
     }
-
-
 }
+
 

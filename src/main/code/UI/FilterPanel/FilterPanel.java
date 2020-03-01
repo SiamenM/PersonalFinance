@@ -1,5 +1,6 @@
 package UI.FilterPanel;
 
+import UI.Controller;
 import UI.Tables.FinanceTable;
 import UI.chartPanel.ChartPanel;
 import javafx.geometry.Insets;
@@ -14,6 +15,7 @@ public class FilterPanel extends HBox {
     private FinanceTable financeTable;
     private ChartPanel chartPanel = null;
     private Button step;
+    private Controller controller;
 
     public FilterPanel(FinanceTable financeTable) {
         super();
@@ -25,6 +27,12 @@ public class FilterPanel extends HBox {
     public FilterPanel(ChartPanel chartPanel) {
        super();
        this.chartPanel = chartPanel;
+        initFilterPanel();
+    }
+    public FilterPanel(Controller controller, ChartPanel chartPanel) {
+        super();
+        this.controller = controller;
+        this.chartPanel = chartPanel;
         initFilterPanel();
     }
 
@@ -39,7 +47,8 @@ public class FilterPanel extends HBox {
             if(chartPanel==null){
                 financeTable.fillIn();
             } else {
-                chartPanel.refresh();
+         //       chartPanel.refresh();
+                controller.setChartPanel(new ChartPanel(controller,true));
             }
 
         });
@@ -50,18 +59,20 @@ public class FilterPanel extends HBox {
             if(chartPanel==null){
                 financeTable.fillIn();
             } else {
-                chartPanel.refresh();
+               controller.setChartPanel(new ChartPanel(controller,true));
             }
+
         });
         Button right = new Button("", new ImageView("/images/right.png"));
         right.setOnAction(event -> {
             SaveData.getInstance().getFilter().next();
             step.setText(Format.getTitleFilter(SaveData.getInstance().getFilter()));
-            if(chartPanel==null){
-                financeTable.fillIn();
-            } else {
-                chartPanel.refresh();
-            }
+//            if(chartPanel==null){
+//                financeTable.fillIn();
+//            } else {
+//                chartPanel.refresh();
+//            }
+
         });
         step.setPrefHeight(left.getPrefHeight());
         step.setMinHeight(left.getPrefHeight());

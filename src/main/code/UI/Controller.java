@@ -112,7 +112,7 @@ public class Controller {
         currencyAddDeletePanel = new CurrencyAddDeletePanel(this);
         transferFilterPanel = new FilterPanel(transferTable);
         transactionFilterPanel = new FilterPanel(transactionTable);
-        chartPanel = new ChartPanel(true);
+        chartPanel = new ChartPanel(this,true);
         tables = new LinkedList<>();
         tables.add(transactionTableOverview);
         tables.add(accountsTable);
@@ -130,8 +130,7 @@ public class Controller {
         vboxTransfers.getChildren().addAll(transferAddDeletePanel, transferFilterPanel, transferTable);
         vboxTransaction.getChildren().addAll(transactionAddDeletePanel, transactionFilterPanel, transactionTable);
         vboxCurrencies.getChildren().addAll(currencyAddDeletePanel, currencyTable);
-        vboxArticle.setAlignment(Pos.TOP_CENTER);
-        vboxStatistics.getChildren().add(chartPanel);
+        vboxStatistics.getChildren().addAll(chartPanel);
         initListViewBalanceCurrencyAndFinishBalance();
         this.selectionModel = tabPane.getSelectionModel();
     }
@@ -312,6 +311,9 @@ public class Controller {
         stage.initOwner(labelLastTransactions.getScene().getWindow());
     }
 
+    public void setChartPanel(ChartPanel chartPanel){
+        this.chartPanel = chartPanel;
+    }
     private void changeLanguage(String language) {
         if (Settings.getProgramLanguage().equals(language)) {
             return;
@@ -330,8 +332,6 @@ public class Controller {
         for (FinanceTable table : tables) {
             table.refreshTableLanguage();
         }
-
-
     }
 
     public AccountsTable getAccountsTable() {
