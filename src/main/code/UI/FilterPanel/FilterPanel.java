@@ -13,6 +13,7 @@ import settings.Format;
 public class FilterPanel extends HBox {
     private FinanceTable financeTable;
     private ChartPanel chartPanel = null;
+    private Button step;
 
     public FilterPanel(FinanceTable financeTable) {
         super();
@@ -31,7 +32,7 @@ public class FilterPanel extends HBox {
         setAlignment(Pos.CENTER);
         setSpacing(10);
         setPadding(new Insets(5, 5, 5, 5));
-        Button step = new Button(Format.getTitleFilter(SaveData.getInstance().getFilter()));
+        step = new Button(Format.getTitleFilter(SaveData.getInstance().getFilter()));
         step.setOnAction(event -> {
             SaveData.getInstance().getFilter().nextPeriod();
             step.setText(Format.getTitleFilter(SaveData.getInstance().getFilter()));
@@ -65,5 +66,9 @@ public class FilterPanel extends HBox {
         step.setPrefHeight(left.getPrefHeight());
         step.setMinHeight(left.getPrefHeight());
         this.getChildren().addAll(left, step, right);
+    }
+
+    public void refreshStepButtonName(){
+        step.setText(Format.getTitleFilter(SaveData.getInstance().getFilter()));
     }
 }

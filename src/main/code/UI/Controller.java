@@ -45,6 +45,9 @@ public class Controller {
     private TransferAddDeletePanel transferAddDeletePanel;
     private TransactionAddDeletePanel transactionAddDeletePanel;
     private CurrencyAddDeletePanel currencyAddDeletePanel;
+    private FilterPanel transferFilterPanel;
+    private FilterPanel transactionFilterPanel;
+    private ChartPanel chartPanel;
 
     @FXML
     public TabPane tabPane;
@@ -107,6 +110,9 @@ public class Controller {
         transferAddDeletePanel = new TransferAddDeletePanel(this);
         transactionAddDeletePanel = new TransactionAddDeletePanel(this);
         currencyAddDeletePanel = new CurrencyAddDeletePanel(this);
+        transferFilterPanel = new FilterPanel(transferTable);
+        transactionFilterPanel = new FilterPanel(transactionTable);
+        chartPanel = new ChartPanel(true);
         tables = new LinkedList<>();
         tables.add(transactionTableOverview);
         tables.add(accountsTable);
@@ -121,11 +127,11 @@ public class Controller {
         vboxOverview.getChildren().add(transactionTableOverview);
         vboxAccount.getChildren().addAll(accountAddDeletePanel, accountsTable);
         vboxArticle.getChildren().addAll(articleAddDeletePanel, articleTable);
-        vboxTransfers.getChildren().addAll(transferAddDeletePanel, new FilterPanel(transferTable), transferTable);
-        vboxTransaction.getChildren().addAll(transactionAddDeletePanel, new FilterPanel(transactionTable), transactionTable);
+        vboxTransfers.getChildren().addAll(transferAddDeletePanel, transferFilterPanel, transferTable);
+        vboxTransaction.getChildren().addAll(transactionAddDeletePanel, transactionFilterPanel, transactionTable);
         vboxCurrencies.getChildren().addAll(currencyAddDeletePanel, currencyTable);
         vboxArticle.setAlignment(Pos.TOP_CENTER);
-        vboxStatistics.getChildren().add(new ChartPanel(true));
+        vboxStatistics.getChildren().add(chartPanel);
         initListViewBalanceCurrencyAndFinishBalance();
         this.selectionModel = tabPane.getSelectionModel();
     }
@@ -318,6 +324,10 @@ public class Controller {
         transferAddDeletePanel.refreshButtonsName();
         transactionAddDeletePanel.refreshButtonsName();
         currencyAddDeletePanel.refreshButtonsName();
+        transferFilterPanel.refreshStepButtonName();
+        transactionFilterPanel.refreshStepButtonName();
+        chartPanel.getFilterPanel().refreshStepButtonName();
+
     }
 
     public AccountsTable getAccountsTable() {

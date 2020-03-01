@@ -19,6 +19,7 @@ import java.util.Map;
 public class ChartPanel extends VBox {
 
     private boolean income;
+    private FilterPanel filterPanel;
 
     public ChartPanel(boolean income) {
         this.income = income;
@@ -31,7 +32,7 @@ public class ChartPanel extends VBox {
     public void initChartPanel() {
         Button button;
         Map<String, Double> mapData;
-        FilterPanel filterPanel = new FilterPanel(this);
+        filterPanel = new FilterPanel(this);
         if (income) {
             mapData = Statistics.getDataForChartOnIncomeArticles();
             button = new Button(Text.get("INCOMES_BY_ARTICLES"));
@@ -66,6 +67,10 @@ public class ChartPanel extends VBox {
     public void refresh() {
         this.getChildren().removeAll();
         this.initChartPanel();
+    }
+
+    public FilterPanel getFilterPanel(){
+        return this.filterPanel;
     }
 
 }
