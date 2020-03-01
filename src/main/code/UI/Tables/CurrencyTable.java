@@ -12,6 +12,12 @@ import java.util.Comparator;
 
 public class CurrencyTable extends FinanceTable {
 
+    private TableColumn<Currency, String> columnTitle;
+    private TableColumn<Currency, String> columnCode;
+    private TableColumn<Currency, String> columnCourse;
+    private TableColumn<Currency, String> columnIsOn;
+    TableColumn<Currency, String> columnIsBase;
+
     public CurrencyTable() {
         this.fillIn();
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
@@ -39,29 +45,28 @@ public class CurrencyTable extends FinanceTable {
 
     @Override
     public FinanceTable initTable() {
-        TableColumn<Currency, String> columnTitle = new TableColumn<>(Text.get("TITLE"));
+        columnTitle = new TableColumn<>(Text.get("TITLE"));
         columnTitle.setCellValueFactory(
                 Currency -> {
                     SimpleObjectProperty<String> propertyTitle = new SimpleObjectProperty<>();
                     propertyTitle.setValue(Currency.getValue().getTitle());
                     return propertyTitle;
                 });
-
-        TableColumn<Currency, String> columnCode = new TableColumn<>(Text.get("CODE"));
+        columnCode = new TableColumn<>(Text.get("CODE"));
         columnCode.setCellValueFactory(
                 Currency -> {
                     SimpleObjectProperty<String> propertyCode = new SimpleObjectProperty<>();
                     propertyCode.setValue(Currency.getValue().getCode());
                     return propertyCode;
                 });
-        TableColumn<Currency, String> columnCourse = new TableColumn<>(Text.get("COURSE"));
+        columnCourse = new TableColumn<>(Text.get("COURSE"));
         columnCourse.setCellValueFactory(
                 Currency -> {
                     SimpleObjectProperty<String> propertyCourse = new SimpleObjectProperty<>();
                     propertyCourse.setValue(String.valueOf(Currency.getValue().getRate()));
                     return propertyCourse;
                 });
-        TableColumn<Currency, String> columnIsOn = new TableColumn<>(Text.get("ON"));
+        columnIsOn = new TableColumn<>(Text.get("ON"));
         columnIsOn.setCellValueFactory(
                 Currency -> {
                     SimpleObjectProperty<String> propertyIsOn = new SimpleObjectProperty<>();
@@ -72,7 +77,7 @@ public class CurrencyTable extends FinanceTable {
                     }
                     return propertyIsOn;
                 });
-        TableColumn<Currency, String> columnIsBase = new TableColumn<>(Text.get("BASE"));
+        columnIsBase = new TableColumn<>(Text.get("BASE"));
         columnIsBase.setCellValueFactory(
                 Currency -> {
                     SimpleObjectProperty<String> propertyIsBase = new SimpleObjectProperty<>();
@@ -91,5 +96,14 @@ public class CurrencyTable extends FinanceTable {
     public void fillIn() {
         ObservableList<Currency> currencies = FXCollections.observableArrayList(SaveData.getInstance().getCurrencies());
         this.setItems(currencies);
+    }
+
+    @Override
+    public void refreshTableLanguage() {
+        columnTitle.setText(Text.get("TITLE"));
+        columnCode.setText(Text.get("CODE"));
+        columnCourse.setText(Text.get("COURSE"));
+        columnIsOn.setText(Text.get("ON"));
+        columnIsBase.setText(Text.get("BASE"));
     }
 }

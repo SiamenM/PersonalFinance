@@ -10,6 +10,8 @@ import settings.Text;
 
 public class ArticleTables extends FinanceTable {
 
+    private TableColumn<Article, String> columnArticle;
+
     public ArticleTables() {
         this.fillIn();
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
@@ -18,7 +20,7 @@ public class ArticleTables extends FinanceTable {
 
     @Override
     public FinanceTable initTable() {
-        TableColumn<Article, String> columnArticle = new TableColumn<>(Text.get("ARTICLE"));
+        columnArticle = new TableColumn<>(Text.get("ARTICLE"));
         columnArticle.setCellValueFactory(
                 Article -> {
                     SimpleObjectProperty<String> propertyArticle = new SimpleObjectProperty<>();
@@ -33,5 +35,10 @@ public class ArticleTables extends FinanceTable {
     public void fillIn() {
         ObservableList<Article> articles = FXCollections.observableArrayList(SaveData.getInstance().getArticles());
         this.setItems(articles);
+    }
+
+    @Override
+    public void refreshTableLanguage() {
+        columnArticle.setText(Text.get("ARTICLE"));
     }
 }

@@ -12,6 +12,9 @@ import settings.Text;
 
 public class AccountsTable extends FinanceTable {
 
+    private TableColumn<Account, String> columnAccounts;
+    private TableColumn<Account, String> columnAmount;
+
     public AccountsTable() {
         this.fillIn();
         this.setColumnResizePolicy(CONSTRAINED_RESIZE_POLICY);
@@ -20,14 +23,14 @@ public class AccountsTable extends FinanceTable {
 
     @Override
     public FinanceTable initTable() {
-        TableColumn<Account, String> columnAccounts = new TableColumn<>(Text.get("ACCOUNT"));
+        columnAccounts = new TableColumn<>(Text.get("ACCOUNT"));
         columnAccounts.setCellValueFactory(
                 Account -> {
                     SimpleObjectProperty<String> propertyAccount = new SimpleObjectProperty<>();
                     propertyAccount.setValue(Account.getValue().getTitle());
                     return propertyAccount;
                 });
-        TableColumn<Account, String> columnAmount = new TableColumn<>(Text.get("AMOUNT"));
+        columnAmount = new TableColumn<>(Text.get("AMOUNT"));
         columnAmount.setCellValueFactory(
                 Account -> {
                     SimpleObjectProperty<String> propertyAmount = new SimpleObjectProperty<>();
@@ -42,6 +45,12 @@ public class AccountsTable extends FinanceTable {
     public void fillIn() {
         ObservableList<Account> accounts = FXCollections.observableArrayList(SaveData.getInstance().getAccounts());
         this.setItems(accounts);
+    }
+
+    @Override
+    public void refreshTableLanguage() {
+        columnAccounts.setText(Text.get("ACCOUNT"));
+        columnAmount.setText(Text.get("AMOUNT"));
     }
 
 }

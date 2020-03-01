@@ -12,6 +12,12 @@ import settings.Text;
 
 public class TransferTable extends FinanceTable {
 
+    private TableColumn<Transfer, String> columnDates;
+    private TableColumn<Transfer, String> columnSource;
+    private TableColumn<Transfer, String> columnTarget;
+    private TableColumn<Transfer, String> columnMarkedOff;
+    private TableColumn<Transfer, String> columnAccepted;
+    private TableColumn<Transfer, String> columnNotices;
 
     public TransferTable() {
         this.fillIn();
@@ -21,7 +27,7 @@ public class TransferTable extends FinanceTable {
 
     @Override
     public FinanceTable initTable() {
-        TableColumn<Transfer, String> columnDates = new TableColumn<>(Text.get("DATE"));
+        columnDates = new TableColumn<>(Text.get("DATE"));
         columnDates.setCellValueFactory(
                 Transfer -> {
                     SimpleObjectProperty<String> propertyData = new SimpleObjectProperty<>();
@@ -29,35 +35,35 @@ public class TransferTable extends FinanceTable {
                     propertyData.setValue(dateString);
                     return propertyData;
                 });
-        TableColumn<Transfer, String> columnSource = new TableColumn<>(Text.get("SOURCE"));
+        columnSource = new TableColumn<>(Text.get("SOURCE"));
         columnSource.setCellValueFactory(
                 Transfer -> {
                     SimpleObjectProperty<String> propertySource = new SimpleObjectProperty<>();
                     propertySource.setValue(Transfer.getValue().getFromAccount().getTitle());
                     return propertySource;
                 });
-        TableColumn<Transfer, String> columnTarget = new TableColumn<>(Text.get("TARGET"));
+        columnTarget = new TableColumn<>(Text.get("TARGET"));
         columnTarget.setCellValueFactory(
                 Transfer -> {
                     SimpleObjectProperty<String> propertyTarget = new SimpleObjectProperty<>();
                     propertyTarget.setValue(Transfer.getValue().getToAccount().getTitle());
                     return propertyTarget;
                 });
-        TableColumn<Transfer, String> columnMarkedOff = new TableColumn<>(Text.get("MARKED_OFF"));
+        columnMarkedOff = new TableColumn<>(Text.get("MARKED_OFF"));
         columnMarkedOff.setCellValueFactory(
                 Transfer -> {
                     SimpleObjectProperty<String> propertyMarkedOff = new SimpleObjectProperty<>();
                     propertyMarkedOff.setValue(Format.amount(Transfer.getValue().getFromAmount(), Transfer.getValue().getFromAccount().getCurrency()));
                     return propertyMarkedOff;
                 });
-        TableColumn<Transfer, String> columnAccepted = new TableColumn<>(Text.get("ACCEPTED"));
+        columnAccepted = new TableColumn<>(Text.get("ACCEPTED"));
         columnAccepted.setCellValueFactory(
                 Transfer -> {
                     SimpleObjectProperty<String> propertyAccepted = new SimpleObjectProperty<>();
                     propertyAccepted.setValue(Format.amount(Transfer.getValue().getToAmount(), Transfer.getValue().getToAccount().getCurrency()));
                     return propertyAccepted;
                 });
-        TableColumn<Transfer, String> columnNotices = new TableColumn<>(Text.get("NOTICE"));
+        columnNotices = new TableColumn<>(Text.get("NOTICE"));
         columnNotices.setCellValueFactory(
                 Transfer -> {
                     SimpleObjectProperty<String> propertyNotice = new SimpleObjectProperty<>();
@@ -72,6 +78,16 @@ public class TransferTable extends FinanceTable {
     public void fillIn() {
         ObservableList<Transfer> transfers = FXCollections.observableArrayList(SaveData.getInstance().getFilterTransfers());
         this.setItems(transfers);
+    }
+
+    @Override
+    public void refreshTableLanguage() {
+        columnDates.setText(Text.get("DATE"));
+        columnSource.setText(Text.get("SOURCE"));
+        columnTarget.setText(Text.get("TARGET"));
+        columnMarkedOff.setText(Text.get("MARKED_OFF"));
+        columnAccepted.setText(Text.get("ACCEPTED"));
+        columnNotices.setText(Text.get("NOTICE"));
     }
 
 }

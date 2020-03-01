@@ -15,11 +15,11 @@ import settings.Text;
 
 import java.util.Map;
 
-
 public class ChartPanel extends VBox {
 
     private boolean income;
     private FilterPanel filterPanel;
+    private Button button;
 
     public ChartPanel(boolean income) {
         this.income = income;
@@ -27,10 +27,8 @@ public class ChartPanel extends VBox {
         this.initChartPanel();
     }
 
-
     //предусмотреть смену панелей
     public void initChartPanel() {
-        Button button;
         Map<String, Double> mapData;
         filterPanel = new FilterPanel(this);
         if (income) {
@@ -69,9 +67,15 @@ public class ChartPanel extends VBox {
         this.initChartPanel();
     }
 
-    public FilterPanel getFilterPanel(){
-        return this.filterPanel;
+    public void refreshChartPanelLanguage() {
+        filterPanel.refreshStepButtonName();
+        if (income) {
+            button.setText(Text.get("INCOMES_BY_ARTICLES"));
+        } else {
+            button.setText(Text.get("EXPENSES_BY_ARTICLES"));
+        }
     }
+
 
 }
 

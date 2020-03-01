@@ -11,6 +11,8 @@ abstract public class FinanceTable<S> extends TableView {
 
     abstract public void fillIn();
 
+    abstract public void refreshTableLanguage();
+
     public Common getCommon() {
         Common common;
         try {

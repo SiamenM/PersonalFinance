@@ -326,7 +326,11 @@ public class Controller {
         currencyAddDeletePanel.refreshButtonsName();
         transferFilterPanel.refreshStepButtonName();
         transactionFilterPanel.refreshStepButtonName();
-        chartPanel.getFilterPanel().refreshStepButtonName();
+        chartPanel.refreshChartPanelLanguage();
+        for (FinanceTable table : tables) {
+            table.refreshTableLanguage();
+        }
+
 
     }
 
