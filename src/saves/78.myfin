@@ -1,2 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<data/>
+<data>
+    <accounts>
+        <amount>0.0</amount>
+        <currency>
+            <base>false</base>
+            <code>USD</code>
+            <on>true</on>
+            <rate>1.0</rate>
+            <title>462</title>
+        </currency>
+        <startAmount>0.0</startAmount>
+        <title>464</title>
+    </accounts>
+    <articles>
+        <title>66</title>
+    </articles>
+    <currencies>
+        <base>false</base>
+        <code>USD</code>
+        <on>true</on>
+        <rate>1.0</rate>
+        <title>462</title>
+    </currencies>
+    <currencies>
+        <base>false</base>
+        <code>BLR</code>
+        <on>true</on>
+        <rate>1.0</rate>
+        <title>67</title>
+    </currencies>
+</data>

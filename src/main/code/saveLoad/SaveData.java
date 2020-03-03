@@ -20,7 +20,6 @@ public final class SaveData {
     private List<Transaction> transactions = new ArrayList<>();
     private List<Transfer> transfers = new ArrayList<>();
     private Common oldCommon;
-    //    private boolean saved = true;
     private boolean saved = false;
     private final Filter filter;
 
@@ -45,8 +44,8 @@ public final class SaveData {
                 return 0;
             }
         });
-        this.transactions.sort((Transaction t, Transaction t1) -> (int) t1.getDate().compareTo(t.getDate()));
-        this.transfers.sort((Transfer t, Transfer t1) -> (int) t1.getDate().compareTo(t.getDate()));
+        this.transactions.sort((Transaction t, Transaction t1) -> t1.getDate().compareTo(t.getDate()));
+        this.transfers.sort((Transfer t, Transfer t1) -> t1.getDate().compareTo(t.getDate()));
         this.currencies.sort((Currency c, Currency c1) -> {
             if (c.isBase()) {
                 return -1;

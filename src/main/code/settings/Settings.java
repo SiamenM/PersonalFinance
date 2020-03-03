@@ -78,7 +78,9 @@ public final class Settings {
         try {
             ini = new Wini(FILE_SETTINGS);
             if (fileSave != null) {
-                ini.put("Settings", "fileSave", fileSave.getAbsolutePath().replace("\\", "\\\\"));
+
+                //check path for checking
+                ini.put("Settings", "fileSave", fileSave.getPath().replace("\\", "\\\\"));
             }
             ini.store();
         } catch (IOException e) {

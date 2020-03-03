@@ -230,6 +230,7 @@ public class Controller {
             SaveData.getInstance().clear();
             SaveData.getInstance().load();
             refreshTables();
+            initListViewBalanceCurrencyAndFinishBalance();
         }
     }
 
