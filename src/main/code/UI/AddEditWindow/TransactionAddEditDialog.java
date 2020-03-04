@@ -24,8 +24,8 @@ public class TransactionAddEditDialog extends AddEditWindow {
 
     @Override
     protected void init() {
-        DatePicker datePicker = new DatePicker();
-        datePicker.setValue(LocalDate.now());
+        DatePicker datePicker = new DatePicker(LocalDate.now());
+
         components.put("DATE", datePicker);
         components.put("AMOUNT", new TextField());
         components.put("NOTICE", new TextField());
@@ -52,7 +52,8 @@ public class TransactionAddEditDialog extends AddEditWindow {
     @Override
     protected Common getCommonFromForm() throws ModelException {
         try {
-            Date date = Settings.PARSER_DATE.parse(components.get("DATE").getAccessibleText());
+            //EXCEPTION
+            Date date = components.get("DATE").getValue();
             Account account = (Account) ((ComboBox) components.get("ACCOUNT")).getValue();
             Article article = (Article) ((ComboBox) components.get("ARTICLE")).getValue();
             String amount = ((TextField) components.get("AMOUNT")).getText();
@@ -63,15 +64,5 @@ public class TransactionAddEditDialog extends AddEditWindow {
         } catch (ParseException e) {
             throw new ModelException(ModelException.DATE_FORMAT);
         }
-    }
-
-    @Override
-    protected void addCommon() {
-
-    }
-
-    @Override
-    protected void editCommon(Common common) {
-
     }
 }

@@ -28,14 +28,13 @@ public class ChartPanel extends VBox {
     public ChartPanel(Controller controller, boolean income) {
         this.income = income;
         this.setAlignment(Pos.CENTER);
-        this.initChartPanel();
+        filterPanel = new FilterPanel(controller, this);
         this.controller = controller;
+        this.initChartPanel();
     }
 
     //предусмотреть смену панелей
     public void initChartPanel() {
-
-        filterPanel = new FilterPanel(controller, this);
         if (income) {
             mapData = Statistics.getDataForChartOnIncomeArticles();
             button = new Button(Text.get("INCOMES_BY_ARTICLES"));
@@ -43,24 +42,13 @@ public class ChartPanel extends VBox {
             mapData = Statistics.getDataChartOnExpArticles();
             button = new Button(Text.get("EXPENSES_BY_ARTICLES"));
         }
-        chart = this.initPieChart(this.mapData);
-//
-        if(chart==null){
-            initEmptyChart();
-        } else {
-            chart.setMaxWidth(600);
-            chart.setMaxHeight(400);
-            chart.setPrefHeight(600);
-            chart.setPrefWidth(400);
-            this.getChildren().addAll(filterPanel, button, chart);
-        }
+        initPieChart(mapData);
     }
 
 
-    private PieChart initPieChart(Map<String, Double> mapData) {
-
+    private void initPieChart(Map<String, Double> mapData) {
         if (mapData.size() == 0) {
-            return null;
+            initEmptyChart();
         } else {
             PieChart.Data[] data = new PieChart.Data[mapData.size()];
             int i = 0;
@@ -68,9 +56,14 @@ public class ChartPanel extends VBox {
                 data[i] = new PieChart.Data(entry.getKey(), entry.getValue());
                 i++;
             }
-            return new PieChart(FXCollections.observableArrayList(data));
+            chart = new PieChart(FXCollections.observableArrayList(data));
+            chart.setMaxWidth(600);
+            chart.setMaxHeight(400);
+            chart.setPrefHeight(600);
+            chart.setPrefWidth(400);
+            this.getChildren().addAll(filterPanel, button, chart);
+            // return new PieChart(FXCollections.observableArrayList(data));
         }
-
     }
 
     private void initEmptyChart() {

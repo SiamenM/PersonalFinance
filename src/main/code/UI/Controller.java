@@ -6,7 +6,6 @@ import UI.Tables.*;
 import UI.chartPanel.ChartPanel;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
-import javafx.geometry.Pos;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -21,14 +20,12 @@ import saveLoad.SaveData;
 import settings.Format;
 import settings.Settings;
 import settings.Text;
-
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
-
 public class Controller {
 
 
@@ -353,6 +350,9 @@ public class Controller {
 
     public CurrencyTable getCurrencyTable() {
         return currencyTable;
+    }
+    public ChartPanel getChartPanel(){
+        return chartPanel;
     }
 
     public void clickMenuOverview() {

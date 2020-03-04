@@ -76,27 +76,27 @@
     </currencies>
     <currencies>
         <base>false</base>
-        <code>EUR</code>
-        <on>false</on>
-        <rate>2.4703</rate>
-        <title>Евро</title>
-    </currencies>
-    <currencies>
-        <base>false</base>
         <code>USD</code>
         <on>true</on>
         <rate>2.2342</rate>
         <title>Доллар США</title>
     </currencies>
+    <currencies>
+        <base>false</base>
+        <code>EUR</code>
+        <on>true</on>
+        <rate>2.4703</rate>
+        <title>Евро</title>
+    </currencies>
     <transactions>
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -112,11 +112,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -132,11 +132,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -152,11 +152,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -172,11 +172,11 @@
         <account>
             <amount>15000.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>10000.0</startAmount>
             <title>deposit in rub</title>
@@ -192,11 +192,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -212,11 +212,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -232,11 +232,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -252,11 +252,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -272,11 +272,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -292,11 +292,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -312,11 +312,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -332,11 +332,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -352,11 +352,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -372,11 +372,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -392,11 +392,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -412,11 +412,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -432,11 +432,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -452,11 +452,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -472,11 +472,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -492,11 +492,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -512,11 +512,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -532,11 +532,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -552,11 +552,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -572,11 +572,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -592,11 +592,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -612,11 +612,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -632,11 +632,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -652,11 +652,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -672,11 +672,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -692,11 +692,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -712,11 +712,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -732,11 +732,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -752,11 +752,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -772,11 +772,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -792,11 +792,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -812,11 +812,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -832,11 +832,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -852,11 +852,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -872,11 +872,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -892,11 +892,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -912,11 +912,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -932,11 +932,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -952,11 +952,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -972,11 +972,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -992,11 +992,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -1012,11 +1012,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -1032,11 +1032,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -1052,11 +1052,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -1072,11 +1072,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -1092,11 +1092,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -1112,11 +1112,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -1132,11 +1132,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -1152,11 +1152,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -1172,11 +1172,11 @@
         <account>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -1192,11 +1192,11 @@
         <account>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -1212,11 +1212,11 @@
         <account>
             <amount>15000.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>10000.0</startAmount>
             <title>deposit in rub</title>
@@ -1233,11 +1233,11 @@
         <fromAccount>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -1247,11 +1247,11 @@
         <toAccount>
             <amount>4254.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>1000.0</startAmount>
             <title>Кошелёк</title>
@@ -1263,11 +1263,11 @@
         <fromAccount>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -1277,11 +1277,11 @@
         <toAccount>
             <amount>15000.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>10000.0</startAmount>
             <title>deposit in rub</title>
@@ -1293,11 +1293,11 @@
         <fromAccount>
             <amount>73814.0</amount>
             <currency>
-                <base>true</base>
-                <code>BLR</code>
+                <base>false</base>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>1.0</rate>
-                <title>Белорусский рубль</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>VISA</title>
@@ -1308,10 +1308,10 @@
             <amount>90.0</amount>
             <currency>
                 <base>false</base>
-                <code>USD</code>
+                <code>EUR</code>
                 <on>true</on>
-                <rate>0.0</rate>
-                <title>Доллар США</title>
+                <rate>2.4703</rate>
+                <title>Евро</title>
             </currency>
             <startAmount>0.0</startAmount>
             <title>deposit in usd</title>

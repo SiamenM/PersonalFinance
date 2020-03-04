@@ -47,7 +47,7 @@ public class FilterPanel extends HBox {
             if(chartPanel==null){
                 financeTable.fillIn();
             } else {
-         //       chartPanel.refresh();
+
                 controller.setChartPanel(new ChartPanel(controller,true));
             }
 
