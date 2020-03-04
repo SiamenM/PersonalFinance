@@ -12,7 +12,9 @@ import saveLoad.SaveData;
 import settings.Format;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class TransferAddEditDialog extends AddEditWindow {
@@ -58,7 +60,7 @@ public class TransferAddEditDialog extends AddEditWindow {
     @Override
     protected Common getCommonFromForm() throws ModelException {
         try {
-            Date date = parser.parse(components.get("DATE").getAccessibleText());
+            Date date = getDate();
             Account fromAccount = (Account) ((ComboBox) components.get("SOURCE")).getValue();
             Account toAccount = (Account) ((ComboBox) components.get("TARGET")).getValue();
             String fromAmount = ((TextField) components.get("MARKED_OFF")).getText();
@@ -67,8 +69,18 @@ public class TransferAddEditDialog extends AddEditWindow {
             return new Transfer(fromAccount, toAccount, Format.fromAmountToNumber(fromAmount), Format.fromAmountToNumber(toAmount), notice, date);
         } catch (NumberFormatException e) {
             throw new ModelException(ModelException.AMOUNT_FORMAT);
-        } catch (ParseException e) {
+        }
+        catch (ParseException e) {
             throw new ModelException(ModelException.DATE_FORMAT);
         }
+    }
+
+    private Date getDate() throws ParseException {
+        LocalDate localDate = ((DatePicker)components.get("DATE")).getValue();
+        Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
+        Date date = Date.from(instant);
+        String pattern = parser.format(date);
+        date = parser.parse(pattern);
+        return date;
     }
 }

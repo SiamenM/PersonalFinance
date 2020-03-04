@@ -11,12 +11,16 @@ import mainClasses.Common;
 import mainClasses.Transaction;
 import saveLoad.SaveData;
 import settings.Format;
-import settings.Settings;
 import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 
 public class TransactionAddEditDialog extends AddEditWindow {
+
+    private SimpleDateFormat parser = new SimpleDateFormat("yyyy-MM-dd");
 
     public TransactionAddEditDialog(Controller controller, Transaction transaction) {
         super(controller,transaction);
@@ -52,8 +56,7 @@ public class TransactionAddEditDialog extends AddEditWindow {
     @Override
     protected Common getCommonFromForm() throws ModelException {
         try {
-            //EXCEPTION
-            Date date = components.get("DATE").getValue();
+            Date date = getDate();
             Account account = (Account) ((ComboBox) components.get("ACCOUNT")).getValue();
             Article article = (Article) ((ComboBox) components.get("ARTICLE")).getValue();
             String amount = ((TextField) components.get("AMOUNT")).getText();
@@ -64,5 +67,14 @@ public class TransactionAddEditDialog extends AddEditWindow {
         } catch (ParseException e) {
             throw new ModelException(ModelException.DATE_FORMAT);
         }
+    }
+
+    private Date getDate() throws ParseException {
+        LocalDate localDate = ((DatePicker)components.get("DATE")).getValue();
+        Instant instant = Instant.from(localDate.atStartOfDay(ZoneId.systemDefault()));
+        Date date = Date.from(instant);
+        String pattern = parser.format(date);
+        date = parser.parse(pattern);
+        return date;
     }
 }
