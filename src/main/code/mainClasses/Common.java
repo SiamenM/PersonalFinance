@@ -1,6 +1,5 @@
 package mainClasses;
 
-
 import saveLoad.SaveData;
 
 abstract public class Common {

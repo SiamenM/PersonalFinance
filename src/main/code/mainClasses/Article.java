@@ -27,13 +27,6 @@ public class Article extends Common {
     }
 
     @Override
-    public String toString() {
-        return "Article{" +
-                "title='" + title + '\'' +
-                '}';
-    }
-
-    @Override
     public boolean equals(Object o) {
         if (this == o) {
             return true;
@@ -57,11 +50,17 @@ public class Article extends Common {
 
     @Override
     public void postEdit(SaveData saveData) {
-
         for (Transaction t: saveData.getTransactions()){
             if (t.getArticle().equals(saveData.getOldCommon())){
                 t.setArticle(this);
             }
         }
+    }
+
+    @Override
+    public String toString() {
+        return "Article{" +
+                "title='" + title + '\'' +
+                '}';
     }
 }

@@ -20,12 +20,14 @@ import saveLoad.SaveData;
 import settings.Format;
 import settings.Settings;
 import settings.Text;
+
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Optional;
+
 public class Controller {
 
 
@@ -109,7 +111,7 @@ public class Controller {
         currencyAddDeletePanel = new CurrencyAddDeletePanel(this);
         transferFilterPanel = new FilterPanel(transferTable);
         transactionFilterPanel = new FilterPanel(transactionTable);
-        chartPanel = new ChartPanel(this,true);
+        chartPanel = new ChartPanel(this, true);
         tables = new LinkedList<>();
         tables.add(transactionTableOverview);
         tables.add(accountsTable);
@@ -220,7 +222,7 @@ public class Controller {
         FileChooser fileChooserOpen = new FileChooser();
         fileChooserOpen.setTitle(Text.get("OPEN"));
         fileChooserOpen.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("myfin", "*.myfin"));
-        fileChooserOpen.setInitialDirectory(new File("src/saves"));
+        fileChooserOpen.setInitialDirectory(new File("saves"));
         File selectedFile = fileChooserOpen.showOpenDialog(stage);
         if (selectedFile != null) {
             Settings.setFileSave(selectedFile);
@@ -243,7 +245,7 @@ public class Controller {
             FileChooser fileChooserSave = new FileChooser();
             fileChooserSave.setTitle(Text.get("SAVE"));
             fileChooserSave.getExtensionFilters().addAll(new FileChooser.ExtensionFilter("myfin", "*.myfin"));
-            fileChooserSave.setInitialDirectory(new File("src/saves"));
+            fileChooserSave.setInitialDirectory(new File("saves"));
             File selectedFile = fileChooserSave.showSaveDialog(stage);
             if (selectedFile != null) {
                 String pathFile = selectedFile.getAbsolutePath();
@@ -309,9 +311,10 @@ public class Controller {
         stage.initOwner(labelLastTransactions.getScene().getWindow());
     }
 
-    public void setChartPanel(ChartPanel chartPanel){
+    public void setChartPanel(ChartPanel chartPanel) {
         this.chartPanel = chartPanel;
     }
+
     private void changeLanguage(String language) {
         if (Settings.getProgramLanguage().equals(language)) {
             return;
@@ -351,7 +354,8 @@ public class Controller {
     public CurrencyTable getCurrencyTable() {
         return currencyTable;
     }
-    public ChartPanel getChartPanel(){
+
+    public ChartPanel getChartPanel() {
         return chartPanel;
     }
 

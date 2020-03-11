@@ -48,14 +48,6 @@ public class Account extends Common {
         this.currency = currency;
     }
 
-    public double getStartAmount() {
-        return startAmount;
-    }
-
-    public void setStartAmount(double startAmount) {
-        this.startAmount = startAmount;
-    }
-
     public void setAmount(double amount) {
         this.amount = amount;
     }
@@ -106,16 +98,16 @@ public class Account extends Common {
 
     @Override
     public void postEdit(SaveData saveData) {
-        for (Transaction t: saveData.getTransactions()){
-            if (t.getAccount().equals(saveData.getOldCommon())){
+        for (Transaction t : saveData.getTransactions()) {
+            if (t.getAccount().equals(saveData.getOldCommon())) {
                 t.setAccount(this);
             }
         }
-        for (Transfer t: saveData.getTransfers()){
-            if (t.getFromAccount().equals(saveData.getOldCommon())){
+        for (Transfer t : saveData.getTransfers()) {
+            if (t.getFromAccount().equals(saveData.getOldCommon())) {
                 t.setFromAccount(this);
             }
-            if (t.getToAccount().equals(saveData.getOldCommon())){
+            if (t.getToAccount().equals(saveData.getOldCommon())) {
                 t.setToAccount(this);
             }
         }

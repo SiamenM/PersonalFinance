@@ -14,9 +14,6 @@ public class Transfer extends Common {
     private String notice;
     private Date date;
 
-    public Transfer() {
-    }
-
     public Transfer(Account fromAccount, Account toAccount, double fromAmount, double toAmount, String notice, Date date) throws ModelException {
         if (fromAccount == null || toAccount == null) {
             throw new ModelException(ModelException.ACCOUNT_EMPTY);
@@ -42,6 +39,9 @@ public class Transfer extends Common {
 
     public Transfer(Account fromAccount, Account toAccount, double fromAmount, double toAmount) throws ModelException {
         this(fromAccount, toAccount, fromAmount, toAmount, "", new Date());
+    }
+
+    public Transfer() {
     }
 
     public Account getFromAccount() {

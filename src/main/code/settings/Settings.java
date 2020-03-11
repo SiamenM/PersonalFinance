@@ -24,8 +24,8 @@ public final class Settings {
 
     public static final String[] CURRENCIES_CODES = {"BLR", "USD", "EUR", "RUB", "UAH"};
 
-    private static final File FILE_SETTINGS = new File("src/saves/settings.ini");
-    private static File fileSave = new File("src/saves/default.myfin");
+    private static final File FILE_SETTINGS = new File("saves/settings.ini");
+    private static File fileSave = new File("saves//default.myfin");
     private static String programLanguage = "ru";
 
     public static void init() {
