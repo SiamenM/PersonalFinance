@@ -14,7 +14,7 @@ import javafx.stage.FileChooser;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import mainClasses.Currency;
-import mainClasses.Statistics;
+import utilityClasses.Statistics;
 import org.xml.sax.SAXException;
 import saveLoad.SaveData;
 import settings.Format;
@@ -29,7 +29,6 @@ import java.util.List;
 import java.util.Optional;
 
 public class Controller {
-
 
     private TransactionTable transactionTableOverview;
     private AccountsTable accountsTable;

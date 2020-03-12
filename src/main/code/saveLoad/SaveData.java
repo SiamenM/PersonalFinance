@@ -3,6 +3,7 @@ package saveLoad;
 import financeException.ModelException;
 import mainClasses.*;
 import org.xml.sax.SAXException;
+import utilityClasses.Filter;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;

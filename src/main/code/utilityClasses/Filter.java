@@ -1,4 +1,4 @@
-package mainClasses;
+package utilityClasses;
 
 import java.time.YearMonth;
 import java.util.Calendar;
@@ -16,7 +16,7 @@ public class Filter {
     private Date to;
 
     public Filter() {
-        this(STEP_MONTH);
+        this(STEP_YEAR);
     }
 
     public Filter(int step) {

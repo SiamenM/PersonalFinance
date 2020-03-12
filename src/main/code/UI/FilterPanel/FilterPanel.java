@@ -24,11 +24,6 @@ public class FilterPanel extends HBox {
         initFilterPanel();
     }
 
-    public FilterPanel(ChartPanel chartPanel) {
-       super();
-       this.chartPanel = chartPanel;
-        initFilterPanel();
-    }
     public FilterPanel(Controller controller, ChartPanel chartPanel) {
         super();
         this.controller = controller;
@@ -44,34 +39,21 @@ public class FilterPanel extends HBox {
         step.setOnAction(event -> {
             SaveData.getInstance().getFilter().nextPeriod();
             step.setText(Format.getTitleFilter(SaveData.getInstance().getFilter()));
-            if(chartPanel==null){
-                financeTable.fillIn();
-            } else {
-
-                controller.setChartPanel(new ChartPanel(controller,true));
-            }
+            chooseAction();
 
         });
         Button left = new Button("", new ImageView("/images/left.png"));
         left.setOnAction(event -> {
             SaveData.getInstance().getFilter().prev();
             step.setText(Format.getTitleFilter(SaveData.getInstance().getFilter()));
-            if(chartPanel==null){
-                financeTable.fillIn();
-            } else {
-               controller.setChartPanel(new ChartPanel(controller,true));
-            }
+            chooseAction();
 
         });
         Button right = new Button("", new ImageView("/images/right.png"));
         right.setOnAction(event -> {
             SaveData.getInstance().getFilter().next();
             step.setText(Format.getTitleFilter(SaveData.getInstance().getFilter()));
-//            if(chartPanel==null){
-//                financeTable.fillIn();
-//            } else {
-//                chartPanel.refresh();
-//            }
+            chooseAction();
 
         });
         step.setPrefHeight(left.getPrefHeight());
@@ -79,7 +61,15 @@ public class FilterPanel extends HBox {
         this.getChildren().addAll(left, step, right);
     }
 
-    public void refreshStepButtonName(){
+    private void chooseAction() {
+        if (chartPanel == null) {
+            financeTable.fillIn();
+        } else {
+            controller.getChartPanel().refreshChart();
+        }
+    }
+
+    public void refreshStepButtonName() {
         step.setText(Format.getTitleFilter(SaveData.getInstance().getFilter()));
     }
 }

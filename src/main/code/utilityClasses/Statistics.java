@@ -1,5 +1,8 @@
-package mainClasses;
+package utilityClasses;
 
+import mainClasses.Account;
+import mainClasses.Currency;
+import mainClasses.Transaction;
 import saveLoad.SaveData;
 
 import java.util.HashMap;
